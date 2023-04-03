@@ -15,27 +15,25 @@ body
 
 .row {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
+.column-two {
+  flex-grow: 1;  
 }
 
-button
+.button
   background-color: var(--crimson1)
   border: 1px solid var(--crimson12)
   box-shadow: $button-shadow
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  flex-direction: row;
+  gap: 8px;
   font-size: $2xl
   border-radius: $round
   padding: 8px
+  height: 48px
+  width: 220px
   transition: 0.2s ease all
   &:hover
     opacity: .8
@@ -44,5 +42,7 @@ button
     color:var(--crimson12)
 
   i
-    font-size: 32px
+    font-size: $3xl
+    vertical-align: middle;
+    line-height: 1.5
     
