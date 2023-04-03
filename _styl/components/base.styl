@@ -9,38 +9,40 @@
   background: #6DC4FF
   color: black
 
-hr
-  margin: 10px auto 40px
-  height: 1px
-  background: $purple
-  border: none
-  width: 65%
+body
+	background-color: var(--mauve2)
 
-img
-  max-width: 100%
 
-.emoji
-	width: 35px
-	position: relative
-	top: 2px
-	
-	&.large
-		width: 54px
-		top: 4px
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
 
-		@media only screen and (max-width: 800px)
-		  width: 36px;
-	
-	&.med
-		width: 36px
-		top: 2px
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
 
-		@media only screen and (max-width: 800px)
-		  width: 24px;
-		
-	&.small
-		width: 20px
-		
-	&.xsmall
-		width: 15px
-	
+button
+  background-color: var(--crimson1)
+  border: 1px solid var(--crimson12)
+  box-shadow: $button-shadow
+  display: inline-flex;
+  align-items: center;
+  font-size: $2xl
+  border-radius: $round
+  padding: 8px
+  transition: 0.2s ease all
+  &:hover
+    opacity: .8
+
+  a
+    color:var(--crimson12)
+
+  i
+    font-size: 32px
+    
