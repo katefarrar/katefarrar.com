@@ -5,12 +5,37 @@
 footer
   background-color: var(--mauve3);
   border-top: $border
-  margin: 0 auto;
-  padding: 60px 0;
   text-align: center;
+  padding: 24px 32px
+
+  .wrapper
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1664px;
+    margin: 0 auto;
 
   p
     margin-bottom: 0
   
   i
     color: var(--crimson10)
+
+  .social
+    a
+      font-size: $3xl
+      transition: 0.2s ease all
+      &:hover
+        opacity: .8
+
+@media screen and (max-width: 320px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+    

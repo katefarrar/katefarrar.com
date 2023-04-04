@@ -1,11 +1,12 @@
 /*--------------------------------------------------------------------
 * $WORK
 --------------------------------------------------------------------*/
-
 .work
-  
-  .content
-    max-width: 1100px;
+
+  section
+    padding: 0;
+    margin-top: 64px;
+
 
   h1.title
     font-size: 36px;
@@ -15,24 +16,26 @@
 
   h2
     font-size: 30px;
+
+  a
+    color:var(--crimson12)
+
+  .button
+    margin-top: 16px;
     
+
   .work-col
     width: 49%;
-    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-    border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #F20303, #FFE81D, #3CE389, #6DC4FF);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: 2px 1000px 1px #fff inset;
+    border: $border
+    border-radius: $round;
     
-    &:nth-child(odd)
-      background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #6DC4FF, #3CE389, #FFE81D, #F20303);
-      
   .logo-wrap
+    background-color: var(--mauve1)
     margin: 0 auto;
     height: 165px;
     max-width: 100%;
     text-align: center;
+    border-radius: $round;
     
     img
       position: relative;
@@ -40,13 +43,8 @@
       max-width: 60%;
       
   .work-info
-    border-top: 2px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #F20303, #FFE81D, #3CE389, #6DC4FF);
+    border-top: $border;
     padding: 30px;
-    
-    &.even
-      border-image-source: linear-gradient(to left, #6DC4FF, #3CE389, #FFE81D, #F20303);
 
     p
       font-size: 16px;
@@ -58,25 +56,6 @@
         
     .button-wrap
       margin: 20px 10px 0 0;
-      
-    button
-      display: inline-block;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: middle;
-      font-size: 16px;
-      font-weight: $semibold;
-      padding: .5rem .85rem;
-      border: 2px solid $blue;
-      margin-right: 10px;
-      background-color: transparent;
-      border-radius: 1rem;
-      
-      &:hover
-        opacity: .8;
-      
-      a
-        color: $blue;
   
   .work-grid
     display: flex;
@@ -88,8 +67,8 @@
       justify-content: none;
     
     .work-col
+      background-color: var(--mauve1)
       width: 32%;
-      border-radius: 1rem;
       margin-bottom: 40px;
       
       @media only screen and (max-width: 800px)
@@ -103,7 +82,6 @@
 
       img
         width: 200px;
-        border-radius: .8rem .8rem 0 0;
 
     .work-logo-col
       width: 32%;
@@ -127,7 +105,6 @@
   .case-studies      
 
     .work-col
-      border: 3px solid $blue;
       width: 49%;
 
       @media only screen and (max-width: 800px)
@@ -147,16 +124,7 @@
 
           
       .work-info
-        border-top: 3px solid $blue;
-        border-image-source: none;
         text-align: left;
-
-        button
-          border: 2px solid $blue
-          border-radius: 1rem
-          
-          a
-            color: $blue
     
         
 /*--------------------------------------------------------------------

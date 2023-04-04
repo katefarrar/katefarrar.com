@@ -6,6 +6,9 @@ header
   border-bottom: $border
   padding: 24px 32px
 
+  @media screen and (max-width: 768px)
+    padding: 8px 16px
+
   .wrapper
     display: flex;
     justify-content: space-between;
@@ -36,6 +39,8 @@ header
         
       li:not(:last-child)
         margin-right: 24px;
+        @media screen and (max-width: 768px)
+          margin-right: 16px
 
       i
         vertical-align: middle;
@@ -46,3 +51,16 @@ header
         transition: 0.2s ease all
         &:hover
           opacity: .8
+
+      #toggle-btn
+        cursor: pointer
+
+
+@media screen and (max-width: 320px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

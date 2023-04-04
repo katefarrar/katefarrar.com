@@ -4,48 +4,32 @@
 .content
   margin: 0 auto;
 
-.title
-  margin-bottom: 24px;
+.home
 
-#intro
-  .row
+  #intro
+   .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 44px;
-  
-  .column
-    max-width: 268px;
-
-  .column-two
-    flex-direction: column;;
-    padding: 24px 0;
-  
-  .column-two > * + * {
-   margin-top: 24px;
   }
 
-// .callout
-//   background-color: 
-//   border: $border
-//   border-radius: $round
-//   padding: 16px;
-//   text-align: center;
+  .column-one {
+    flex: 0 0 268px;
+  }
 
-//   p 
-//    margin-bottom: 0;
+  .column-one img {
+    max-width: 100%;
+    height: auto;
+  }
 
-.bio
-  width: 376px
-  border-radius: $round
+  .column-two {
+    flex: 1;
+  }
 
-#about
-  .row
-    gap: 24px;
+  .column-two > * {
+    margin-bottom: 20px;
+  }
 
-#contact
-  .ph
-    margin-right: 16px;
-    font-size: 32px
-  a
-    transition: 0.2s ease all
-    &:hover
-      opacity: .8
-   
+
+    
