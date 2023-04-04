@@ -1,0 +1,27 @@
+extends layout
+
+block vars
+  - var pageDescription = 'Kate Farrar is a product design leader in CO.'
+  - var bodyClass = 'animate__animated animate__fadeIn about'
+
+block content
+
+  include includes/header
+
+  .content
+
+    section
+      .row
+        .column-one
+          h2.title About
+          p I'm an inclusive design leader with over 15 years of industry experience. I provide users with meaningful product experiences by advocating for their needs through user-centered design methods. I am deeply committed to collaboration and love working with cross-functional teams. A great day for me is when I'm learning and working alongside my teammates.
+
+          p I live in Colorado with my wife, Abby. We have three fur children, Norah, Rosie & Henry.
+
+          p Send me some <a href="mailto:kate.farrar@gmail.com" class="link">electronic mail</a> or connect with me on <a href="https://www.linkedin.com/in/katefarrar/" target="_blank" class="link">LinkedIn</a>. Also known to frequent <a href="https://twitter.com/katefarrar" target="_blank" class="link">Twitter</a>, <a href="https://instagram.com/katefarrar" target="_blank" class="link">Instagram</a>, <a href="https://dribbble.com/katefarrar" target="_blank" class="link">Dribbble</a>, & <a href="https://github.com/katefarrar" target="_blank" class="link">GitHub</a>.
+
+
+        .column-two
+          img(src='/assets/images/kate-2022.jpg' alt="Kate Farrar")
+
+  include includes/footer
