@@ -1,35 +1,38 @@
 /*--------------------------------------------------------------------
 * $HOME
 --------------------------------------------------------------------*/
+
 .content
-  margin: 0 auto;
+    flex: 1
+    margin: 0 auto
 
 .home
 
+  .content
+    display: flex
+    align-items: center
+
   #intro
-   .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 44px;
-  }
-
-  .column-one {
-    flex: 0 0 268px;
-  }
-
-  .column-one img {
-    max-width: 100%;
-    height: auto;
-  }
-
-  .column-two {
-    flex: 1;
-  }
-
-  .column-two > * {
-    margin-bottom: 20px;
-  }
-
-
+    padding-top: 0;
+    padding-bottom: 0;
     
+    h1
+      font-size: $4xl
+      margin-bottom: 40px;
+    
+    h2
+      margin-bottom: 40px;
+
+    .icons
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      
+      .icon
+        color: var(--purple10)
+        margin-right: 16px;
+        i
+          font-size: $8xl
+  
+  .button
+    margin-top: 24px;

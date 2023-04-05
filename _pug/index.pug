@@ -11,25 +11,30 @@ block content
   .content
 
     section#intro
-      .row
-        .column-one
-          img(src='https://placehold.co/268x268/000000/FFF' width='268px')
+      .icons
+        //- .column-one
+        //-   img(src='/assets/images/kate-2022.jpg' alt="Kate Farrar")
+        span.icon
+          i.ph-duotone.ph-dog
+        span.icon
+          i.ph-duotone.ph-baseball-cap
+        span.icon
+          i.ph-duotone.ph-books
+        span.icon
+          i.ph-duotone.ph-cat
+        span.icon
+          i.ph-duotone.ph-vinyl-record
+        span.icon
+          i.ph-duotone.ph-pencil
 
-        .column-two
-          h1 Hello! I'm Kate.
 
-          h2 I'm a design leader committed to building teams that are rooted in user-centered design and cross-functional collaboration.
+      div
+        h1 Hello! I'm Kate.
 
-          .button.lg
-            a(href='https://www.linkedin.com/in/katefarrar/') #[i.ph.ph-linkedin-logo] Let's connect
+        h2 I'm a design leader committed to building teams that are rooted in user-centered design and cross-functional collaboration.
 
-    section 
-      h2.title Experience
-
-      h3 I am currently a Staff Product Designer at <a href="https://firehydrant.com">FireHydrant</a>.
-
-      p In the past I've had the privilege of working on the product teams at Elastic, Bonusly, &yet, TeamSnap, & CauseLabs.
-
-      a(href="/work") See more work
+        div
+          span.button.lg
+            a(href='/work') #[i.ph.ph-lightbulb] View my work    
 
   include includes/footer

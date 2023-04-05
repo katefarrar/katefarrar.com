@@ -20,16 +20,6 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
-"@phosphor-icons/web@^2.0.3":
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/@phosphor-icons/web/-/web-2.0.3.tgz"
-  integrity sha512-9oYmohi2fo87w3DbtfjBoJxrklVojgXq2wuGcqxKccj2TxMq7UIusKDrGUZYOQHM9pUKkh+kvfmutETMGDR6gg==
-
-"@radix-ui/colors@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.npmjs.org/@radix-ui/colors/-/colors-0.1.8.tgz"
-  integrity sha512-jwRMXYwC0hUo0mv6wGpuw254Pd9p/R6Td5xsRpOmaWkUHlooNWqVcadgyzlRumMq3xfOTXwJReU0Jv+EIy4Jbw==
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/abbrev/-/abbrev-1.1.1.tgz"
@@ -164,21 +154,21 @@ async@^1.5.2:
   integrity sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=
 
 async@^2.5.0, async@^2.6.0, async@^2.6.1:
-  version "2.6.3"
-  resolved "https://registry.npmjs.org/async/-/async-2.6.3.tgz"
-  integrity sha512-zflvls11DCy+dQWzTW2dzuilv8Z5X/pjfmZOWba6TNIVDm+2UDaJmXSOXlasHKfNBs8oo3M0aT50fDEWfKZjXg==
+  version "2.6.4"
+  resolved "https://registry.npmjs.org/async/-/async-2.6.4.tgz"
+  integrity sha512-mzo5dfJYwAn29PeiJ0zvwTo04zj8HDJj0Mn8TD7sno7q12prdbnasKJHhkm2c1LgrhlJ0teaea8860oxi51mGA==
   dependencies:
     lodash "^4.17.14"
 
 async@^3.2.0:
-  version "3.2.1"
-  resolved "https://registry.npmjs.org/async/-/async-3.2.1.tgz"
-  integrity sha512-XdD5lRO/87udXCMC9meWdYiR+Nq6ZjUfXidViUZGu2F1MO4T3XwZ1et0hb2++BgLfhyJwy44BGB/yx80ABx8hg==
+  version "3.2.4"
+  resolved "https://registry.npmjs.org/async/-/async-3.2.4.tgz"
+  integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
 
 async@~3.2.0:
-  version "3.2.1"
-  resolved "https://registry.npmjs.org/async/-/async-3.2.1.tgz"
-  integrity sha512-XdD5lRO/87udXCMC9meWdYiR+Nq6ZjUfXidViUZGu2F1MO4T3XwZ1et0hb2++BgLfhyJwy44BGB/yx80ABx8hg==
+  version "3.2.4"
+  resolved "https://registry.npmjs.org/async/-/async-3.2.4.tgz"
+  integrity sha512-iAB+JbDEGXhyIUavoDl9WP/Jj106Kz9DEn1DPgYw5ruDn0e3Wgi3sKFm55sASdGBNOQB8F59d9qQ7deqrHA8wQ==
 
 atob@^2.1.2:
   version "2.1.2"
@@ -764,7 +754,7 @@ crypto-browserify@^3.0.0:
 css-mqpacker@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/css-mqpacker/-/css-mqpacker-4.0.1.tgz"
-  integrity sha1-5g6pLcMXTo8lT03/fbC/QKwwLW4=
+  integrity sha512-YRfDgc6UxSfPTmIPf0loLaBI2YJ+t8havRRwrQLBTs68T8YHdxWneCSQatZ2Gf/aixVqergCXWDl44jBTnQKUg==
   dependencies:
     fs-extra "^0.26.7"
     minimist "^1.1.1"
@@ -832,9 +822,9 @@ debug@~3.1.0:
     ms "2.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.2.tgz"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 define-properties@^1.1.3:
   version "1.1.3"
@@ -1426,7 +1416,7 @@ grunt-contrib-watch@^1.1.0:
 grunt-css-mqpacker@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/grunt-css-mqpacker/-/grunt-css-mqpacker-3.0.1.tgz"
-  integrity sha1-h26FqLiFI9vY8TibHYRn6CuY6wM=
+  integrity sha512-1q30J4Y9unCmKGIs1/S3xS3HjkMZ0yCJ33Lb1493SFQMkfC+ntBFae4AbGvdxRLc34tR/DRlk1j7rjmvfAdp/A==
   dependencies:
     css-mqpacker "^4.0.0"
 
@@ -1469,7 +1459,7 @@ grunt-legacy-util@~2.0.1:
 grunt-postcss-import@^0.0.1:
   version "0.0.1"
   resolved "https://registry.npmjs.org/grunt-postcss-import/-/grunt-postcss-import-0.0.1.tgz"
-  integrity sha1-L0C1ef7VgIs6oo6tLlkq10XNaJI=
+  integrity sha512-ZielLmtC3agLjt5wNIGcJdj5I7z3PB7DVWGTvbBYZ79fDAM0R+Q9hITr8PPN5JcWVK01uqVbh8ncPlQQNKRNXw==
   dependencies:
     chalk "^0.5.1"
     jquery-deferred "^0.3.0"
@@ -1976,7 +1966,7 @@ JSONStream@^1.0.3:
 jstransformer-markdown-it@^2.1.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/jstransformer-markdown-it/-/jstransformer-markdown-it-2.1.0.tgz"
-  integrity sha1-aewwzkUYvtWZezjwJ2SOjChekvc=
+  integrity sha512-E9uALZSe3M3jiq9Mza+wTlT44Yyh/s3D5XWUeJgH3vyzB05KFQz8Tv2I9do3BbRY/S5SDxFMkxB6fCGj+MA2rg==
   dependencies:
     markdown-it "^8.0.0"
 
@@ -2047,7 +2037,7 @@ lodash.memoize@~3.0.3:
 lodash@^2.4.1:
   version "2.4.2"
   resolved "https://registry.npmjs.org/lodash/-/lodash-2.4.2.tgz"
-  integrity sha1-+t2DS5aDBz2hebPq5tnA0VBT9z4=
+  integrity sha512-Kak1hi6/hYHGVPmdyiZijoQyz5x2iGVzs6w9GYB/HiXEtylY7tIoYEROMjvM1d9nXJqPOrG2MNPMn01bJ+S0Rw==
 
 lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.21, lodash@^4.17.4, lodash@~4.17.10, lodash@~4.17.19, lodash@~4.17.21:
   version "4.17.21"
@@ -2155,9 +2145,9 @@ minimalistic-crypto-utils@^1.0.1:
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
 minimatch@^3.0.2, minimatch@^3.0.4, minimatch@~3.0.2, minimatch@~3.0.4, "minimatch@2 || 3":
-  version "3.0.4"
-  resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz"
-  integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
+  version "3.0.8"
+  resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.0.8.tgz"
+  integrity sha512-6FsRAQsxQ61mw+qP1ZzbL9Bc78x2p5OqNgNpnoAFLTrX8n5Kxph0CsnhmKKNXTWjXqU5L0pGPR7hYk+XWZr60Q==
   dependencies:
     brace-expansion "^1.1.7"
 
@@ -2700,9 +2690,11 @@ punycode@^1.3.2, punycode@1.3.2:
   integrity sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0=
 
 qs@^6.4.0:
-  version "6.9.4"
-  resolved "https://registry.npmjs.org/qs/-/qs-6.9.4.tgz"
-  integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
+  version "6.11.1"
+  resolved "https://registry.npmjs.org/qs/-/qs-6.11.1.tgz"
+  integrity sha512-0wsrzgTz/kAVIeuxSjnpGC56rzYtr6JT/2BwEvMaPhFIoYa1aGO8LbzuU1R0uUYQkLpWBTOj0l/CLAJB64J6nQ==
+  dependencies:
+    side-channel "^1.0.4"
 
 querystring-es3@~0.2.0:
   version "0.2.1"

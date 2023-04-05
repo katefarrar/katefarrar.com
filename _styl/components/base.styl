@@ -11,32 +11,8 @@
 
 body
   background-color: var(--mauve2)
-  // background:
-  //   linear-gradient(var(--mauve2)),
-  //   url(images/noise.svg));
 
-.button
-    background-color: var(--crimson1)
-    border: 1px solid var(--crimson12)
-    box-shadow: $button-shadow
-    display: inline-flex;
-    align-items: center;
-    flex-direction: row;
-    padding: 8px
-    gap: 8px;
-    border-radius: $round
-    transition: 0.2s ease all
-    &:hover
-      opacity: .8
-
-    i
-      vertical-align: middle;
-      line-height: 1.5
-    
-    &.lg
-      font-size: $2xl
-      height: 48px
-      max-width: 220px
-      
-      i
-        font-size: $3xl
+body.home, body.about
+  display: flex
+  flex-direction: column
+  min-height: 100vh
