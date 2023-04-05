@@ -2,7 +2,7 @@ extends layout
 
 block vars
   - var pageDescription = 'Kate Farrar is a product design leader in CO.'
-  - var bodyClass = 'dark-theme animate__animated animate__fadeIn home'
+  - var bodyClass = 'animate__animated animate__fadeIn home'
 
 block content
 
@@ -11,47 +11,30 @@ block content
   .content
 
     section#intro
-      .row
-        .column
-          img(src='https://placehold.co/268x268/000000/FFF' width='268px')
+      .icons
+        //- .column-one
+        //-   img(src='/assets/images/kate-2022.jpg' alt="Kate Farrar")
+        span.icon
+          i.ph-duotone.ph-dog
+        span.icon
+          i.ph-duotone.ph-baseball-cap
+        span.icon
+          i.ph-duotone.ph-books
+        span.icon
+          i.ph-duotone.ph-cat
+        span.icon
+          i.ph-duotone.ph-vinyl-record
+        span.icon
+          i.ph-duotone.ph-pencil
 
-        .column-two
-          h1 Hello! I'm Kate.
 
-          h2 I'm a design leader committed to building teams that are rooted in user-centered design and cross-functional collaboration.
+      div
+        h1 Hello! I'm Kate.
 
-          .button 
-            a(href='https://www.linkedin.com/in/katefarrar/') #[i.ph.ph-linkedin-logo] Let's connect
+        h2 I'm a design leader committed to building teams that are rooted in user-centered design and cross-functional collaboration.
 
-    section#experience 
-      h2.title Experience
-
-      h3 I am currently a Staff Product Designer at <a href="https://firehydrant.com">FireHydrant</a>.
-
-      img(src='/assets/images/logos/bonusly-after.png' alt="Bonusly" width="25%")
-      figcaption.center 
-        small Bounsly
-
-      p In the past I've had the privilege of working on the product teams at Elastic, Bonusly, &yet, TeamSnap, & CauseLabs.
-
-      p <a href="href='mailto:kate.farrar@gmail.com">Get in touch</a> if you're interesting in seeing case studies and a full portfolio.
-
-    section#about
-      .row
-        .column
-          h2.title About
-          p I'm an inclusive design leader with over 15 years of industry experience. I provide users with meaningful product experiences by advocating for their needs through user-centered design methods. I am deeply committed to collaboration and love working with cross-functional teams. A great day for me is when I'm learning and working alongside my teammates.
-
-          p I live in Colorado with my wife, Abby. We have three fur children, Norah, Rosie & Henry.
-
-        .column
-          img.bio(src='/assets/images/kate-2022.jpg' alt="Kate Farrar")
-
-    section#contact
-      h2.title Contact
-
-      p Send me some <a href="mailto:kate.farrar@gmail.com" class="link">electronic mail</a> or connect with me on <a href="https://www.linkedin.com/in/katefarrar/" target="_blank" class="link">LinkedIn</a>. Also known to frequent <a href="https://twitter.com/katefarrar" target="_blank" class="link">Twitter</a>, <a href="https://instagram.com/katefarrar" target="_blank" class="link">Instagram</a>, <a href="https://dribbble.com/katefarrar" target="_blank" class="link">Dribbble</a>, & <a href="https://github.com/katefarrar" target="_blank" class="link">GitHub</a>.
-
-      .social <a href="https://linkedin.com/in/katefarrar" target="_blank"><i class="ph ph-linkedin-logo"></a></i> <a href="https://twitter.com/katefarrar" target="_blank"><i class="ph ph-twitter-logo"></i></a> <a href="https://instagram.com/katefarrar" target="_blank"><i class="ph ph-instagram-logo"></i></a> <a href="https://dribbble.com/katefarrar" target="_blank"><i class="ph ph-dribbble-logo"></i></a> <a href="https://github.com/katefarrar" target="_blank"><i class="ph ph-github-logo"></i></a>
+        div
+          span.button.lg
+            a(href='/work') #[i.ph.ph-lightbulb] View my work    
 
   include includes/footer

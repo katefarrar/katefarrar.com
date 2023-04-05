@@ -9,32 +9,35 @@ block title
 
 block content
 
-  .gradient
+  include includes/header
 
   .content
 
-    include includes/header
-
     section
-      h1.title Recent Work
+      h1.title Experience 
+
+      .intro 
+
+        h3 I'm currently a Staff Product Designer at <a href="https://firehydrant.com">FireHydrant</a>.
+
+        p In the past I've had the privilege of working on the product teams at 
+          a(href="https://elastic.com" target="_blank") Elastic
+          | , 
+          a(href="https://bonus.ly" target="_blank") Bonusly
+          | , 
+          a(href="https://andyet.com" target="_blank") &yet
+          | , 
+          a(href="https://teamsnap.com" target="_blank") TeamSnap
+          | and 
+          a(href="https://causelabs.com" target="_blank") CauseLabs
+          | .
+
+        p Additional case studies available 
+          a(href="mailto:kate.farrar@gmail.com") upon request.
+
       .case-studies
-        h2.title Case Studies
+        h3 Case Studies
         .work-grid
-
-          .work-col
-              .logo-wrap
-                img(src='/assets/images/logos/elastic-header.png')
-
-              .work-info
-                div
-                  h3 Elastic
-                  
-                  p Elasticsearch is the world’s leading free and open search and analytics solution.
-                  
-                  p.small My role: senior product designer
-                  
-                  .button-wrap
-                    h4 Case Study coming soon!
 
           .work-col
             .logo-wrap
@@ -43,14 +46,14 @@ block content
             .work-info
               div
                 h3 Bonusly
-                
+
                 p Bonusly is a fun, personal employee recognition and rewards program.
-                
-                p.small My role: lead product designer
-                
-                .button-wrap
-                  button
-                    a(href='/work-bonusly') View Case Study
+
+                .tags 
+                  span Lead Product Designer
+
+                .button
+                  a(href='/work-bonusly') View Case Study
 
           .work-col
             .logo-wrap
@@ -59,14 +62,15 @@ block content
             .work-info
               div
                 h3 Balancing Act
-                
+
                 p An online experience to engage citizens in public budgeting.
-                
-                p.small My role: lead product designer
-                
-                .button-wrap
-                  button
-                    a(href='/work-ba') View Case Study
+
+                .tags 
+                  span Lead Product Designer
+                  span Branding
+
+                .button.secondary
+                  a(href='/work-ba') View Case Study
 
           .work-col
             .logo-wrap
@@ -75,118 +79,79 @@ block content
             .work-info
               div
                 h3 Brides to Prosperity
-                
+
                 p Design workshop to develop a prototype tablet app.
-                
-                p.small My role: workshop facilitator, lead product designer
-                
-                .button-wrap
-                  button
-                    a(href='/work-b2p') View Case Study
 
-    .work-links
-      h2.title Additional Experience
-      .work-grid
+                .tags 
+                  span Lead Product Designer
+                  span Workshop Facilitatior
 
-          .work-col
-            .logo-wrap
-              img(src='/assets/images/logos/work-logo-open-ideo.png')
+                .button.secondary
+                  a(href='/work-b2p') View Case Study
+        .work-links
 
-            .work-info
-              div
-                h2 Open Ideo
-                
-                p Social platform connecting designers in the Open Ideo Chapters and Amplify programs.
-                
-                p.small My role: product design, responsive web, front end development
-                
-                .button-wrap
-                  button
-                    a(href='http://openideo.com/chapters' target='_blank') Visit Open Ideo
+          h3 Around the Web
+          .links
+            .link-item
+              h3 
+                a(href='http://openideo.com/chapters' target='_blank') 
+                  span
+                    i.ph.ph-user-circle 
+                  span Open Ideo
+              div.tags
+                span product design
+                span responsive web 
+                span front end dev
+            .link-item
+              h3 
+                a(href='http://heroku.com' target='_blank') 
+                  span
+                    i.ph.ph-database 
+                  span Heroku
+              div.tags
+                span product design
+                span responsive web 
+                span front end dev
+            .link-item
+              h3 
+                a(href='http://moneythink.org' target='_blank') 
+                  span
+                    i.ph.ph-bank 
+                  span Moneythink
+              div.tags
+                span product design
+                span iOS 
+                span Android
+            .link-item
+              h3 
+                a(href='http://simplewebrtc.com/' target='_blank') 
+                  span
+                    i.ph.ph-chat 
+                  span SimpleWebRTC
+              div.tags
+                span product design
+                span responsive web 
+                span front end dev
+            .link-item
+              h3 
+                a(href='https://causelabs.com' target='_blank') 
+                  span
+                    i.ph.ph-rocket-launch 
+                  span CauseLabs
+              div.tags
+                span product design
+                span front end dev
+            .link-item
+              h3 
+                a(href='https://thrivenetworks.org/thrive-water/' target='_blank') 
+                  span
+                    i.ph.ph-drop 
+                  span Thrive Networks
+              div.tags
+                span product design
+                span front end dev
 
-          .work-col
-            .logo-wrap
-              img(src='/assets/images/logos/work-logo-heroku.png')
-
-            .work-info.even
-              div
-                h2 Heroku
-                
-                p Design and development support for Heroku.com with the team at &yet.
-                
-                p.small My role: user experience, user interface, responsive web, front end development
-                
-                .button-wrap
-                  button
-                    a(href='http://heroku.com' target='_blank') Visit Heroku
-
-          .work-col
-            .logo-wrap
-              img(src='/assets/images/logos/work-logo-moneythink.png')
-
-            .work-info
-              div
-                h2 Moneythink
-                
-                p Financial education app for iOS and Android platforms.
-                
-                p.small My role: product design, native app design
-                
-                .button-wrap
-                  button
-                    a(href='http://moneythink.org' target='_blank') Visit Moneythink
-
-
-
-          .work-col
-            .logo-wrap
-              img(src='/assets/images/logos/work-logo-swrtc.png')
-
-            .work-info
-              div
-                h2 SimpleWebRTC
-                
-                p Responsive website for realtime React modules product including developer documentation built by &yet.
-                
-                p.small My role: user experience, user interface, responsive web, front end development
-                
-                .button-wrap
-                  button
-                    a(href='http://simplewebrtc.com/' target='_blank') Visit SimpleWebRTC
-
-          .work-col
-            .logo-wrap
-              img(src='/assets/images/logos/work-logo-thrive.png')
-
-            .work-info.even
-              div
-                h2 Thrive Networks
-                
-                p Technology platform for water and sanitation projects in developing countries.
-                
-                p.small My role: product design, front end development
-                
-                .button-wrap
-                  button
-                    a(href='https://thrivenetworks.org/thrive-water/' target='_blank') Visit Thrive Networks
-
-          .work-col
-            .logo-wrap
-              img(src='/assets/images/logos/work-logo-teamsnap.png')
-
-            .work-info
-              div
-                h2 Teamsnap
-                
-                p Sports team management app for communication and organization.
-                
-                p.small My role: product design, front end development
-                
-                .button-wrap
-                  button
-                    a(href='http://teamsnap.com' target='_blank') Visit Teamsnap
-
-    include includes/footer
+  include includes/footer
 
 
 

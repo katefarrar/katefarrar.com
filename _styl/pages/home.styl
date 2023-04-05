@@ -1,51 +1,38 @@
 /*--------------------------------------------------------------------
 * $HOME
 --------------------------------------------------------------------*/
+
 .content
-  margin: 0 auto;
+    flex: 1
+    margin: 0 auto
 
-.title
-  margin-bottom: 24px;
+.home
 
-#intro
-  .row
-    gap: 44px;
+  .content
+    display: flex
+    align-items: center
+
+  #intro
+    padding-top: 0;
+    padding-bottom: 0;
+    
+    h1
+      font-size: $4xl
+      margin-bottom: 40px;
+    
+    h2
+      margin-bottom: 40px;
+
+    .icons
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+      
+      .icon
+        color: var(--purple10)
+        margin-right: 16px;
+        i
+          font-size: $8xl
   
-  .column
-    max-width: 268px;
-
-  .column-two
-    flex-direction: column;;
-    padding: 24px 0;
-  
-  .column-two > * + * {
-   margin-top: 24px;
-  }
-
-// .callout
-//   background-color: 
-//   border: $border
-//   border-radius: $round
-//   padding: 16px;
-//   text-align: center;
-
-//   p 
-//    margin-bottom: 0;
-
-.bio
-  width: 376px
-  border-radius: $round
-
-#about
-  .row
-    gap: 24px;
-
-#contact
-  .ph
-    margin-right: 16px;
-    font-size: 32px
-  a
-    transition: 0.2s ease all
-    &:hover
-      opacity: .8
-   
+  .button
+    margin-top: 24px;

@@ -1,38 +1,45 @@
 /*--------------------------------------------------------------------
 * $WORK
 --------------------------------------------------------------------*/
-
 .work
-  
-  .content
-    max-width: 1100px;
+
+  .intro
+    margin-bottom: 40px;
+
 
   h1.title
-    font-size: 36px;
     text-align: left;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    font-size: $3xl
 
-  h2
-    font-size: 30px;
+  p
+    a
+      border-bottom: 1px solid var(--crimson10)
+      margin-right: 2px
+
+  .button
+    margin-top: 16px;
+
+  a.email-link
+    display: flex;
+    align-items: center;
+
+    span
+      i
+        vertical-align: middle;
     
+
   .work-col
     width: 49%;
-    box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-    border: solid 3px transparent;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #F20303, #FFE81D, #3CE389, #6DC4FF);
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    box-shadow: 2px 1000px 1px #fff inset;
+    border: $border
+    border-radius: $round;
     
-    &:nth-child(odd)
-      background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #6DC4FF, #3CE389, #FFE81D, #F20303);
-      
   .logo-wrap
+    background-color: var(--mauve1)
     margin: 0 auto;
     height: 165px;
     max-width: 100%;
     text-align: center;
+    border-radius: $round;
     
     img
       position: relative;
@@ -40,13 +47,8 @@
       max-width: 60%;
       
   .work-info
-    border-top: 2px solid;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to left, #F20303, #FFE81D, #3CE389, #6DC4FF);
-    padding: 30px;
-    
-    &.even
-      border-image-source: linear-gradient(to left, #6DC4FF, #3CE389, #FFE81D, #F20303);
+    border-top: $border;
+    padding: 32px;
 
     p
       font-size: 16px;
@@ -58,25 +60,9 @@
         
     .button-wrap
       margin: 20px 10px 0 0;
-      
-    button
-      display: inline-block;
-      text-align: center;
-      white-space: nowrap;
-      vertical-align: middle;
-      font-size: 16px;
-      font-weight: $semibold;
-      padding: .5rem .85rem;
-      border: 2px solid $blue;
-      margin-right: 10px;
-      background-color: transparent;
-      border-radius: 1rem;
-      
-      &:hover
-        opacity: .8;
-      
-      a
-        color: $blue;
+
+      a.private
+        color: var(--crimson10)
   
   .work-grid
     display: flex;
@@ -88,8 +74,8 @@
       justify-content: none;
     
     .work-col
+      background-color: var(--mauve1)
       width: 32%;
-      border-radius: 1rem;
       margin-bottom: 40px;
       
       @media only screen and (max-width: 800px)
@@ -103,7 +89,6 @@
 
       img
         width: 200px;
-        border-radius: .8rem .8rem 0 0;
 
     .work-logo-col
       width: 32%;
@@ -124,11 +109,11 @@
         img
           width: 60%;
           
-  .case-studies      
+  .case-studies
+    h3
+      margin-top: 1.2rem;
 
     .work-col
-      border: 3px solid $blue;
-      width: 49%;
 
       @media only screen and (max-width: 800px)
         width: 100%;
@@ -147,16 +132,53 @@
 
           
       .work-info
-        border-top: 3px solid $blue;
-        border-image-source: none;
         text-align: left;
 
-        button
-          border: 2px solid $blue
-          border-radius: 1rem
-          
-          a
-            color: $blue
+  .work-links
+    margin-bottom: 64px;
+
+    .links
+      display: inline-flex
+      flex-wrap: wrap
+      gap: 16px;
+
+      .link-item
+        flex 1 0 calc(50% - 20px)
+        margin 8px 0;
+        padding 24px 32px
+        box-sizing border-box
+        background-color: var(--mauve1)
+        border-radius: $round;
+        border: $border
+        gap: 8px;
+        
+        @media (max-width: 768px)
+          flex-basis calc(100% - 20px)
+
+        h3
+          margin-top: 0;
+          margin-bottom: 1.2rem;
+          font-size: $2xl;
+
+          span 
+            display: inline-block;
+
+            i
+              padding-right: 8px;
+              vertical-align: middle;
+
+.tags
+  span 
+    font-size: $xs
+    background-color: var(--teal3)
+    border-radius: $round
+    border: 1px solid var(--teal11)
+    padding: 4px 8px
+    color: var(--teal11)
+    margin: 0 8px 8px 0
+    display: inline-block;
+
+      
     
         
 /*--------------------------------------------------------------------
@@ -165,24 +187,31 @@
 
 .case-study
 
+  .wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+    div
+      flex-basis: 45%
+
+      &:nth-child(2)
+        text-align: right
+
 
   .full
     width: 100%;
-  
-  .content
-    max-width: 1100px;
-    
+      
   .logo
     max-width: 600px;
     
-  .rainbow
-    margin: 10px 0;
-    
   blockquote
     margin-bottom: 70px;
-    margin-left: 30px;
-    padding-left: 30px;
-    padding-right: 50px;
+    margin-left: 32px;
+    padding-left: 32px;
+    padding-right: 48px;
     border-left: 10px solid $blue;
     
     @media only screen and (max-width: 600px) {
@@ -197,40 +226,25 @@
       font-size: 20px;
   
   img {
-    border-radius: 1rem;
-  }
+    border-radius: $round;
+    width: 100%;
 
-  .btn-left {
-    float: left;
-    
-    @media only screen and (max-width: 600px) {
-      float: none;
-      text-align: center;
-      margin-top: 40px;
-    }
-
-  }
-  
-  .btn-right {
-    float: right;
-    
-    @media only screen and (max-width: 600px) {
-      float: none;
-      text-align: center;
-    }
   }
     
   #intro
-    img
-      margin-bottom: 40px;
-          
     h1
-      text-align: center;
-      font-size: 32px;
-      
+      margin-bottom: 1rem;
+
+    img
+      margin-bottom: 36px;
+
   #main
-    max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 64px;
+
+    .tags
+      margin-top: 24px;
+      span 
+        font-size: $xl
     
     p
       margin: 60px 0;

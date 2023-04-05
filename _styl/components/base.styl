@@ -10,39 +10,9 @@
   color: black
 
 body
-	background-color: var(--mauve2)
+  background-color: var(--mauve2)
 
-
-.row {
-  display: flex;
-}
-
-.column-two {
-  flex-grow: 1;  
-}
-
-.button
-  background-color: var(--crimson1)
-  border: 1px solid var(--crimson12)
-  box-shadow: $button-shadow
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 8px;
-  font-size: $2xl
-  border-radius: $round
-  padding: 8px
-  height: 48px
-  width: 220px
-  transition: 0.2s ease all
-  &:hover
-    opacity: .8
-
-  a
-    color:var(--crimson12)
-
-  i
-    font-size: $3xl
-    vertical-align: middle;
-    line-height: 1.5
-    
+body.home, body.about
+  display: flex
+  flex-direction: column
+  min-height: 100vh

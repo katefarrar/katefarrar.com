@@ -25,14 +25,21 @@ html(lang='en')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/mauveDark.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/crimson.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/crimsonDark.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/teal.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/tealDark.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/purple.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/tealDark.css" />
     link(rel='stylesheet' href='/assets/css/main.min.css')
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css')
-    link(rel='shortcut icon' href='/assets/images/icon-wave.png')
-
-    <script src="https://kit.fontawesome.com/12b8ca3ab7.js" crossorigin="anonymous"></script>
+    link(rel='shortcut icon' href='/assets/images/bolt.png')
 
   body(class=bodyClass)
 
     block content
 
     include includes/ga.html
+
+    block scripts
+      script(src="../js/main.js" type="text/javascript")
+
+

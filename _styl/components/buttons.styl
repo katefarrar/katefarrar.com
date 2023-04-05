@@ -2,23 +2,56 @@
 * $BUTTONS
 --------------------------------------------------------------------*/
   
-.rainbow {
-  display: inline-block;
-  color: $gray;
-  border-radius: 100rem;
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: $semibold;
-  padding: .5rem 3rem;
-  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-  border: solid 3px transparent;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #F20303, #FFE81D, #3CE389, #6DC4FF);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #fff inset;
+.button
+  background-color: var(--crimson1)
+  border: 1px solid var(--crimson12)
+  box-shadow: $button-shadow
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 8px
+  gap: 8px;
+  border-radius: $round
+  transition: 0.2s ease all
+  &:hover
+    opacity: .8
+
+  i
+    vertical-align: middle;
+    line-height: 1.5
+
+  a
+    color: var(--crimson12)
+    display: flex
+    align-items: center
+    gap: 8px
+    font-weight: $medium
+
+  &.ghost
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
   
-  &:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #6DC4FF, #3CE389, #FFE81D, #F20303);
-  }
-  opacity: .8;
-}
+  &.md
+    font-size: $xl
+    
+    a
+      i
+        margin-top: -2px
+
+  &.lg
+    font-size: $xl
+    height: 48px
+    
+    a
+      i
+        font-size: $2xl
+        margin-top: -2px
+
+i
+  line-height: 1.5
+
+  span
+    vertical-align: middle;
+
+  
