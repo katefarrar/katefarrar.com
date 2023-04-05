@@ -3,49 +3,14 @@
 --------------------------------------------------------------------*/
 
 footer
-    
-  .content
-    margin-bottom: 0;
+  background-color: var(--mauve3);
+  border-top: $border
+  margin: 0 auto;
+  padding: 60px 0;
+  text-align: center;
+
+  p
+    margin-bottom: 0
   
-    padding: 50px 0;
-
-    p, a
-      font-size: 16px;
-      font-weight: $bold;
-
-    .flex-grid
-      display: flex;
-      
-      @media only screen and (max-width: 800px)
-          display: block;
-    
-    .col
-      flex: 1;
-      
-      @media only screen and (max-width: 800px)
-          text-align: center;
-      
-    .social
-      text-align: right;
-      @media only screen and (max-width: 800px)
-          text-align: center;
-
-      a
-        background-color: $green;
-        border-radius: 1rem;
-        color: $white;
-        display: inline-block;
-        font-size: 20px;
-        transition: 0.2s ease all
-        padding: .1rem 1rem;
-        position: relative
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
-        
-        @media only screen and (max-width: 800px)
-          font-size: 24px;
-
-        &:hover, &:active
-          opacity: .8
-          top: 1px
+  i
+    color: var(--crimson10)
