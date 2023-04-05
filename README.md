@@ -5,7 +5,7 @@ katefarrar.com
 
 Welcome to [@katefarrar's](https://twitter.com/katefarrar) portfolio! So glad you're here.
 
-Hi! If you'd like to check things out, clone this repo, then run
+Hi! If you'd like to check things out clone this repo then run
 `npm i`
 and
 `npm start`
