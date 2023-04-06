@@ -193,12 +193,25 @@
     justify-content: space-between
     align-items: center
     width: 100%
+    @media screen and (max-width: 500px)
+      flex-direction: column
+      justify-content: flex-start
 
-    div
+    .back
       flex-basis: 45%
-
-      &:nth-child(2)
-        text-align: right
+      text-align: left;
+      @media screen and (max-width: 500px)
+        flex-basis: 100%
+        order: 2
+    
+    .link
+      flex-basis: 45%
+      text-align: right
+      @media screen and (max-width: 500px)
+        order: 1
+        margin: 16px 0 24px
+        flex-basis: 100%
+        text-align: left
 
 
   .full
