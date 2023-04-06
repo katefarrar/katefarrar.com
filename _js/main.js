@@ -6,15 +6,25 @@ function toggleTheme() {
   if (document.body.classList.contains('dark-theme')) {
     icon.classList.remove('ph-sun');
     icon.classList.add('ph-moon');
+    localStorage.setItem('theme', 'dark');
   } else {
     icon.classList.remove('ph-moon');
     icon.classList.add('ph-sun');
+    localStorage.setItem('theme', 'light');
   }
 }
 
 btn.addEventListener('click', toggleTheme);
 
-// Add this code to default to dark theme on page load
-document.body.classList.add('dark-theme');
-icon.classList.remove('ph-bold-light');
-icon.classList.add('ph-bold-dark');
+// Check if user has set a theme preference before
+const theme = localStorage.getItem('theme');
+
+if (theme === 'light') {
+  document.body.classList.remove('dark-theme');
+  icon.classList.remove('ph-moon');
+  icon.classList.add('ph-sun');
+} else {
+  document.body.classList.add('dark-theme');
+  icon.classList.remove('ph-sun');
+  icon.classList.add('ph-moon');
+}

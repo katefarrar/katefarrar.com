@@ -11,6 +11,10 @@
   .content
     display: flex
     align-items: center
+    
+    @media screen and (max-width: 500px)
+      margin-top: 64px
+      margin-bottom: 64px
 
   #intro
     padding-top: 0;
@@ -30,9 +34,19 @@
       
       .icon
         color: var(--teal10)
-        margin-right: 16px;
+        :not(:last-child)
+          margin-right: 16px;
         i
           font-size: $8xl
+          
+          @media screen and (max-width: 768px)
+            font-size: $6xl
+          
+          @media screen and (max-width: 499px)
+            font-size: $5xl
+          
+          @media screen and (max-width: 400px)
+            font-size: $4xl
   
   .button
     margin-top: 24px;

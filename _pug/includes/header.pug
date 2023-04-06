@@ -1,10 +1,13 @@
 header
   .wrapper
-    h2
-      a(href='/') #[i.ph-bold.ph-lightning] Kate Farrar
+    .logo
+      h2
+        a(href='/') #[i.ph-bold.ph-lightning] Kate Farrar
 
-    ul.main-nav 
-      li: a(href="/work") Work
-      li: a(href="/about") About
-      li: a(href='mailto:katefarrar@gmail.com') Contact
-      li: a#toggle-btn <i id="mode-icon" class="ph-bold ph-moon"></i>
+    .nav
+      ul.main-nav 
+        li: a(href="/work") Work
+        li: a(href="/about") About
+        li: a(href='mailto:katefarrar@gmail.com') Contact
+        li: a#toggle-btn 
+          span <i id="mode-icon" class="ph-bold ph-moon"></i>

@@ -7,7 +7,7 @@ footer
   border-top: $border
   text-align: center;
   padding: 24px 32px
-  height: 100px;
+  min-height: 100px;
 
   .wrapper
     display: flex;
@@ -15,6 +15,26 @@ footer
     align-items: center;
     max-width: 1664px;
     margin: 0 auto;
+
+    .copy
+      flex-basis: 45%
+      text-align: left
+
+    .social
+      flex-basis: 45%
+      text-align: right
+
+    @media screen and (max-width: 768px)
+      flex-direction: column
+      justify-content: flex-start
+
+      .copy
+        flex-basis: 100%
+        margin-bottom: 16px
+        
+      .social
+        flex-basis: 100%
+        margin-bottom: 16px
 
   p
     margin-bottom: 0
