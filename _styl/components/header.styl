@@ -33,7 +33,7 @@ header
         
       .main-nav
         flex-basis: 100%
-        margin-bottom: 16px
+        margin-bottom: 8px
 
 
     h2
@@ -41,7 +41,7 @@ header
       text-align: left
 
       a
-        color:var(--mauve12)
+        color:var(--crimson12)
         transition: 0.2s ease all
         &:hover
           opacity: .8
@@ -80,6 +80,19 @@ header
 
       #toggle-btn
         cursor: pointer
+        // border: 1px solid var(--crimson12)
+        // box-shadow: $button-shadow
+        // border-radius: $round
+        // padding: 8px;
+        font-size: 10px;
+        position: relative;
+        top: -2px;
+        
+        i
+          position: relative;
+          top: -2px;
+          vertical-align: middle
+          font-size: $md
 
 
 @media screen and (max-width: 320px) {
