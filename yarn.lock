@@ -551,6 +551,14 @@ chalk@^4.1.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+chalk@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
+  integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 chalk@~4.1.0:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
@@ -589,10 +597,10 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
-clean-css@^5.0.1:
-  version "5.1.5"
-  resolved "https://registry.npmjs.org/clean-css/-/clean-css-5.1.5.tgz"
-  integrity sha512-9dr/cU/LjMpU57PXlSvDkVRh0rPxJBXiBtD0+SgYt8ahTCsXtfKjCkNYgIoTC6mBg8CFr5EKhW3DKCaGMUbUfQ==
+clean-css@^5.3.2:
+  version "5.3.2"
+  resolved "https://registry.npmjs.org/clean-css/-/clean-css-5.3.2.tgz"
+  integrity sha512-JVJbM+f3d3Q704rF4bqQ5UUyTtuJ0JRKNbTKVEeujCCBoMdkEi+V+e8oktO9qGQNSvHrFTM6JZRXrUvGR1czww==
   dependencies:
     source-map "~0.6.0"
 
@@ -1342,6 +1350,14 @@ grunt-contrib-clean@^2.0.0:
     async "^2.6.1"
     rimraf "^2.6.2"
 
+grunt-contrib-concat@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.npmjs.org/grunt-contrib-concat/-/grunt-contrib-concat-2.1.0.tgz"
+  integrity sha512-Vnl95JIOxfhEN7bnYIlCgQz41kkbi7tsZ/9a4usZmxNxi1S2YAIOy8ysFmO8u4MN26Apal1O106BwARdaNxXQw==
+  dependencies:
+    chalk "^4.1.2"
+    source-map "^0.5.3"
+
 grunt-contrib-connect@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/grunt-contrib-connect/-/grunt-contrib-connect-3.0.0.tgz"
@@ -1365,13 +1381,13 @@ grunt-contrib-copy@^1.0.0:
     chalk "^1.1.1"
     file-sync-cmp "^0.1.0"
 
-grunt-contrib-cssmin@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/grunt-contrib-cssmin/-/grunt-contrib-cssmin-4.0.0.tgz"
-  integrity sha512-jXU+Zlk8Q8XztOGNGpjYlD/BDQ0n95IHKrQKtFR7Gd8hZrzgqiG1Ra7cGYc8h2DD9vkSFGNlweb9Q00rBxOK2w==
+grunt-contrib-cssmin@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.npmjs.org/grunt-contrib-cssmin/-/grunt-contrib-cssmin-5.0.0.tgz"
+  integrity sha512-SNp4H4+85mm2xaHYi83FBHuOXylpi5vcwgtNoYCZBbkgeXQXoeTAKa59VODRb0woTDBvxouP91Ff5PzCkikg6g==
   dependencies:
-    chalk "^4.1.0"
-    clean-css "^5.0.1"
+    chalk "^4.1.2"
+    clean-css "^5.3.2"
     maxmin "^3.0.0"
 
 grunt-contrib-pug@^3.0.0:
@@ -1381,6 +1397,11 @@ grunt-contrib-pug@^3.0.0:
   dependencies:
     chalk "^2.4.1"
     pug "^3.0.0"
+
+grunt-contrib-rename@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/grunt-contrib-rename/-/grunt-contrib-rename-0.2.0.tgz"
+  integrity sha512-PRRCO++fYytyuytE2ABX3f5Qg+cfuoNMj9vRnCd+fgw5gflXmzma//ibRoE0Ua+DYaTYwTeqsEbax/x4oKawKQ==
 
 grunt-contrib-stylus@^1.2.0:
   version "1.2.0"
@@ -1465,7 +1486,7 @@ grunt-postcss-import@^0.0.1:
     jquery-deferred "^0.3.0"
     lodash "^2.4.1"
 
-grunt@^1.5.3, grunt@>=0.4.0, grunt@>=0.4.5:
+grunt@^1.5.3, grunt@>=0.4.0, grunt@>=0.4.5, grunt@>=1.4.1:
   version "1.5.3"
   resolved "https://registry.npmjs.org/grunt/-/grunt-1.5.3.tgz"
   integrity sha512-mKwmo4X2d8/4c/BmcOETHek675uOqw0RuA/zy12jaspWqvTp4+ZeQF1W+OTpcbncnaBsfbQJ6l0l4j+Sn/GmaQ==
@@ -2993,6 +3014,11 @@ source-map@^0.1.34:
   integrity sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=
   dependencies:
     amdefine ">=0.0.4"
+
+source-map@^0.5.3:
+  version "0.5.7"
+  resolved "https://registry.npmjs.org/source-map/-/source-map-0.5.7.tgz"
+  integrity sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ==
 
 source-map@^0.5.6:
   version "0.5.7"
