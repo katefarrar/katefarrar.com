@@ -3,18 +3,103 @@
 --------------------------------------------------------------------*/
 .work
 
-  .intro
-    margin-bottom: 40px;
+  .content
+    display: flex;
+    align-items: center;
+
+  section
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex-direction: column;
+
+ul
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+ ul li
+    margin-top: 8px;
+    font-size: $1xl
+
+  ul li i
+    position: relative;
+    top: 2px;
+    padding-right: 8px;
+
+  .inline
+    padding-top: 10px;
+    padding-right: 2px;
+    padding-left: 2px;
+
+h1.title
+  text-align: left;
+  font-size: $3xl
+
+.row 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px;
 
 
-  h1.title
-    text-align: left;
-    font-size: $3xl
+.column-one 
+  flex: 1;
 
-  p
-    a
-      border-bottom: 1px solid var(--crimson10)
-      margin-right: 2px
+
+.column-two 
+  max-width: 600px;
+
+.callout
+    background-color: var(--mauve2)
+    border: $border
+    border-radius: $round;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    .button
+      margin-top: 0;
+
+      i
+        vertical-align: middle;
+        padding-top: 8px;
+    
+    h3
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: $2xl;
+      display: flex;
+        
+    i
+      font-size: $5xl;
+      display: inline-block
+      padding-bottom: 8px
+      margin-right: 12px
+      vertical-align: middle
+    
+    h4
+      margin-bottom: 0;
+
+.inner h3
+  margin-bottom: 0;
+  margin-top: 0;
+
+.intro h4
+  margin-bottom: 0;
+  
+@media (max-width: 768px) 
+  .intro, .inner
+    max-width: 100%;
+
+  .inner ul
+    display: block;
+
+p
+  a
+    border-bottom: 1px solid var(--crimson10)
+    margin-right: 2px
 
   .button
     margin-top: 16px;
@@ -42,48 +127,7 @@
       top: 40%;
       max-width: 60%;
 
-  .callout
-    background-color: var(--mauve2)
-    border: $border
-    border-radius: $round;
-    padding: 32px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 60%;
-
-    .button
-      margin-top: 0;
-    
-    h3
-      margin-top: 0;
-      margin-bottom: 1.2rem;
-      font-size: $2xl;
-      
-      span 
-        display: inline-block;
-        
-    i
-      font-size: 64px;
-      display: inline-block
-      padding-bottom: 3px
-      padding-right: 8px
-      vertical-align: middle
-
-    p
-      font-size: 16px;
-      margin-bottom: 0;
-      
-    p.small
-      font-size: 14px;
-      padding-bottom: 5px;
-      margin-bottom: 0;
-      
-    .button-wrap
-      margin: 20px 10px 0 0;
-      
-      a.private
-        color: var(--crimson10)
-
+  
       
   .work-info
     border-top: $border;
