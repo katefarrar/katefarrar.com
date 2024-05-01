@@ -1,7 +1,26 @@
 footer
 	.wrapper
 		.copy
-			<i class="ph-bold ph-lightning"></i> Copyright ©<script> document.write(new Date().getFullYear())</script> Kate Farrar
+			i(class="ph-bold ph-lightning" aria-hidden="true")
+			|  Copyright ©
+			script(type="text/javascript")
+				| document.write(new Date().getFullYear())
+			|  Kate Farrar
 
 		.social
-			<a href="https://linkedin.com/in/katefarrar" target="_blank"><i class="ph ph-linkedin-logo"></a></i> <a href="https://twitter.com/katefarrar" target="_blank"><i class="ph ph-twitter-logo"></i></a> <a href="https://instagram.com/katefarrar" target="_blank"><i class="ph ph-instagram-logo"></i></a> <a href="https://dribbble.com/katefarrar" target="_blank"><i class="ph ph-dribbble-logo"></i></a> <a href="https://github.com/katefarrar" target="_blank"><i class="ph ph-github-logo"></i></a>
+			ul
+				li
+					a(href="https://linkedin.com/in/katefarrar" target="_blank" aria-label="Visit LinkedIn profile, opens in new tab")
+						i(class="ph ph-linkedin-logo" aria-hidden="true")
+				li
+					a(href="https://twitter.com/katefarrar" target="_blank" aria-label="Visit Twitter profile, opens in new tab")
+						i(class="ph ph-twitter-logo" aria-hidden="true")
+				li
+					a(href="https://instagram.com/katefarrar" target="_blank" aria-label="Visit Instagram profile, opens in new tab")
+						i(class="ph ph-instagram-logo" aria-hidden="true")
+				li
+					a(href="https://dribbble.com/katefarrar" target="_blank" aria-label="Visit Dribbble profile, opens in new tab")
+						i(class="ph ph-dribbble-logo" aria-hidden="true")
+				li
+					a(href="https://github.com/katefarrar" target="_blank" aria-label="Visit GitHub profile, opens in new tab")
+						i(class="ph ph-github-logo" aria-hidden="true")

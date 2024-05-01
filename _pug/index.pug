@@ -11,7 +11,7 @@ block content
   .content
 
     section#intro
-      img(src="/assets/images/shelf-indigo.svg" alt="bookshelf")
+      img(src="/assets/images/shelf-indigo.svg" alt="Decorative illustration of a bookshelf with two books, a hat, a record, a plant, and a framed picture of two dogs and a cat")
 
       div
         h1 Hello! I'm Kate.
@@ -20,6 +20,9 @@ block content
 
         div
           span.button.lg.work-btn
-            a(href='/work') #[i.ph.ph-cursor-click] Learn about my work 
+            a(href='/work' aria-label="Learn more about my work" role="button")
+              i.ph.ph-cursor-click(aria-hidden="true")
+              | Learn about my work
+
 
   include includes/footer

@@ -1,13 +1,14 @@
 header
   .wrapper
     .logo
-      h2
-        a(href='/') #[i.ph-bold.ph-lightning] Kate Farrar
+      a(href='/' aria-label='Return to homepage')
+        i.ph-bold.ph-lightning(aria-label='decorative lightning bolt')
+        | Kate Farrar
 
     .nav
-      ul.main-nav 
+      ul.main-nav(role="navigation")
         li: a(href="/work") Work
         li: a(href="/about") About
-        li: a(href='mailto:kate.farrar@gmail.com') Contact
-        li: a#toggle-btn 
-          span <i id="mode-icon" class="ph-bold ph-moon"></i>
+        li: a(href='mailto:kate.farrar@gmail.com' aria-label="Email Contact") Contact
+        li: a#toggle-btn(role="button" aria-label="Toggle color mode") 
+          i#mode-icon(class="ph-bold ph-moon" aria-hidden="true")

@@ -18,11 +18,9 @@ footer
     flex-wrap: wrap
 
     .copy
-      flex-basis: 45%
       text-align: left
 
     .social
-      flex-basis: 45%
       text-align: right
 
     @media screen and (max-width: 768px)
@@ -46,6 +44,15 @@ footer
     color: var(--teal10)
 
   .social
+    ul
+      justify-content: unset;
+      display: flex;
+      gap: 8px;
+
+    li 
+      margin-top: 0;
+      display: inline;
+
     a
       font-size: $3xl
       transition: 0.2s ease all

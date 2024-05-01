@@ -15,50 +15,95 @@ block content
 
     section
       .intro
-        h1.title Work Experience
+        h1.title Work
 
         h3 I'm currently a Senior Product Design Manager at 
           span
-            i.ph.ph-fire.inline
-            span FireHydrant.
+            i.ph.ph-fire.inline(aria-hidden='true')
+            | FireHydrant.
 
         h4 Visit 
-          <a href="https://firehydrant.com/blog" target="_blank">firehydrant.com/blog</a> 
+          a(href="https://firehydrant.com/blog" target="_blank" rel="noopener noreferrer" aria-label="Visit the FireHydrant blog (opens in new tab)")
+            | firehydrant.com/blog 
           span to see what we've been building lately.
 
-      .inner
+      .experience
+        h3 Previous experience:
 
-        h3 Previously:
+        .row
+          .col-one
+            .name 
+              i.ph.ph-binoculars(aria-hidden='true')
+              a(href="https://elastic.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Elastic (opens in new tab)")
+                | Elastic&nbsp;
+            span Senior Product Designer
+          .col-two 2020 - 2022
 
-        ul 
-          li
-            i.ph.ph-binoculars
-            a(href="https://elastic.com" target="_blank") Elastic
+        .row 
+          .col-one
+            .name 
+              i.ph.ph-gift(aria-hidden='true')
+              a(href="https://bonus.ly" target="_blank" rel="noopener noreferrer" aria-label="Visit Bonusly (opens in new tab)")
+                | Bonusly&nbsp;
+            span Lead Product Designer
+          .col-two 2019 - 2020
 
-          li
-            i.ph.ph-gift
-            a(href="https://bonus.ly" target="_blank") Bonusly
 
-          li
-            i.ph.ph-pizza
-            a(href="https://andyet.com" target="_blank") &yet
+        .row 
+          .col-one
+            .name
+              i.ph.ph-pizza(aria-hidden='true')
+              a(href="https://andyet.com" target="_blank" rel="noopener noreferrer" aria-label="Visit &yet (opens in new tab)")
+                | &yet&nbsp;
+            span Product Designer
+          .col-two 2017 - 2019
 
-          li
-            i.ph.ph-strategy
-            a(href="https://teamsnap.com" target="_blank") TeamSnap
 
-          li
-            i.ph.ph-hand-heart
-            a(href="https://causelabs.com" target="_blank") CauseLabs        
+        .row 
+          .col-one
+            .name
+              i.ph.ph-strategy(aria-hidden='true')
+              a(href="https://teamsnap.com" target="_blank" rel="noopener noreferrer" aria-label="Visit TeamSnap (opens in new tab)")
+                | TeamSnap&nbsp;
+            span Product Designer
+          .col-two 2017
+
+
+        .row 
+          .col-one
+            .name
+              i.ph.ph-hand-heart(aria-hidden='true')
+              a(href="https://causelabs.com" target="_blank" rel="noopener noreferrer" aria-label="Visit CauseLabs (opens in new tab)")
+                | CauseLabs&nbsp;
+            span Lead Product Designer
+          .col-two 2014 - 2017
+
+        .row 
+          .col-one
+            .name
+              i.ph.ph-code(aria-hidden='true')
+              a(href="https://meltmedia.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit CauseLabs (opens in new tab)")
+                | meltmedia&nbsp;
+            span Web Developer Team Lead
+          .col-two 2010 - 2013
+
+        .row 
+          .col-one
+            .name
+              i.ph.ph-lightning(aria-hidden='true')
+              | Kate Farrar Creative&nbsp;
+            span Principal Designer & Developer
+          .col-two 2006 - 2014
+
+
 
 
       .callout
-        i.ph.ph-question
-
-        .div
+        i.ph.ph-question(aria-hidden='true')
+        .inner
           h3 Interested in seeing Case Studies?
-          h4
-            a(href='mailto:kate.farrar@gmail.com') Email me for access.
+          a(href='mailto:kate.farrar@gmail.com' aria-label='Email Kate Farrar to request access to case studies') Email me for access.
+
 
 
   include includes/footer

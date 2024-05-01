@@ -16,8 +16,19 @@ header
     max-width: 1664px;
     margin: 0 auto;
 
-    .logo
-      flex-basis: 45%
+    .logo      
+      font-size: $2xl
+      text-align: left
+
+      a
+        color:var(--teal12)
+        transition: 0.2s ease all
+        &:hover
+          opacity: .8
+
+      i
+        color: var(--teal10)
+        padding-right: 8px
       
     .nav
       text-align: right
@@ -33,20 +44,6 @@ header
       .main-nav
         flex-basis: 100%
         margin-bottom: 8px
-
-
-    h2
-      font-size: $2xl
-      text-align: left
-
-      a
-        color:var(--teal12)
-        transition: 0.2s ease all
-        &:hover
-          opacity: .8
-
-      i
-        color: var(--teal10)
 
 
 
