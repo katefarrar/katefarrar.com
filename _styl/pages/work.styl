@@ -20,22 +20,49 @@
     text-align: left;
     font-size: $3xl
 
+    i
+      margin-right: 8px;
+      position: relative;
+      top: 2px;
+
+  
+
   .experience
     margin-top: 48px;
 
-    h3
-      margin-bottom: .5rem;
+    h2
+      margin-bottom: 1rem;
 
-  .row
+    i
+      margin-right: 8px;
+      position: relative;
+      top: 2px;
+
+    .name
+      font-weight: $medium;
+      font-size: $xl
+      margin-right: 4px;
+
+  .work-row.no-hover:hover
+        color: var(--mauve12)
+        opacity: .8
+
+  .work-row.first
+    border-top: 1px solid var(--mauve4)
+
+
+  .work-row
     display: flex
+    color: inherit;
     justify-content: space-between
     border-bottom: 1px solid var(--mauve4)
-    padding: 24px 0;
+    padding: 16px;
     align-items: baseline
     flex-wrap: wrap
     @media (max-width: 768px)
       flex-direction: column;
-      
+    &:hover
+      color: var(--crimson10)
 
     .col-one
       display: flex;
@@ -44,11 +71,13 @@
       @media (max-width: 768px)
         flex-direction: column;
       i
-        padding-right: 8px;
+        padding-right: px;
         top: 2px
+        font-size: $2xl
         position: relative;
       span
-        font-size: $lg;
+        font-size: $md;
+        color: var(--mauve11)
 
   .callout
       margin-top: 48px;
@@ -73,6 +102,9 @@
       i
         font-size: $5xl;
         margin-right: 12px
+
+      a:hover
+        border-bottom: 1px solid var(--crimson10)
       
 
 @media (max-width: 768px) 
@@ -84,8 +116,10 @@
 
 p
   a
-    border-bottom: 1px solid var(--crimson10)
     margin-right: 2px
+    &:hover
+      border-bottom: 1px solid var(--crimson10)
+
 
   .button
     margin-top: 16px;
