@@ -1,0 +1,65 @@
+extends layout
+
+block vars
+  - var pageDescription = 'Kate Farrar is a product designer and developer living in Denver, CO.'
+  - var bodyClass = 'animate__animated animate__fadeIn work'
+  - var currentPage = 'Work'
+
+block title
+  | Recent Work - 
+
+block content
+
+  include includes/header
+
+  .content
+
+    section
+      h1 
+        i.ph-duotone.ph-broadcast
+        | Signals
+
+      img(src="/assets/images/feature-signals-4.png" width="100%" alt="FireHydrant Design System web interface") 
+
+      h3 New product offering to add Alerting and On-Call functionality to the FireHydrant Incident Management platform.
+
+      h2 The Problem 
+      ul
+        li Legacy alerting tools are misaligned with modern software practices
+        li Extremely expensive and have no material innovation for years
+        li Existing tools do nothing to help an on-call engineer triage an incident
+        li No handoff into an integrated Incident Management tool
+        li Lack of policy enforcement for teams, schedules, and notifications
+
+      h2 Research
+
+      h2 Building a holistic experience 
+
+      h2 Putting the pieces together
+
+      h2 Go To Market
+
+      h2 Alpha
+
+      h2 Beta
+
+      h2 GA
+
+      h2 Measuring Success
+
+      ul
+        li Quarter million in ARR closed in Beta
+        li Two biggest competitors in the space launched similar offerings within weeks of the Signals release
+        li Overwhelmingly positive feedback from existing and new users
+
+      blockquote "How soon can we switch to Signals?"
+
+
+
+
+
+
+  include includes/footer
+
+
+

@@ -3,6 +3,7 @@ extends layout
 block vars
   - var pageDescription = 'Kate Farrar is a product design leader in CO.'
   - var bodyClass = 'animate__animated animate__fadeIn home'
+  - var currentPage = 'Home'
 
 block content
 
@@ -11,20 +12,19 @@ block content
   .content
 
     section#intro
-      img(src="/assets/images/shelf-indigo.svg" alt="Decorative illustration of a bookshelf with two books, a hat, a record, a plant, and a framed picture of two dogs and a cat")
 
       div
         h1 
           i.ph.ph-hand-waving
-          | Hello there!
-
-        h2 I'm an inclusive design leader dedicated to building meaningful user experiences through cross-team collaboration.
+          | Hello there! I'm a Product Designer building human solutions to technical problems.
 
         div
           span.button.lg.work-btn
             a(href='/work' aria-label="Learn more about my work" role="button")
               i.ph.ph-cursor-click(aria-hidden="true")
               | Learn about my work
+
+        //- img(src="/assets/images/shelf-indigo.svg" alt="Decorative illustration of a bookshelf with two books, a hat, a record, a plant, and a framed picture of two dogs and a cat")
 
 
   include includes/footer

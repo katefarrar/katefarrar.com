@@ -7,8 +7,10 @@ header
 
     .nav
       ul.main-nav(role="navigation")
-        li: a(href="/work") Work
-        li: a(href="/about") About
+        li(class=currentPage === 'Work' ? 'active' : '') 
+          a(href='/work') Work
+        li(class=currentPage === 'About' ? 'active' : '') 
+          a(href='/about') About
         li: a(href='mailto:kate.farrar@gmail.com' aria-label="Email Contact") Contact
         li: a#toggle-btn(role="button" aria-label="Toggle color mode") 
           i#mode-icon(class="ph-bold ph-moon" aria-hidden="true")
