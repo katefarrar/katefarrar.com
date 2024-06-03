@@ -1,7 +1,7 @@
 extends layout
 
 block vars
-  - var pageDescription = 'Kate Farrar is a product designer and developer living in Denver, CO.'
+  - var pageDescription = 'Kate Farrar is a designer living in Colorado.'
   - var bodyClass = 'animate__animated animate__fadeIn work'
   - var currentPage = 'Work'
 
@@ -12,18 +12,43 @@ block content
 
   include includes/header
 
-  .content
+  .content.projects
 
     section
       h1 
         i.ph-duotone.ph-broadcast
         | Signals
 
-      img(src="/assets/images/feature-signals-4.png" width="100%" alt="FireHydrant Design System web interface") 
+      h3 Alerting and on-call seamlessly incorporated into an incident management platform.
 
-      h3 New product offering to add Alerting and On-Call functionality to the FireHydrant Incident Management platform.
+      img(src="/assets/images/feature-signals-4.png" width="100%" alt="FireHydrant Design System web interface")
 
-      h2 The Problem 
+      .row
+        .column
+          div
+            h3 The Product
+            p FireHydrant
+
+          div
+            h3 My Role 
+            p Lead Product Designer
+
+        .column 
+          div
+            h3 The Team
+            p Head of Product, Technical Lead
+
+          div
+            h3 Timeframe
+            p Late 2023 - March 2024
+
+
+      h2 Background
+
+      h2 Research
+
+      h2 The Problem
+
       ul
         li Legacy alerting tools are misaligned with modern software practices
         li Extremely expensive and have no material innovation for years
@@ -31,13 +56,10 @@ block content
         li No handoff into an integrated Incident Management tool
         li Lack of policy enforcement for teams, schedules, and notifications
 
-      h2 Research
 
       h2 Building a holistic experience 
 
       h2 Putting the pieces together
-
-      h2 Go To Market
 
       h2 Alpha
 

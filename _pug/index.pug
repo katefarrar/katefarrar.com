@@ -15,16 +15,61 @@ block content
 
       div
         h1 
-          i.ph.ph-hand-waving
-          | Hello there! I'm a Product Designer building human solutions to technical problems.
+          i.ph-duotone.ph-hand-waving
+          | Hello there! 
+        h1.headline I'm a Product Designer building human solutions to technical problems.
 
-        div
-          span.button.lg.work-btn
-            a(href='/work' aria-label="Learn more about my work" role="button")
-              i.ph.ph-cursor-click(aria-hidden="true")
-              | Learn about my work
+    section.work
 
-        //- img(src="/assets/images/shelf-indigo.svg" alt="Decorative illustration of a bookshelf with two books, a hat, a record, a plant, and a framed picture of two dogs and a cat")
+      .work-card
+        .info
+          h2 
+            i.ph-duotone.ph-broadcast
+            | Signals
+
+
+          p Alerting and on-call seamlessly incorporated into the incident management lifecycle.
+
+
+          a.button(href="/work/signals") View project
+
+        img(src="/assets/images/feature-signals-4.png" alt="FireHydrant Design System web interface")
+
+      .work-card 
+        .info
+          h2
+            i.ph-duotone.ph-layout
+            | FireHydrant Design System
+
+          p A design system that inspires trust and confidence from users while empowering the team to build faster.
+
+          a.button(href="/work/fh-design-system") View project
+
+        img(src="/assets/images/feature-design-system-2.png" alt="FireHydrant Design System web interface")
+
+      .work-card 
+        .info
+          h2 
+            i.ph-duotone.ph-siren
+            | Incident Declaration
+
+          p Re-imagining the Incident Declaration experience in the web UI to provide a streamlined and improved experience.
+
+          a.button(href="/work/incident-declaration") View project
+
+        img(src="/assets/images/feature-signals.png" alt="FireHydrant Design System web interface")
+
+      .work-card 
+        .info
+          h2 
+            i.ph-duotone.ph-package
+            | Package Driven Observability
+
+          p Delivering holistic platform value during onboarding with integration-specific, ready-to-use features.
+
+          a.button(href="/work/package-driven-obs") View project
+
+        img(src="/assets/images/feature-signals.png" alt="FireHydrant Design System web interface")
 
 
   include includes/footer

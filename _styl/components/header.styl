@@ -32,12 +32,6 @@ header
         color: var(--teal10)
         padding-right: 8px
       
-    .nav
-      text-align: right
-
-    .active
-      font-weight: bold
-      color: red
 
     @media screen and (max-width: 768px)
       flex-direction: column
@@ -79,6 +73,10 @@ header
         transition: 0.2s ease all
         &:hover
           opacity: .8
+
+      a.active
+        font-weight: $bold
+        color:var(--teal10)
 
       #toggle-btn
         cursor: pointer

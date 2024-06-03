@@ -1,0 +1,43 @@
+extends layout
+
+block vars
+  - var pageDescription = 'Kate Farrar is a designer and technologist'
+  - var bodyClass = 'animate__animated animate__fadeIn about'
+  - var currentPage = 'Fun'
+
+
+block content
+
+  include includes/header
+
+  .content
+
+    section
+      h1.title
+        i.ph-duotone.ph-sunglasses
+        | Fun
+
+      .row
+        .column-one
+          p I'm an inclusive design leader with over 15 years of industry experience. I am passionate about leading design on cross functional teams and creating a sense of belonging for people at work. I’m committed to helping designers be effective leaders on cross-functional teams, empathize with their users through research and testing, and find meaning in their work.
+
+          p I live in Colorado with my wife, Abby. We have two dogs, Norah and Rosie, and one cat, Henry.
+
+          p Send me some 
+            a(href="mailto:kate.farrar@gmail.com" class="link" aria-label="Send Kate Farrar an email") electronic mail
+            |  or connect with me on 
+            a(href="https://www.linkedin.com/in/katefarrar/" target="_blank" class="link" rel="noopener noreferrer" aria-label="Visit Kate Farrar on LinkedIn, opens in new tab") LinkedIn
+            | . Also known to frequent 
+            a(href="https://twitter.com/katefarrar" target="_blank" class="link" rel="noopener noreferrer" aria-label="Visit Kate Farrar on Twitter, opens in new tab") Twitter
+            | , 
+            a(href="https://instagram.com/katefarrar" target="_blank" class="link" rel="noopener noreferrer" aria-label="Visit Kate Farrar on Instagram, opens in new tab") Instagram
+            | , 
+            a(href="https://dribbble.com/katefarrar" target="_blank" class="link" rel="noopener noreferrer" aria-label="Visit Kate Farrar on Dribbble, opens in new tab") Dribbble
+            | , & 
+            a(href="https://github.com/katefarrar" target="_blank" class="link" rel="noopener noreferrer" aria-label="Visit Kate Farrar on GitHub, opens in new tab") GitHub
+            | .
+
+        .column-two
+          img(src='/assets/images/kate-2022.jpg' alt="Kate Farrar smiling in a street lined with trees and cars")
+
+  include includes/footer

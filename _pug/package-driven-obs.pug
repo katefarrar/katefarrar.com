@@ -1,0 +1,116 @@
+extends layout
+
+block vars
+  - var pageDescription = 'Kate Farrar is a designer living in Colorado.'
+  - var bodyClass = 'animate__animated animate__fadeIn work'
+  - var currentPage = 'Work'
+
+block title
+  | Recent Work - 
+
+block content
+
+  include includes/header
+
+  .content.projects
+
+    section
+      h1 Package Driven Observability
+
+      h3 Delivering holistic platform value during onboarding with integration-specific, ready-to-use features.
+
+      .row
+        .column
+          div
+            p.details The Product 
+              span Elastic Observability
+
+          div
+            p.details My Role 
+              span Lead Product Designer
+
+        .column 
+          div
+            p.details The Team 
+              span Technical Lead, 3 Senior Engineers
+
+          div
+            p.details Timeframe 
+              span 2022
+
+      img(src="/assets/images/feature-signals-4.png" width="100%" alt="FireHydrant Design System web interface")
+
+      section
+
+        h2 Background
+
+        p In early 2022,  
+
+        p I lead the project alongside an Engineering Technical Lead. We worked across the Observability organization as well as with the Elastic UI design system team to establish cohesion throughout the product. The following case study shows the end to end product design effort which resulted in a Saved Views feature being implemented in the Observability Logs solution.
+
+      section
+
+        h2 Research
+
+        img(src="/assets/images/work/obs-1.png" width="100%" alt="Four different video chat frames with people in them")
+
+        p I conducted five, hour-long user interviews with a mix a of internal users, external users, and Solutions Architecrs. I used Zoom to conduct the interviews and the Dovetail platform to synthesize interviews and pull out themes.
+
+        h3 Challenges
+
+        p Guiding the user without asking leading questions that will simply validate our hypothesis. Getting feedback on the current experience while still allowing for the user to present their ideal experience.
+
+        h3 Key Findings 
+
+        ul
+          li Users want to see their data in context out of the box without having to build complex Dashboards.
+          li Current experience is disjointed. Onboarding doesn't flow well into Observability solution.
+          li Different roles have different needs.
+          li Users range from beginners to “power users”
+
+      section
+
+        h2 Design Workshop
+
+        p Workshop description
+
+        h3 User Journeys + Personas
+
+        h3 How might we provide a way for users to see the data they are in ingesting in context without having to set up Dashboards or complex filters?
+
+      section
+
+        h2 Early Concepts + Feedback
+
+        p Feedback from engineering team.
+
+      section
+
+        h2 Prototypes
+
+        p prototypes
+
+        h3 User Persona Validation
+
+        h3 Implementation Plan
+
+        p Implementation details
+
+      section
+        h2 Technical Preview
+
+      section
+
+        h2 Feedback
+
+        blockquote "Can we get this functionality across Observability?"
+
+      section 
+
+        h2 Next steps
+
+
+  include includes/footer
+
+
+
