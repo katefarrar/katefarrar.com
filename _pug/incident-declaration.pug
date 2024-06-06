@@ -12,68 +12,107 @@ block content
 
   include includes/header
 
-  .content
+  .content.projects
 
     section
-      h1 
-        i.ph-duotone.ph-broadcast
+      h1.title 
+        i.ph-fill.ph-siren
         | Incident Declaration
 
       h3 Re-imagining the Incident Declaration experience in the web UI to provide a streamlined and improved experience.
 
-      p.meta Lead Product Designer
+    img.feature(src="/assets/images/feature-signals-4.png" width="100%" alt="FireHydrant Design System web interface")
 
-      h3 The Team
+    .callout-wrap
+      .row
+        .column
+          div
+            h3 The Product
+            p FireHydrant
+              i.ph.ph-arrow-square-out
 
-      p.meta Head of Product, Technical Lead
+          div
+            h3 My Role 
+            p Lead Product Designer
 
-      h3 Dates 
+        .column 
+          div
+            h3 The Team
+            p Head of Product, Technical Lead
 
-      p.meta 2022-2023
+          div
+            h3 Timeframe
+            p Dec 2022 - Feb 2023
 
-      img(src="/assets/images/feature-signals-4.png" width="100%" alt="FireHydrant Design System web interface") 
-
-
-
-      h2 Background
-
+    section
       h2 The Problems
 
-      h3 UX
+      h3 User Experience
       p One of the main value points of the product FireHydrant product is the ability to declare an incident in seconds. At this time a majority of our users relied on our Slack app, but the ones that used the FireHydrant web UI had a feature limited experience.
 
       h3 Business
       p Large orgs were hesitant to adopt widely adopt FireHydrant because of the gap in user experience between Slack and the web UI.Orgs that didn't use Slack were not confident in choosing FireHydrant as their Incident Management solution because of the shortcomings of the web UI particularly in regards to Incident Declaration.
 
 
+    section
+      h2 Audit of current experience
 
-      h2 Audit of current experience 
+      ul
+        li Unclear path for users.
+        li Required v. not required sections.
+        li Help text is inconsistent and confusing.
+        li Form is long and not conducive for taking quick action.
 
+    section
       h2 Challenges
 
-      h2 Goals
+      ul 
+        li Improve experience without removing features or complexity
+        li Feature parity with current Slack experience
+        li Ability to choose an incident type
+        li Optimize user flow, IA, &amp; layout
+        li Create a resolved incident
+        li Create reusable patterns for all forms that will be used across the product 
 
+    section
       h2 Research
 
-      h2 Information Architecture
+      p Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.
 
-      h2 Prototypes
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
 
-      h2 Testing 
+    section
+      h2 Beta
 
-      h2 Phased Rollout
+      p Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.
 
-      h2 Updated UI
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
 
-      blockquote "We love that that the form defaults to just showing required fields as it keeps cognitive load low."
+    section
+      h2 GA
 
-      blockquote "Wow, this is a level up. This is really cool. When can we roll this out to all of our team?."
+      p Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.
 
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
 
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
 
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
 
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
 
+    .callout.quote
+      i.ph-duotone.ph-chat-text
+      blockquote.inner
+        | "How soon can we switch to Signals?"
+        div
+          cite - Engineering Leader from Signals Beta Testing Group
 
+    .callout
+      i.ph-duotone.ph-arrow-square-out(aria-hidden='true')
+      .inner
+        h3 See more at 
+          a(href='https://firehydrant.com/signals' target='blank') firehydrant.com/signals
 
 
   include includes/footer
