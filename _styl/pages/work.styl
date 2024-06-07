@@ -39,7 +39,7 @@
       width: 60%
       border-radius: $round
 
-    i
+    h2 i
       margin-right: 8px;
       position: relative;
       top: 2px;
@@ -123,7 +123,7 @@
         margin-right: 12px
 
       a:hover
-        border-bottom: 1px solid var(--crimson10)
+        border-bottom: 1px solid var(--indigo10)
 
   .quote
       align-items: start
@@ -142,8 +142,9 @@
 p
   a
     margin-right: 2px
+    transition: none
     &:hover
-      border-bottom: 1px solid var(--crimson10)
+      border-bottom: 1px solid var(--indigo10)
 
 
   .button
@@ -366,9 +367,36 @@ p
 
   ul
     li
-      list-style: inside
-      padding-left: 24px
+      display: flex
+      align-items: flex-start
+      list-style: none
+      gap: 12px
       margin-bottom: 16px
+      &:before
+        content: '\E0AA';
+        font-family: 'Phosphor';
+        font-size: 16px;
+        position: relative;
+        top: 2px
+        font-weight: 900;
+        color: var(--indigo10)
+      &:last-of-type
+        margin-bottom: 0;
+
+  ol 
+    li
+      display: flex
+      margin-bottom: 16px
+      gap: 12px
+      i
+        top: 4px;
+        position: relative;
+        color: var(--indigo10)
+      &:last-of-type
+          margin-bottom: 0;
+
+
+        
 
   blockquote
     font-style: italic;

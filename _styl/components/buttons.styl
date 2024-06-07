@@ -3,26 +3,30 @@
 --------------------------------------------------------------------*/
   
 .button
-  background-color: var(--crimson2)
-  border: 1px solid var(--crimson7)
-  box-shadow: $button-shadow
+  background-color: var(--indigo4)
   display: inline-flex;
   align-items: center;
   flex-direction: row;
   font-family: $font-family-roboto
-  padding: 16px 20px
+  padding: .75rem 1.25rem
   gap: 8px;
+  font-weight: $medium
   border-radius: $round
   transition: 0.2s ease all
+  box-shadow: 4px 4px var(--indigo10)
   &:hover
     opacity: .9
+    box-shadow: 5px 5px var(--indigo10)
+
+
 
   i
     vertical-align: middle;
     line-height: 1.5
+    
 
   a
-    color: var(--crimson12)
+    color: var(--indigo11)
     display: flex
     align-items: center
     font-weight: $medium
@@ -68,5 +72,13 @@ i
   i
     transform: scaleX(-1)
 
-.primary
-  color: var(--crimson10)
+
+.dark-theme
+  .button
+    background-color: var(--indigo1)
+    box-shadow: 4px 4px var(--indigo6)
+    &:hover
+      opacity: .9
+      box-shadow: 5px 5px var(--indigo6)
+
+  

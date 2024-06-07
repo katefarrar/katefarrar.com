@@ -1,0 +1,165 @@
+extends layout
+
+block vars
+  - var pageDescription = 'Kate Farrar is a designer living in Colorado.'
+  - var bodyClass = 'animate__animated animate__fadeIn work'
+  - var currentPage = 'Work'
+
+block title
+  | Recent Work - 
+
+block content
+
+  include includes/header
+
+  .content.projects
+
+    section
+      h1.title
+        i.ph-fill.ph-layout
+        | FireHydrant Design System
+
+      h3 A design system that inspires trust and confidence from users while empowering the team to build faster.
+
+    img.feature(src="/assets/images/feature-design-system-2.png" width="100%" alt="FireHydrant Design System web interface")
+
+    .callout-wrap
+      .row
+        .column
+          div
+            h3 The Product
+            p FireHydrant
+              i.ph.ph-arrow-square-out
+
+          div
+            h3 My Role 
+            p Lead Product Designer
+
+        .column 
+          div
+            h3 The Team
+            p Senior Product Designer, Contract Brand / UI Designer
+
+          div
+            h3 Timeframe
+            p 2024
+
+    section
+      h2 The Problem
+
+      p In early 2022, my Technical Lead and I were tasked with finding a way to drive more users to the Observability platform during onboarding. I lead the project alongside an Engineering Technical Lead. We worked across the Observability organization as well as with the Elastic UI design system team to establish cohesion throughout the product. The following case study shows the end to end product design effort which resulted in a Saved Views feature being implemented in the Observability Logs solution.
+
+    section
+      h2 Impact
+
+      ul
+        li Frustrating Developer experience due to the lack of a Design System or guidelines.
+        li Bottlenecks between design + engineering make it hard to move quickly and iterate.
+        li Inconsistent UI doesn't inspire a sense of safety and trust for users.
+        li Competitors products are more polished and they are beating us even though our feature offering is more complete.
+
+    section
+      h2 Auditing the current design
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      ul
+        li Inconsistent use of color, components, and patterns.
+        li No clear guidelines or patterns for engineers when building.
+        li Product doesn't feel like a developer tool.
+        li The design / look doesn't match the quality of the features offered.
+
+    section
+      h2 Research + Brand Alignment
+
+      .callout.italic.accent
+        p What makes a dev tool great?
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+    section
+      h2 Explorations
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+    section
+      h2 Final Direction
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+    section
+      h2 Release Plan
+
+      p In order to iterate quickly and bring more value to our users sooner, we opted to release the updates in a phased rollout using feature flag driven development.
+
+    section 
+      h2 Alpha 
+        p For Alpha, we updated the navigation and information architecture along with some additional styles.
+
+        img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+    section 
+      h2 Beta 
+        p For Beta, we updated the navigation and information architecture along with some additional styles.
+
+        img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+        caption Information Architecture audit
+
+
+        img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+        caption Navigation updates
+
+    section 
+      h2 General Audience Release 
+
+      p For GA, we updated chunks of the product at the time based on components and used feature flags to test with certain segments of users. Six weeks before GA, we flipped on the new styles for our internal organization. This allowed us to continue to test and gather feedback leading up to release.
+
+      p Our GTM team helped us recruit customers who were willing to test out the new UI. This allowed us to release small chunks at a time and get feedback in real time. We conducted live and async sessions and gathered feedback in a shared Slack channel.
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+    .callout.quote
+      i.ph-duotone.ph-chat-text
+      blockquote.inner
+        | "Using the web ui is a joy compared to the previous designs."
+        div
+          cite - FireHydrant customer
+
+    section 
+      h2 Foundations + Components 
+
+      p Figma UI kit details here
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+    section
+      h2 Front-end Theme
+
+      p Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.
+
+      img(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+
+      .callout.quote
+      i.ph-duotone.ph-chat-text
+      blockquote.inner
+        | "I don't hate writing front-end code anymore."  
+        div
+          cite - Engineer + Co-founder, FireHydrant
+
+
+  include includes/footer
+
+
+
