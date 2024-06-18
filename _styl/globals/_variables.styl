@@ -40,3 +40,19 @@ $border-light = 1px solid var(--mauve6);
 
 // Box shadow
 $button-shadow = 0px 0px 5px rgba(247, 97, 144, 0.3);
+
+// Spacing
+$spacing-sizes = {
+  'xs': 4px,
+  'sm': 8px,
+  'md': 16px,
+  'lg': 32px,
+  'xl': 64px
+}
+
+for $size, $value in $spacing-sizes
+  .p-{$size}
+    padding: $value
+
+  .m-{$size}
+    margin-top: $value
