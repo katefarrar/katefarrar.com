@@ -1,15 +1,17 @@
 extends layout
 
 block vars
-  - var pageDescription = 'Kate Farrar is a product design leader in CO.'
+  - var pageDescription = 'Pride 2024'
   - var bodyClass = 'animate__animated animate__fadeIn home'
 
+block title
+  | Pride 2024 -
+
 block content
-
   .pride-2024
-
     .guide
-      h1 Scroll down to see more!
-        i.ph-duotone.ph-arrow-fat-lines-down
+      .wrap
+        h1.animate__animated.animate__pulse.animate__repeat-3.animate__delay-1s.1s Scroll down to see more!
+          i.ph-duotone.ph-arrow-fat-lines-down
 
-      img(src="/assets/images/pride-2024.svg" width="100%")
+      img(src="/assets/images/pride-2024-sm.svg" width="100%")
