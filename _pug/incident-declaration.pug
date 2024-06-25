@@ -48,17 +48,17 @@ block content
       h2 The Problems
 
       h3 User Experience
-      p One of the main value points of the product FireHydrant product is the ability to declare an incident in seconds. At this time a majority of our users relied on our Slack app, but the ones that used the FireHydrant web UI had a feature limited experience.
+      p One of the main value points of the product FireHydrant product is the ability to declare an incident in seconds. Early on, the majority of FireHydarnt's customers relied on our Slack app, but the ones that used the FireHydrant web UI had a feature limited experience. Additionally, if Slack experienced a disruption in service that meant teams needed a reliable web UI experience for incident declaration.
 
       h3 Business
-      p Large orgs were hesitant to adopt widely adopt FireHydrant because of the gap in user experience between Slack and the web UI.Orgs that didn't use Slack were not confident in choosing FireHydrant as their Incident Management solution because of the shortcomings of the web UI particularly in regards to Incident Declaration.
+      p As FireHydarnt's product offerings expanded, our team begin to observe that Enterprise companies were less likely to use Slack as their internal chat tool. This meant that they had to rely solely on the web UI for incident declaration. The poor user experience and lack of feature parity with Slack meant that improving the web UI was a top priority for the product.
 
 
     section
       h2 Audit of current web experience
 
       img(src="/assets/images/work/id-2.png" width="100%" alt="FireHydrant Design System web interface")
-      small Current incident declaration form experience on the web.
+      small Current incident declaration form experience on the web
 
       ul.m-lg
         li Unclear path for users.
@@ -81,10 +81,10 @@ block content
     section
       h2 Research
 
-      p Beginning with on user interviews with customers and conversations with our Custom Success team, I created user personas to identify the key pain points that our users were experiencing. These also provided us with clear goals to validate our solutions against as we began to build. 
+      p Beginning with user interviews with customers and conversations with our Custom Success team, I created user personas to identify the key pain points that our users were experiencing. These also provided us with clear goals to validate our solutions against as we began to build. 
 
       img.m-lg(src="/assets/images/work/id-3.png" width="100%" alt="FireHydrant Design System web interface")
-      small User personas based on role.
+      small User personas based on role
 
 
       h3.m-lg Gamedays
@@ -94,7 +94,7 @@ block content
     section
       h2 Information Architecture
 
-      p In order to identify the different types of content in the form I extracted out the different sdfasdf
+      p In order to identify the best way to display information in the form, I extracted out the different content blocks and identified their hierarchy.
 
       img.m-lg(src="/assets/images/work/id-1.png" width="100%" alt="FireHydrant Design System web interface")
       small Form content blocks
@@ -102,54 +102,56 @@ block content
     section
       h2 Early Concepts + Prototypes
 
-      p Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.
+      p For early concepts, I made the decision to focus on lo-fidelity mock ups in order to center the user flow and journey. This allowed us to not be distracted by UI or visual elements and to move quickly with layouts and prototypes.
 
       img.m-lg(src="/assets/images/work/id-8.png" width="100%" alt="FireHydrant Design System web interface")
-      small First iteration of form content and wireframes.
+      small First iteration of form content and wireframes
 
       img.m-lg(src="/assets/images/work/id-7.png" width="100%" alt="FireHydrant Design System web interface")
-      small Second iteration form with user flow diagram.
+      small Second iteration form with user flow diagram
 
     section
       h2 Final Direction
 
-      p Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.
+      p After three rounds of iterations with the team, we settled on an experience that relied on modular content blocks. This solution allowed us to keep cognitive load low for the user, while also giving them the option to add additional complexity if they had that information.
 
       img.m-lg(src="/assets/images/work/id-5.png" width="100%" alt="FireHydrant Design System web interface")
-      small Modular form content.
+      small Modular form content
 
       img.m-lg(src="/assets/images/work/id-6.png" width="100%" alt="FireHydrant Design System web interface")
-      small Final user flow.
+      small Final user flow
+
+      p We also planned to redesign from of the UI and form components with this effort, but we wanted to first validate this concept before we moved on any further. We put together a very, rough lo-fi clickable prototype and did internal testing with users from all different parts of the company. The overall feedback was extremely positive.
 
       img.m-lg(src="/assets/images/work/id-9.png" width="100%" alt="FireHydrant Design System web interface")
-      small Lo-fidelity clickable prototype.
+      small Lo-fidelity clickable prototype for internal testing
 
     section
       h2 User Testing
 
-      p Artoo-Detoo, where are you? At last! Where have you been? They're heading in this direction.
+      p The next step was to translate the design into high fidelity prototypes with an improved UI that we could test with customers. Alongside our Head of Product, I conducted four user interview sessions with existing customers where they walked through the prototype with us and gave their feedback.
 
       img.m-lg(src="/assets/images/work/id-10.png" width="100%" alt="FireHydrant Design System web interface")
       small Active Incident Form (Left) | Resolved Incident Form (Right) 
 
-      img.m-lg(src="/assets/images/work/id-11.png" width="100%" alt="FireHydrant Design System web interface")
-      small Incident Form in drawer.
+      img.m-lg(src="/assets/images/work/id-11.png" width="100%" alt="FireHydrant Design System web interface") 
+      small Incident Form in drawer
 
       h3 What worked
         i.ph-duotone.ph-thumbs-up
 
       ul 
-        li Modularity + simplicity is working
+        li Modularity + simplicity
         li Incident types
 
-      h3 What didn't
+      h3.space-top-md What didn't
         i.ph-duotone.ph-thumbs-down
 
       ul 
         li Drawer is confusing
         li Resolved incidents needs more thought + education 
 
-      h3 What needs improvement
+      h3.space-top-md What needs improvement
         i.ph-duotone.ph-sparkle
 
       ul 
@@ -161,44 +163,63 @@ block content
     section
       h2 Phased Rollout
 
-      h3 Phase 1
-      p Modular incident declaration form
+      p Based on user feedback we decided to stick with the existing single page form view instead of a drawer. We opted for a phased rollout because we felt confident that this was going to be a huge improvement for users and wanted to be able to iterate quickly on this work and get this out to our users as soon as possible.
 
-      h3 Phase 2
-      p Updated incident type form
+      .callout.quote.heading
+        i.ph-duotone.ph-lightbulb
+        blockquote.inner
+          | "How can we phase out this work in order to bring more value to users quickly?
 
-      h3 Phase 3
-      p Assign teams during incident declaration
+      p Phase 1: Modular incident declaration form
+
+      p Phase 2: Updated incident type form
+
+      p Phase 3: Assign teams during incident declaration
 
     section
       h2 Release
 
-      img.m-lg(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+      img.m-lg(src="/assets/images/work/id-12.png" width="100%" alt="FireHydrant Design System web interface")
+      small Product announcement post on FireHydrant's blog
 
-      img.m-lg(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
 
-      img.m-lg(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+      img.m-lg(src="/assets/images/work/id-13.png" width="100%" alt="FireHydrant Design System web interface")
+      small Desktop Incident Form (Left) | Mobile Responsive Incident Form (Right) 
 
     section
       h2 Updated UI
 
-      img.m-lg(src="https://placehold.co/600x400" width="100%" alt="FireHydrant Design System web interface")
+      img.m-lg(src="/assets/images/work/id-14.png" width="100%" alt="FireHydrant Design System web interface")
+      small Product announcement post on FireHydrant's blog
 
-    .callout.quote
-      i.ph-duotone.ph-chat-text
-      blockquote.inner
-        | "We love that that the form defaults to just showing required fields as it keeps cognitive load low."
-        div
-          cite - Engineering Leader from Design Partner Organization
-
-    .callout.quote
-      i.ph-duotone.ph-chat-text
-      blockquote.inner
-        | "Wow, this is a level up. This is really cool. When can we roll this out to all of our team?."
-        div
-          cite - Engineering Leader from Design Partner Organization
+      img.m-lg(src="/assets/images/work/id-15.png" width="100%" alt="FireHydrant Design System web interface")
+      small Updated UI
 
 
+    section
+      h2 User Feedback
+
+      .callout.quote
+        i.ph-duotone.ph-chat-text
+        blockquote.inner
+          | "We love that that the form defaults to just showing required fields as it keeps cognitive load low."
+          div
+            cite - Engineering Leader
+
+      .callout.quote
+        i.ph-duotone.ph-chat-text
+        blockquote.inner
+          | "Wow, this is a level up. This is really cool. When can we roll this out to all of our team?."
+          div
+            cite - Engineering Leader
+
+    section.case-study-link
+      h2.link Thanks for reading!
+        i.ph-duotone.ph-smiley-sticker
+
+      h3 Want to see more? 
+        a(href="/work") Check out my other Case Studies.
+          i.ph-duotone.ph-arrow-fat-line-right
 
 
   include includes/footer

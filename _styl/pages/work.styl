@@ -44,6 +44,11 @@
       position: relative;
       top: 2px;
 
+    h4.more-link
+      margin-left: 16px;
+      position: relative;
+      top: 2px;
+
   
 
   .experience
@@ -125,11 +130,36 @@
       a:hover
         border-bottom: 1px solid var(--indigo10)
 
+  .heading
+    margin-bottom: 48px;
+
   .quote
       align-items: start
 
   .accent
     background-color: var(--mauve6)
+
+  h2 
+    i
+      margin-right: 8px;
+      position: relative;
+      top: 2px;
+
+  h2.link
+    i
+      margin-left: 8px;
+      position: relative;
+      top: 2px;
+
+
+  h4
+    i
+      margin-left: 8px;
+      position: relative;
+      top: 2px;
+
+  .case-study-link
+    margin-top: 80px;
       
 
 @media (max-width: 768px) 
@@ -349,9 +379,14 @@ p
   img
     border-radius: $round
 
+  .space-top-md
+    margin-top: 48px;
+
   small
-    font-size: $md
+    font-size: $sm
     font-family: $font-family-roboto-mono
+    margin: 10px 0 40px 
+    display: inline-block
 
   .row
     display: flex;
@@ -411,12 +446,12 @@ p
 
   blockquote
     font-style: italic;
-    font-size: $3xl
-    margin-bottom: 16px
+    font-size: $2xl
     font-weight: $medium
 
   cite
     font-size: 16px
+    font-weight: $regular
     
   .callout-wrap
     background-color: var(--mauve1)
@@ -433,7 +468,7 @@ p
       margin-bottom: 0
 
   section
-    margin: 80px 0 0
+    margin: 40px 0 0
     padding: 0 20%
     display: block;
 
