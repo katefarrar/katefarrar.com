@@ -3,577 +3,381 @@ export default function FireHydrantSignals() {
     <div className="space-y-12">
       <div className="space-y-4">
         <h1 className="font-notch text-4xl font-medium tracking-tight">
-          Signals
+          Signals for FireHydrant
         </h1>
         <p className="text-xl text-gray-600">
-          Alerting and on-call seamlessly incorporated into FireHydrant's
-          incident management platform.
+          Alerting and on-call, rethought as part of incident management
+        </p>
+      </div>
+
+      <div className="prose max-w-none">
+        <p className="text-gray-700 leading-relaxed">
+          Signals is FireHydrant's alerting and on-call product, designed to
+          help teams respond faster and more consistently by tightly integrating
+          alerts into the incident lifecycle—from first notification to
+          resolution and retro.
         </p>
       </div>
 
       <div className="grid grid-cols-2 gap-6 text-sm">
         <div>
-          <div className="font-semibold text-gray-900">Product</div>
-          <div className="text-gray-600">Signals for FireHydrant</div>
-        </div>
-        <div>
           <div className="font-semibold text-gray-900">Role</div>
           <div className="text-gray-600">Lead Product Designer</div>
         </div>
         <div>
+          <div className="font-semibold text-gray-900">Timeframe</div>
+          <div className="text-gray-600">Fall 2023 – Spring 2024</div>
+        </div>
+        <div>
           <div className="font-semibold text-gray-900">Team</div>
           <div className="text-gray-600">
-            Head of Product, Technical Lead, Engineering Team, Senior Product
-            Designer
+            Product, Engineering, Customer Success
           </div>
         </div>
         <div>
-          <div className="font-semibold text-gray-900">Timeframe</div>
-          <div className="text-gray-600">Fall 2023 - Spring 2024</div>
+          <div className="font-semibold text-gray-900">Outcome</div>
+          <div className="text-gray-600">
+            Launched GA; $250k ARR closed during beta; rapid competitive
+            response from incumbents
+          </div>
         </div>
       </div>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Product Demo</h2>
-        <div className="aspect-video w-full">
-          <iframe
-            className="w-full h-full border border-gray-200"
-            src="https://www.youtube.com/embed/GdRIHOgRjEA"
-            title="FireHydrant Signals Demo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          Hero product screenshot
+          <br />
+          Single, clean screenshot showing alert → escalation → acknowledgment
         </div>
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">The Goal</h2>
+        <h2 className="text-2xl font-semibold">The problem</h2>
         <p className="text-gray-700 leading-relaxed">
-          New product offering to add Alerting and On-Call functionality to the
-          FireHydrant Incident Management platform.
+          Most alerting tools are built as standalone systems. They notify
+          people, but they don't help teams understand what's happening,
+          coordinate a response, or transition cleanly into incident management.
+        </p>
+        <p className="text-gray-700 leading-relaxed">As a result:</p>
+        <ul className="space-y-2 text-gray-700">
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Alerts lack context</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>
+              On-call engineers spend time triaging instead of responding
+            </span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Incidents fracture across tools</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Escalation rules are powerful but hard to reason about</span>
+          </li>
+        </ul>
+        <p className="text-gray-700 leading-relaxed">
+          We saw an opportunity to design alerting not as a separate product,
+          but as the <strong>first step in incident response</strong>.
         </p>
       </section>
 
       <section className="space-y-6">
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          Conceptual comparison diagram
+          <br />
+          Traditional alerting vs Signals integrated with incident management
+        </div>
+      </section>
+
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">
-          The problem with existing alerting tools
+          Designing for the full incident lifecycle
         </h2>
+        <p className="text-gray-700 leading-relaxed">
+          The core design principle was end-to-end continuity: alerts shouldn't
+          end at notification—they should flow naturally into investigation,
+          resolution, and learning.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Internally, we described this as designing{" "}
+          <strong>"from ring to retro."</strong>
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Signals was built to:
+        </p>
         <ul className="space-y-2 text-gray-700">
           <li className="flex gap-3">
             <span className="text-gray-400 mt-1">•</span>
+            <span>Trigger alerts with clear ownership</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Escalate predictably over time</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Transition smoothly into incidents</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Preserve context for post-incident review</span>
+          </li>
+        </ul>
+      </section>
+
+      <section className="space-y-6">
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          Incident lifecycle diagram
+          <br />
+          Signal → Alert → Incident → Resolution → Retro
+          <br />
+          Use ONE clear lifecycle visual
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Key system decisions</h2>
+
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold">
+              Decoupling alerts from incidents
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Alerts and incidents serve different purposes. Alerts demand
+              immediate attention; incidents represent coordinated response.
+              Tying them too tightly increases noise and cost.
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              We designed alerts to <strong>optionally connect to incidents</strong>,
+              rather than forcing a one-to-one relationship. This reduced
+              unnecessary incidents while preserving escalation and auditability.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold">
+              Treating escalation as a time-based system
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Escalation policies aren't just lists of people — they're
+              timelines. We treated time as a first-class concept, making it
+              explicit when actions happen and why.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold">
+              Optimizing for predictability over raw flexibility
+            </h3>
+            <p className="text-gray-700 leading-relaxed">
+              Existing tools optimize for configurability. We optimized for{" "}
+              <strong>understandability</strong>, even when that meant
+              constraining options.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          System mental model diagram
+          <br />
+          Signals, alerts, escalation policies, schedules, teams
+          <br />
+          This should communicate how the system fits together
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">
+          Deep dive: Escalation policies
+        </h2>
+        <p className="text-gray-700 leading-relaxed">
+          Escalation policies were the most complex and highest-risk part of
+          Signals. They combine time, ownership, repetition, and hand-offs—and
+          small misunderstandings have real operational impact.
+        </p>
+
+        <div className="space-y-6 mt-8">
+          <div>
+            <h3 className="text-lg font-semibold">Alpha: exposing everything</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Our initial assumption was that experienced engineers could handle
+              the full complexity. Policies were fully visible and configurable,
+              but users struggled to understand:
+            </p>
+            <ul className="space-y-2 text-gray-700 mt-4">
+              <li className="flex gap-3">
+                <span className="text-gray-400 mt-1">•</span>
+                <span>Time gaps between notifications</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-gray-400 mt-1">•</span>
+                <span>When repetition started</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-gray-400 mt-1">•</span>
+                <span>When responsibility changed hands</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          Alpha escalation policy form
+          <br />
+          One representative screenshot only
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div>
+          <h3 className="text-lg font-semibold">Beta: making time explicit</h3>
+          <p className="text-gray-700 leading-relaxed">
+            User feedback showed that <strong>time was the missing dimension</strong>.
+            We redesigned escalation policies to visualize actions along a
+            timeline, clarifying order, delays, repeats, and hand-offs.
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          Beta escalation policy iteration
+          <br />
+          Emphasize timeline clarity and sequencing
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div>
+          <h3 className="text-lg font-semibold">GA: clarity over cleverness</h3>
+          <p className="text-gray-700 leading-relaxed">
+            Final designs prioritized:
+          </p>
+          <ul className="space-y-2 text-gray-700 mt-4">
+            <li className="flex gap-3">
+              <span className="text-gray-400 mt-1">•</span>
+              <span>Clear language</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-gray-400 mt-1">•</span>
+              <span>Explicit intervals</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-gray-400 mt-1">•</span>
+              <span>Scan-friendly policy summaries</span>
+            </li>
+            <li className="flex gap-3">
+              <span className="text-gray-400 mt-1">•</span>
+              <span>Helper text that explained <em>why</em>, not just <em>what</em></span>
+            </li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-4">
+            The result was a system that felt powerful without being opaque.
+          </p>
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          GA escalation policy list view
+          <br />
+          Scannable summary of escalation policies
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">
+          Visualizing alert context in real time
+        </h2>
+        <p className="text-gray-700 leading-relaxed">
+          Even with better configuration, users still needed to understand what
+          was happening <em>during</em> an alert.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          We introduced an alert timeline that shows:
+        </p>
+        <ul className="space-y-2 text-gray-700 mt-4">
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>When the signal triggered</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Who was notified and how</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>Status changes over time</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="text-gray-400 mt-1">•</span>
+            <span>When alerts connected to incidents</span>
+          </li>
+        </ul>
+        <p className="text-gray-700 leading-relaxed mt-4">
+          This reduced guesswork and improved confidence during high-stress
+          moments.
+        </p>
+      </section>
+
+      <section className="space-y-6">
+        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
+          Alert timeline
+          <br />
+          Single example showing chronological alert events
+        </div>
+      </section>
+
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Impact</h2>
+        <ul className="space-y-3 text-gray-700">
+          <li className="flex gap-3">
+            <span className="font-semibold text-gray-900">Revenue:</span>
+            <span>$250k ARR closed during beta</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="font-semibold text-gray-900">Adoption:</span>
+            <span>Strong uptake from existing customers</span>
+          </li>
+          <li className="flex gap-3">
+            <span className="font-semibold text-gray-900">Market response:</span>
             <span>
-              Legacy alerting tools are misaligned with modern software
-              practices
+              Major competitors launched similar offerings shortly after GA
             </span>
           </li>
           <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>
-              Extremely expensive and have no material innovation for years
+            <span className="font-semibold text-gray-900">
+              Customer feedback:
             </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
             <span>
-              Existing tools do nothing to help an on-call engineer triage an
-              incident
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>No handoff into an integrated Incident Management tool</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>
-              Lack of policy enforcement for teams, schedules, and notifications
+              Consistently highlighted clarity, cost savings, and ease of
+              adoption
             </span>
           </li>
         </ul>
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          Building a holistic user experience
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="From ring to retro - the complete user experience"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">User Personas</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="User personas for alerting and on-call"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Research</h2>
-        <ul className="space-y-2 text-gray-700">
-          <li className="flex gap-3">
-            <span className="font-semibold text-gray-900">
-              Utilizing internal resources:
-            </span>
-            <span>
-              Interviews and conversations with SME's on my team from Product,
-              Engineering, CS, IT, and Marketing.
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="font-semibold text-gray-900">
-              ChatGPT prompts:
-            </span>
-            <span>
-              "Explain the different types of schedule rotations that PagerDuty
-              allows users to configure."
-            </span>
-          </li>
-          <li className="flex gap-3">
-            <span className="font-semibold text-gray-900">
-              Competitive analysis:
-            </span>
-            <span>Deep dive into existing alerting + on-call tools.</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="font-semibold text-gray-900">
-              Existing UX patterns:
-            </span>
-            <span>Looking outside of developer tools for inspiration.</span>
-          </li>
-        </ul>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Competitive analysis</h2>
+        <h2 className="text-2xl font-semibold">Reflection</h2>
         <p className="text-gray-700 leading-relaxed">
-          How can we achieve feature parity while also improving the UX?
+          Designing Signals reinforced the importance of seeing the{" "}
+          <em>entire system</em>, not just individual features. The most
+          meaningful improvements came from understanding where users lost
+          confidence—and reshaping the product to restore it.
         </p>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Competitive analysis of existing alerting tools"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Existing UX patterns</h2>
-        <ul className="space-y-2 text-gray-700">
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Restaurant industry</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Calendar apps</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Workflow builders</span>
-          </li>
-        </ul>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Inspiration from UX patterns outside developer tools"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Putting the pieces together</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Synthesizing research into design direction"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          Breaking down complex technical problems
-        </h2>
         <p className="text-gray-700 leading-relaxed">
-          <strong>Grocery Store Method:</strong> using common examples to
-          simplify complex technical processes.
+          At this scale, good design isn't about adding capability. It's about
+          making complex systems feel trustworthy under pressure.
         </p>
-
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-lg font-semibold">Original user story</h3>
-            <p className="text-gray-700 leading-relaxed italic">
-              "As a systems administrator, I want FireHydrant to automatically
-              monitor CPU usage information for Kubernetes servers from DataDog
-              and alert the relevant on-call engineer if thresholds are
-              exceeded."
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">Simplified user story</h3>
-            <p className="text-gray-700 leading-relaxed italic">
-              "As a store manager, I want the refrigerator system to
-              automatically monitor stock levels and alert the relevant staff if
-              supplies are below set thresholds."
-            </p>
-          </div>
-        </div>
-
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Grocery store method visualization"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Defining the mental model</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Mental model for alerting system"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Event lifecycle</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Event lifecycle diagram"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Escalation Policies</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Escalation policies overview"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          Alpha: escalation policies form
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Alpha version of escalation policies form"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          Alpha: escalation policies view
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Alpha version of escalation policies list view"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Alpha feedback</h2>
-
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-lg font-semibold">Assumption</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Keep it simple. Display all escalation policy details in list
-              view.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">User feedback</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Time between notifications is confusing</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Repeat / hand-off concepts aren't translating</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Hard to quickly scan escalation policy list</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">Goal for Beta</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Clarity for intervals between notifications</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Updated placeholder text for Repeat / hand-off</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Easier to scan list</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Notification intervals</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Notification intervals design"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          Beta: Repeat / Hand off section
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Beta version of repeat and hand-off section"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          Beta: Escalation Policy list view
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Beta version of escalation policy list"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Beta feedback</h2>
-
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-lg font-semibold">Assumption</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Developers can handle the complexity and are used to configuring
-              things like this. Alert lifecycle is self explanatory.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">Beta user feedback</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Repeat / hand-off is STILL confusing</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>
-                  Need to visualize all these steps within the context of an
-                  alert or incident
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">Goal for GA</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Updated helper text for form</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Alert timeline</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          GA: Updated helper text in form
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="GA version with updated helper text"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          GA: Visualizing the alert lifecycle
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Alert lifecycle visualization - part 1"
-          className="w-full border border-gray-200"
-        />
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Alert lifecycle visualization - part 2"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Beta: Onboarding feedback</h2>
-
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-lg font-semibold">Assumption</h3>
-            <p className="text-gray-700 leading-relaxed">
-              More flexibility / allow users to go at their own pace.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">Beta user feedback</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Not sure where to start with getting set up</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>
-                  Without a guided demo, it takes way too much time for the
-                  users to understand the value
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">GA Goals</h3>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>
-                  Guided onboarding that demonstrates the value of the product
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>
-                  Ability to test platform without configuring integrations or
-                  inviting entire team to product
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Onboarding</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Onboarding overview"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Onboarding: Guided process</h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Guided onboarding process"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">
-          Onboarding: Testing the platform
-        </h2>
-        <img
-          src="https://via.placeholder.com/600x400"
-          alt="Testing the platform without full setup"
-          className="w-full border border-gray-200"
-        />
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Measuring Success</h2>
-
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-lg font-semibold">Sales</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Quarter million in ARR closed in Beta.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">Market fit</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Two biggest competitors in the space launched similar offerings
-              within weeks of the Signals release.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">User feedback</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Overwhelmingly positive feedback from existing and new users
-              during from Alpha through GA.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">User Feedback</h2>
-
-        <blockquote className="border-l-4 border-gray-300 pl-6 py-2 text-lg italic text-gray-700">
-          "You fixed the most important piece by not tying alerts to incidents."
-        </blockquote>
-
-        <blockquote className="border-l-4 border-gray-300 pl-6 py-2 text-lg italic text-gray-700">
-          "This is going to save us so much money in user licenses."
-        </blockquote>
-
-        <blockquote className="border-l-4 border-gray-300 pl-6 py-2 text-lg italic text-gray-700">
-          "How soon can we switch to Signals?"
-        </blockquote>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Reflections</h2>
-
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-lg font-semibold">See the whole picture.</h3>
-            <p className="text-gray-700 leading-relaxed">
-              You have to understand the complete problem if you're going to
-              come up with a complete solution.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">You are here.</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Don't get too far ahead of your team or your users. Validate while
-              building.
-            </p>
-          </div>
-        </div>
       </section>
     </div>
   );

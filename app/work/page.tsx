@@ -5,27 +5,13 @@ const workSections = [
     company: "Dagster",
     projects: [
       { slug: "dagster-compass", title: "Compass" },
-      { slug: "dagster-rbac", title: "RBAC" },
-      { slug: "dagster-alerting", title: "Alerting" },
+      { slug: "dagster-rbac", title: "Custom RBAC for Dagster+" },
     ],
   },
   {
     company: "FireHydrant",
     projects: [
-      { slug: "firehydrant-signals", title: "Signals" },
-      {
-        slug: "firehydrant-incident-declaration",
-        title: "Incident Declaration",
-      },
-    ],
-  },
-  {
-    company: "Elastic",
-    projects: [
-      {
-        slug: "elastic-package-driven-observability",
-        title: "Package-Driven Observability",
-      },
+      { slug: "firehydrant-signals", title: "Signals for FireHydrant" },
     ],
   },
 ];
@@ -33,7 +19,7 @@ const workSections = [
 export default function Work() {
   return (
     <div className="space-y-12">
-      <h1 className="font-notch text-4xl font-medium tracking-tight">Work</h1>
+      <h1 className="font-notch text-4xl font-medium tracking-tight">Case Studies</h1>
 
       {workSections.map((section) => (
         <section key={section.company} className="space-y-4">

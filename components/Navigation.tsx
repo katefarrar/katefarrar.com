@@ -16,7 +16,13 @@ export default function Navigation() {
               href="/work"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Work
+              Case Studies
+            </Link>
+            <Link
+              href="/brand-systems"
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Brand Systems
             </Link>
             <Link
               href="/about"
