@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export default function FireHydrantSignals() {
   return (
     <div className="space-y-12">
       <div className="space-y-4">
-        <h1 className="font-notch text-4xl font-medium tracking-tight">
+        <h1 className="font-notch text-4xl tracking-tight">
           Signals for FireHydrant
         </h1>
         <p className="text-xl text-gray-600">
@@ -25,14 +27,12 @@ export default function FireHydrantSignals() {
           <div className="text-gray-600">Lead Product Designer</div>
         </div>
         <div>
-          <div className="font-semibold text-gray-900">Timeframe</div>
-          <div className="text-gray-600">Fall 2023 – Spring 2024</div>
+          <div className="font-semibold text-gray-900">Product</div>
+          <div className="text-gray-600">FireHydrant</div>
         </div>
         <div>
-          <div className="font-semibold text-gray-900">Team</div>
-          <div className="text-gray-600">
-            Product, Engineering, Customer Success
-          </div>
+          <div className="font-semibold text-gray-900">Audience</div>
+          <div className="text-gray-600">Incident Management teams</div>
         </div>
         <div>
           <div className="font-semibold text-gray-900">Outcome</div>
@@ -44,11 +44,13 @@ export default function FireHydrantSignals() {
       </div>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Hero product screenshot
-          <br />
-          Single, clean screenshot showing alert → escalation → acknowledgment
-        </div>
+        <Image
+          src="/signals-1.png"
+          alt="Hero product screenshot showing alert, escalation, and acknowledgment"
+          width={1200}
+          height={675}
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -86,14 +88,6 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Conceptual comparison diagram
-          <br />
-          Traditional alerting vs Signals integrated with incident management
-        </div>
-      </section>
-
-      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">
           Designing for the full incident lifecycle
         </h2>
@@ -106,9 +100,7 @@ export default function FireHydrantSignals() {
           Internally, we described this as designing{" "}
           <strong>"from ring to retro."</strong>
         </p>
-        <p className="text-gray-700 leading-relaxed">
-          Signals was built to:
-        </p>
+        <p className="text-gray-700 leading-relaxed">Signals was built to:</p>
         <ul className="space-y-2 text-gray-700">
           <li className="flex gap-3">
             <span className="text-gray-400 mt-1">•</span>
@@ -130,13 +122,11 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Incident lifecycle diagram
-          <br />
-          Signal → Alert → Incident → Resolution → Retro
-          <br />
-          Use ONE clear lifecycle visual
-        </div>
+        <img
+          src="/signals-2.png"
+          alt="Incident lifecycle diagram showing Signal → Alert → Incident → Resolution → Retro"
+          className="w-full border border-gray-200"
+        />
       </section>
 
       <section className="space-y-6">
@@ -153,9 +143,10 @@ export default function FireHydrantSignals() {
               Tying them too tightly increases noise and cost.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              We designed alerts to <strong>optionally connect to incidents</strong>,
-              rather than forcing a one-to-one relationship. This reduced
-              unnecessary incidents while preserving escalation and auditability.
+              We designed alerts to{" "}
+              <strong>optionally connect to incidents</strong>, rather than
+              forcing a one-to-one relationship. This reduced unnecessary
+              incidents while preserving escalation and auditability.
             </p>
           </div>
 
@@ -184,16 +175,6 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          System mental model diagram
-          <br />
-          Signals, alerts, escalation policies, schedules, teams
-          <br />
-          This should communicate how the system fits together
-        </div>
-      </section>
-
-      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">
           Deep dive: Escalation policies
         </h2>
@@ -205,7 +186,9 @@ export default function FireHydrantSignals() {
 
         <div className="space-y-6 mt-8">
           <div>
-            <h3 className="text-lg font-semibold">Alpha: exposing everything</h3>
+            <h3 className="text-lg font-semibold">
+              Alpha: exposing everything
+            </h3>
             <p className="text-gray-700 leading-relaxed">
               Our initial assumption was that experienced engineers could handle
               the full complexity. Policies were fully visible and configurable,
@@ -230,29 +213,22 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Alpha escalation policy form
-          <br />
-          One representative screenshot only
-        </div>
+        <img
+          src="/signals-3.png"
+          alt="Alpha escalation policy form"
+          className="w-full border border-gray-200"
+        />
       </section>
 
       <section className="space-y-6">
         <div>
           <h3 className="text-lg font-semibold">Beta: making time explicit</h3>
           <p className="text-gray-700 leading-relaxed">
-            User feedback showed that <strong>time was the missing dimension</strong>.
-            We redesigned escalation policies to visualize actions along a
-            timeline, clarifying order, delays, repeats, and hand-offs.
+            User feedback showed that{" "}
+            <strong>time was the missing dimension</strong>. We redesigned
+            escalation policies to visualize actions along a timeline,
+            clarifying order, delays, repeats, and hand-offs.
           </p>
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Beta escalation policy iteration
-          <br />
-          Emphasize timeline clarity and sequencing
         </div>
       </section>
 
@@ -277,7 +253,9 @@ export default function FireHydrantSignals() {
             </li>
             <li className="flex gap-3">
               <span className="text-gray-400 mt-1">•</span>
-              <span>Helper text that explained <em>why</em>, not just <em>what</em></span>
+              <span>
+                Helper text that explained <em>why</em>, not just <em>what</em>
+              </span>
             </li>
           </ul>
           <p className="text-gray-700 leading-relaxed mt-4">
@@ -287,11 +265,13 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          GA escalation policy list view
-          <br />
-          Scannable summary of escalation policies
-        </div>
+        <Image
+          src="/signals-4.png"
+          alt="GA escalation policy list view - scannable summary of escalation policies"
+          width={1200}
+          height={675}
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -330,11 +310,11 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Alert timeline
-          <br />
-          Single example showing chronological alert events
-        </div>
+        <img
+          src="/signals-6.png"
+          alt="Alert timeline showing chronological alert events"
+          className="w-full border border-gray-200"
+        />
       </section>
 
       <section className="space-y-6">
@@ -349,7 +329,9 @@ export default function FireHydrantSignals() {
             <span>Strong uptake from existing customers</span>
           </li>
           <li className="flex gap-3">
-            <span className="font-semibold text-gray-900">Market response:</span>
+            <span className="font-semibold text-gray-900">
+              Market response:
+            </span>
             <span>
               Major competitors launched similar offerings shortly after GA
             </span>

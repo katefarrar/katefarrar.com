@@ -11,6 +11,9 @@ const config: Config = {
         sans: ['"Stack Sans Text"', 'system-ui', 'sans-serif'],
         notch: ['"Stack Sans Notch"', '"Stack Sans Text"', 'system-ui', 'sans-serif'],
       },
+      colors: {
+        'brand-teal': '#A7FFF8',
+      },
     },
   },
   plugins: [],

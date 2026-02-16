@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Kate Farrar",
@@ -16,14 +17,20 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@400..700&family=Stack+Sans+Text:wght@400..700&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@400..700&family=Stack+Sans+Text:wght@400..700&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className="antialiased bg-white text-gray-900">
+      <body className="antialiased bg-white text-gray-900 text-base">
         <Navigation />
-        <main className="max-w-3xl mx-auto px-6 py-12">
-          {children}
-        </main>
+        <main className="max-w-4xl mx-auto px-6 py-16">{children}</main>
+        <Footer />
       </body>
     </html>
   );

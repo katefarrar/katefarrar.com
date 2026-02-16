@@ -13,6 +13,17 @@ const brandProjects = [
     url: "https://compass.dagster.io",
   },
   {
+    name: "FireHydrant",
+    description:
+      "Product design system and marketing for an end to end Incident Management platform.",
+    details: [
+      "Design system",
+      "Marketing website",
+      "Launch and announcement assets",
+    ],
+    url: "https://firehydrant.com",
+  },
+  {
     name: "Standby Coffee Techs",
     description:
       "Brand identity for a vintage-inspired coffee equipment service brand",
@@ -45,9 +56,7 @@ const brandProjects = [
 export default function BrandSystems() {
   return (
     <div className="space-y-12">
-      <h1 className="font-notch text-4xl font-medium tracking-tight">
-        Brand Systems
-      </h1>
+      <h1 className="font-notch text-4xl ftracking-tight">Brand Systems</h1>
 
       <div className="space-y-8">
         {brandProjects.map((project) => (

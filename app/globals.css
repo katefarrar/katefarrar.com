@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+}
+
+@layer utilities {
+  .text-justify-all {
+    text-align: justify;
+    text-align-last: justify;
+  }
+}

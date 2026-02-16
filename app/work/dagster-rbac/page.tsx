@@ -2,7 +2,7 @@ export default function DagsterRBAC() {
   return (
     <div className="space-y-12">
       <div className="space-y-4">
-        <h1 className="font-notch text-4xl font-medium tracking-tight">
+        <h1 className="font-notch text-4xl tracking-tight">
           Custom RBAC for Dagster+
         </h1>
         <p className="text-xl text-gray-600">
@@ -13,8 +13,8 @@ export default function DagsterRBAC() {
 
       <div className="prose max-w-none">
         <p className="text-gray-700 leading-relaxed">
-          As organizations scale their use of Dagster+, access control becomes
-          a platform concern—not just a security feature. Custom RBAC enables
+          As organizations scale their use of Dagster+, access control becomes a
+          platform concern—not just a security feature. Custom RBAC enables
           teams to define precise, meaningful permissions that align with real
           organizational structures while remaining understandable and safe to
           operate.
@@ -24,7 +24,7 @@ export default function DagsterRBAC() {
       <div className="grid grid-cols-2 gap-6 text-sm">
         <div>
           <div className="font-semibold text-gray-900">Role</div>
-          <div className="text-gray-600">Product Designer</div>
+          <div className="text-gray-600">Lead Product Designer</div>
         </div>
         <div>
           <div className="font-semibold text-gray-900">Product</div>
@@ -318,7 +318,9 @@ export default function DagsterRBAC() {
           </li>
           <li className="flex gap-3">
             <span className="text-gray-400 mt-1">•</span>
-            <span>Consistent patterns across creation, assignment, and review</span>
+            <span>
+              Consistent patterns across creation, assignment, and review
+            </span>
           </li>
         </ul>
         <p className="text-gray-700 leading-relaxed mt-4">

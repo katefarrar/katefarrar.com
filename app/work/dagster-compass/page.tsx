@@ -1,10 +1,10 @@
+import Image from "next/image";
+
 export default function DagsterCompass() {
   return (
     <div className="space-y-12">
       <div className="space-y-4">
-        <h1 className="font-notch text-4xl font-medium tracking-tight">
-          Compass
-        </h1>
+        <h1 className="font-notch text-4xl tracking-tight">Compass</h1>
         <p className="text-xl text-gray-600">
           Designing conversational analytics without breaking trust or
           governance
@@ -27,7 +27,7 @@ export default function DagsterCompass() {
       <div className="grid grid-cols-2 gap-6 text-sm">
         <div>
           <div className="font-semibold text-gray-900">Role</div>
-          <div className="text-gray-600">Product Designer</div>
+          <div className="text-gray-600">Lead Product Designer</div>
         </div>
         <div>
           <div className="font-semibold text-gray-900">Product</div>
@@ -42,13 +42,13 @@ export default function DagsterCompass() {
       </div>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Compass hero
-          <br />
-          Slack screenshot showing a real question → result → follow-up
-          <br />
-          Should feel grounded and work-in-progress, not marketing
-        </div>
+        <Image
+          src="/compass-1.png"
+          alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+          width={1200}
+          height={675}
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -88,11 +88,13 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Conceptual contrast
-          <br />
-          Dashboards & ticket queues vs conversational exploration in Slack
-        </div>
+        <Image
+          src="/compass-2.png"
+          alt="Conceptual contrast - dashboards and ticket queues versus conversational exploration in Slack"
+          width={1200}
+          height={675}
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -186,11 +188,13 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Slack thread with initial question + follow-up
-          <br />
-          Emphasize continuity and shared context
-        </div>
+        <Image
+          src="/compass-3.png"
+          alt="Slack thread with initial question and follow-up, emphasizing continuity and shared context"
+          width={1200}
+          height={675}
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -246,7 +250,9 @@ export default function DagsterCompass() {
             <ul className="space-y-2 text-gray-700 mt-4">
               <li className="flex gap-3">
                 <span className="text-gray-400 mt-1">•</span>
-                <span>Not positioning Compass as a replacement for core BI</span>
+                <span>
+                  Not positioning Compass as a replacement for core BI
+                </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-gray-400 mt-1">•</span>
@@ -267,13 +273,13 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Before / after
-          <br />
-          Before: analyst ticket or dashboard
-          <br />
-          After: shared Slack conversation
-        </div>
+        <Image
+          src="/compass-4.png"
+          alt="Before and after comparison - analyst ticket or dashboard versus shared Slack conversation"
+          width={1200}
+          height={675}
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -309,11 +315,13 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Response UI showing explanation or clarification
-          <br />
-          Optional example where Compass asks a follow-up question
-        </div>
+        <Image
+          src="/compass-4.png"
+          alt="Response UI showing explanation or clarification, example where Compass asks a follow-up question"
+          width={1200}
+          height={675}
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -343,8 +351,7 @@ export default function DagsterCompass() {
         </ul>
         <p className="text-gray-700 leading-relaxed mt-4">
           More importantly, it demonstrated that conversational analytics can
-          work{" "}
-          <strong>without sacrificing governance or trust</strong>.
+          work <strong>without sacrificing governance or trust</strong>.
         </p>
       </section>
 
