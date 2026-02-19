@@ -23,24 +23,24 @@ const projects = [
     year: "2023",
     description: "Real-time incident detection and alerting",
   },
-  {
-    title: "Status Pages",
-    company: "FireHydrant",
-    year: "2023",
-    description: "Real-time incident detection and alerting",
-  },
-  {
-    title: "Incident Declaration",
-    company: "FireHydrant",
-    year: "2022-2023",
-    description: "Real-time incident detection and alerting",
-  },
-  {
-    title: "Incident Declaration",
-    company: "FireHydrant",
-    year: "2022-2023",
-    description: "Real-time incident detection and alerting",
-  },
+  // {
+  //   title: "Status Pages",
+  //   company: "FireHydrant",
+  //   year: "2023",
+  //   description: "Real-time incident detection and alerting",
+  // },
+  // {
+  //   title: "Incident Declaration",
+  //   company: "FireHydrant",
+  //   year: "2022-2023",
+  //   description: "Real-time incident detection and alerting",
+  // },
+  // {
+  //   title: "Incident Declaration",
+  //   company: "FireHydrant",
+  //   year: "2022-2023",
+  //   description: "Real-time incident detection and alerting",
+  // },
 ];
 
 export default function Work() {
