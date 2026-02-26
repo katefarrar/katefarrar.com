@@ -17,7 +17,7 @@ export default function Home() {
             href="/work"
             className="inline-flex items-center gap-2 px-6 py-3 mt-8 border border-gray-900 hover:bg-gray-900 hover:text-white transition-colors text-lg"
           >
-            View Case Studies
+            View Work
             <span>→</span>
           </a>
         </div>

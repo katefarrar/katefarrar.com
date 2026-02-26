@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Lightbox } from "@/components/Lightbox";
 
 export default function FireHydrantSignals() {
   return (
@@ -122,10 +123,10 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <img
+        <Lightbox
           src="/signals-2.png"
           alt="Incident lifecycle diagram showing Signal → Alert → Incident → Resolution → Retro"
-          className="w-full border border-gray-200"
+          className="w-full rounded-lg"
         />
       </section>
 
@@ -213,10 +214,10 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <img
+        <Lightbox
           src="/signals-3.png"
           alt="Alpha escalation policy form"
-          className="w-full border border-gray-200"
+          className="w-full rounded-lg"
         />
       </section>
 
@@ -310,10 +311,10 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <img
+        <Lightbox
           src="/signals-6.png"
           alt="Alert timeline showing chronological alert events"
-          className="w-full border border-gray-200"
+          className="w-full rounded-lg"
         />
       </section>
 
