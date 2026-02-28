@@ -270,16 +270,16 @@ export default function DagsterCompass() {
             </p>
           </div>
         </div>
-      </section>
 
-      <section className="space-y-6">
-        <Image
-          src="/compass-4.png"
-          alt="Before and after comparison - analyst ticket or dashboard versus shared Slack conversation"
-          width={1200}
-          height={675}
-          className="w-full rounded-lg"
-        />
+        <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/dFbQv7SGVck"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
       </section>
 
       <section className="space-y-6">
@@ -315,13 +315,15 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <Image
-          src="/compass-4.png"
-          alt="Response UI showing explanation or clarification, example where Compass asks a follow-up question"
-          width={1200}
-          height={675}
-          className="w-full rounded-lg"
-        />
+        <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/A8E9LAu1sI8"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
       </section>
 
       <section className="space-y-6">
