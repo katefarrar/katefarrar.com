@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Lightbox } from "@/components/Lightbox";
 
 export default function DagsterCompass() {
   return (
@@ -42,11 +43,9 @@ export default function DagsterCompass() {
       </div>
 
       <section className="space-y-6">
-        <Image
+        <Lightbox
           src="/compass-1.png"
           alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
-          width={1200}
-          height={675}
           className="w-full rounded-lg"
         />
       </section>
@@ -88,11 +87,9 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <Image
+        <Lightbox
           src="/compass-2.png"
           alt="Conceptual contrast - dashboards and ticket queues versus conversational exploration in Slack"
-          width={1200}
-          height={675}
           className="w-full rounded-lg"
         />
       </section>
@@ -188,11 +185,9 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <Image
+        <Lightbox
           src="/compass-3.png"
           alt="Slack thread with initial question and follow-up, emphasizing continuity and shared context"
-          width={1200}
-          height={675}
           className="w-full rounded-lg"
         />
       </section>

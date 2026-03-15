@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 interface LightboxProps {
@@ -14,6 +14,19 @@ interface LightboxProps {
 export function Lightbox({ src, alt, width, height, className = "" }: LightboxProps) {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscape);
+      return () => document.removeEventListener("keydown", handleEscape);
+    }
+  }, [isOpen]);
+
   return (
     <>
       <img
@@ -25,23 +38,15 @@ export function Lightbox({ src, alt, width, height, className = "" }: LightboxPr
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4 cursor-zoom-out"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 p-4 cursor-zoom-out"
           onClick={() => setIsOpen(false)}
         >
-          <div className="relative max-w-7xl max-h-full">
+          <div className="relative max-w-7xl max-h-full bg-white p-8 rounded-xl border border-gray-200">
             <img
               src={src}
               alt={alt}
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
-              onClick={(e) => e.stopPropagation()}
+              className="max-w-full max-h-[90vh] object-contain"
             />
-            <button
-              className="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close lightbox"
-            >
-              &times;
-            </button>
           </div>
         </div>
       )}

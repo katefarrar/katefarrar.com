@@ -1,3 +1,5 @@
+import { Lightbox } from "@/components/Lightbox";
+
 export default function DagsterAlerting() {
   return (
     <div className="space-y-12">
@@ -87,9 +89,11 @@ export default function DagsterAlerting() {
       </section>
 
       <section className="space-y-6">
-        <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-          Problem illustration
-        </div>
+        <Lightbox
+          src="/alerts-1.png"
+          alt="Problem illustration"
+          className="w-full rounded-lg"
+        />
       </section>
 
       <section className="space-y-6">
@@ -162,9 +166,11 @@ export default function DagsterAlerting() {
             </p>
           </div>
 
-          <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-            Alert policy creation UI
-          </div>
+          <Lightbox
+            src="/alerts-2.png"
+            alt="Alert policy creation UI"
+            className="w-full rounded-lg"
+          />
 
           <div>
             <h3 className="text-lg font-semibold mb-4">
@@ -202,9 +208,11 @@ export default function DagsterAlerting() {
             </p>
           </div>
 
-          <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-            Alert surfaced alongside asset or run details
-          </div>
+          <Lightbox
+            src="/alerts-3.png"
+            alt="Alert surfaced alongside asset or run details"
+            className="w-full rounded-lg"
+          />
 
           <div>
             <h3 className="text-lg font-semibold mb-4">
@@ -236,9 +244,11 @@ export default function DagsterAlerting() {
             </p>
           </div>
 
-          <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-            Asset health status model or asset UI showing health state
-          </div>
+          <Lightbox
+            src="/alerts-4.png"
+            alt="Asset health status model or asset UI showing health state"
+            className="w-full rounded-lg"
+          />
 
           <div>
             <h3 className="text-lg font-semibold mb-4">
@@ -279,9 +289,11 @@ export default function DagsterAlerting() {
             </p>
           </div>
 
-          <div className="aspect-video w-full bg-gray-100 border border-gray-200 flex items-center justify-center text-gray-400">
-            Slack + Email alert screenshots
-          </div>
+          <Lightbox
+            src="/alerts-5.png"
+            alt="Slack + Email alert screenshots"
+            className="w-full rounded-lg"
+          />
         </div>
       </section>
 
