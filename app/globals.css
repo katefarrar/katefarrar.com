@@ -6,6 +6,11 @@
   html {
     font-size: 16px;
   }
+
+  ::selection {
+    background-color: #E6FFFD;
+    color: #171717;
+  }
 }
 
 @layer utilities {

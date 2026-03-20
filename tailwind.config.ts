@@ -13,6 +13,10 @@ const config: Config = {
       },
       colors: {
         'brand-teal': '#A7FFF8',
+        'teal': {
+          DEFAULT: '#A7FFF8',
+          dark: '#7FCCC6',
+        },
       },
     },
   },

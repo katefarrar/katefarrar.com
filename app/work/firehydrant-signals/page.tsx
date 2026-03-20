@@ -3,55 +3,62 @@ import { Lightbox } from "@/components/Lightbox";
 
 export default function FireHydrantSignals() {
   return (
-    <div className="space-y-12">
-      <div className="space-y-4">
-        <h1 className="font-notch text-4xl tracking-tight">
-          Signals for FireHydrant
-        </h1>
-        <p className="text-xl text-gray-600">
-          Alerting and on-call, rethought as part of incident management
-        </p>
-      </div>
+    <div className="space-y-20">
+      <header className="grid grid-cols-12 gap-x-8 gap-y-12 pb-12 border-b border-gray-200">
 
-      <div className="prose max-w-none">
-        <p className="text-gray-700 leading-relaxed">
-          Signals is FireHydrant's alerting and on-call product, designed to
-          help teams respond faster and more consistently by tightly integrating
-          alerts into the incident lifecycle—from first notification to
-          resolution and retro.
-        </p>
-      </div>
+        <div className="col-span-12 lg:col-span-8 space-y-8">
+          <h1 className="font-notch text-5xl lg:text-6xl tracking-tight leading-tight">
+            Signals for FireHydrant
+          </h1>
 
-      <div className="grid grid-cols-2 gap-6 text-sm">
-        <div>
-          <div className="font-semibold text-gray-900">Role</div>
-          <div className="text-gray-600">Lead Product Designer</div>
+          <p className="text-2xl text-gray-600 leading-relaxed max-w-2xl">
+            Alerting and on-call, rethought as part of incident management
+          </p>
+
+          <p className="text-lg text-gray-700 leading-relaxed max-w-2xl">
+            Signals is FireHydrant's alerting and on-call product, designed to
+            help teams respond faster and more consistently by tightly integrating
+            alerts into the incident lifecycle—from first notification to
+            resolution and retro.
+          </p>
         </div>
-        <div>
-          <div className="font-semibold text-gray-900">Product</div>
-          <div className="text-gray-600">FireHydrant</div>
-        </div>
-        <div>
-          <div className="font-semibold text-gray-900">Audience</div>
-          <div className="text-gray-600">Incident Management teams</div>
-        </div>
-        <div>
-          <div className="font-semibold text-gray-900">Outcome</div>
-          <div className="text-gray-600">
-            Launched GA; $250k ARR closed during beta; rapid competitive
-            response from incumbents
+
+        <div className="col-span-12 lg:col-span-4 lg:border-l lg:border-gray-200 lg:pl-8 grid grid-cols-2 lg:grid-cols-1 gap-6 text-sm">
+          <div>
+            <div className="font-semibold text-gray-900 mb-1">Role</div>
+            <div className="text-gray-600">Lead Product Designer</div>
+          </div>
+          <div>
+            <div className="font-semibold text-gray-900 mb-1">Product</div>
+            <div className="text-gray-600">FireHydrant</div>
+          </div>
+          <div>
+            <div className="font-semibold text-gray-900 mb-1">Audience</div>
+            <div className="text-gray-600">Incident Management teams</div>
+          </div>
+          <div className="col-span-2 lg:col-span-1">
+            <div className="font-semibold text-gray-900 mb-1">Outcome</div>
+            <div className="text-gray-600">
+              Launched GA; $250k ARR closed during beta; rapid competitive
+              response from incumbents
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
       <section className="space-y-6">
-        <Image
-          src="/signals-1.png"
-          alt="Hero product screenshot showing alert, escalation, and acknowledgment"
-          width={1200}
-          height={675}
-          className="w-full rounded-lg"
-        />
+        <figure className="space-y-3">
+          <Image
+            src="/signals-1.png"
+            alt="Hero product screenshot showing alert, escalation, and acknowledgment"
+            width={1200}
+            height={675}
+            className="w-full rounded-lg"
+          />
+          <figcaption className="text-xs text-gray-500 italic">
+            Alert timeline composite showing the chronological event flow — from signal trigger through escalation and notification — alongside real-time mobile push delivery
+          </figcaption>
+        </figure>
       </section>
 
       <section className="space-y-6">
@@ -123,11 +130,16 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <Lightbox
-          src="/signals-2.png"
-          alt="Incident lifecycle diagram showing Signal → Alert → Incident → Resolution → Retro"
-          className="w-full rounded-lg"
-        />
+        <figure className="space-y-3">
+          <Lightbox
+            src="/signals-2.png"
+            alt="Incident lifecycle diagram showing Signal → Alert → Incident → Resolution → Retro"
+            className="w-full rounded-lg"
+          />
+          <figcaption className="text-xs text-gray-500 italic">
+            The full incident lifecycle — Signals owns detection and alerting, handing off seamlessly into FireHydrant's incident management workflow
+          </figcaption>
+        </figure>
       </section>
 
       <section className="space-y-6">
@@ -214,11 +226,16 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <Lightbox
-          src="/signals-3.png"
-          alt="Alpha escalation policy form"
-          className="w-full rounded-lg"
-        />
+        <figure className="space-y-3">
+          <Lightbox
+            src="/signals-3.png"
+            alt="Alpha escalation policy form"
+            className="w-full rounded-lg"
+          />
+          <figcaption className="text-xs text-gray-500 italic">
+            Alpha escalation policy design — time-based steps and hand-offs visible but difficult to reason about at a glance
+          </figcaption>
+        </figure>
       </section>
 
       <section className="space-y-6">
@@ -266,13 +283,18 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <Image
-          src="/signals-4.png"
-          alt="GA escalation policy list view - scannable summary of escalation policies"
-          width={1200}
-          height={675}
-          className="w-full rounded-lg"
-        />
+        <figure className="space-y-3">
+          <Image
+            src="/signals-4.png"
+            alt="GA escalation policy list view - scannable summary of escalation policies"
+            width={1200}
+            height={675}
+            className="w-full rounded-lg"
+          />
+          <figcaption className="text-xs text-gray-500 italic">
+            GA escalation policy — scannable summary view with clear ownership, timing, and repeat behavior at every step
+          </figcaption>
+        </figure>
       </section>
 
       <section className="space-y-6">
@@ -311,11 +333,16 @@ export default function FireHydrantSignals() {
       </section>
 
       <section className="space-y-6">
-        <Lightbox
-          src="/signals-6.png"
-          alt="Alert timeline showing chronological alert events"
-          className="w-full rounded-lg"
-        />
+        <figure className="space-y-3">
+          <Lightbox
+            src="/signals-5.png"
+            alt="Alert timeline showing chronological alert events"
+            className="w-full rounded-lg"
+          />
+          <figcaption className="text-xs text-gray-500 italic">
+            Full alert timeline showing the complete lifecycle from signal trigger through escalation, notification, and incident connection
+          </figcaption>
+        </figure>
       </section>
 
       <section className="space-y-6">

@@ -2,38 +2,42 @@ import { Lightbox } from "@/components/Lightbox";
 
 export default function DagsterAlerting() {
   return (
-    <div className="space-y-12">
-      <div className="space-y-4">
-        <h1 className="font-notch text-4xl tracking-tight">
-          Integrated Alerting in Dagster+
-        </h1>
-        <p className="text-xl text-gray-600">
-          Designing alerts that are actionable, contextual, and trustworthy
-        </p>
-      </div>
+    <div className="space-y-20">
+      <header className="grid grid-cols-12 gap-x-8 gap-y-12 pb-12 border-b border-gray-200">
 
-      <div className="grid grid-cols-2 gap-6 text-sm">
-        <div>
-          <div className="font-semibold text-gray-900">Product</div>
-          <div className="text-gray-600">Dagster+</div>
+        <div className="col-span-12 lg:col-span-8 space-y-8">
+          <h1 className="font-notch text-5xl lg:text-6xl tracking-tight leading-tight">
+            Integrated Alerting in Dagster+
+          </h1>
+
+          <p className="text-2xl text-gray-600 leading-relaxed max-w-2xl">
+            Designing alerts that are actionable, contextual, and trustworthy
+          </p>
         </div>
-        <div>
-          <div className="font-semibold text-gray-900">Role</div>
-          <div className="text-gray-600">Product Designer</div>
-        </div>
-        <div>
-          <div className="font-semibold text-gray-900">Scope</div>
-          <div className="text-gray-600">
-            Systems design, interaction design, cross-surface integration
+
+        <div className="col-span-12 lg:col-span-4 lg:border-l lg:border-gray-200 lg:pl-8 grid grid-cols-2 lg:grid-cols-1 gap-6 text-sm">
+          <div>
+            <div className="font-semibold text-gray-900 mb-1">Role</div>
+            <div className="text-gray-600">Product Designer</div>
+          </div>
+          <div>
+            <div className="font-semibold text-gray-900 mb-1">Product</div>
+            <div className="text-gray-600">Dagster+</div>
+          </div>
+          <div>
+            <div className="font-semibold text-gray-900 mb-1">Scope</div>
+            <div className="text-gray-600">
+              Systems design, interaction design, cross-surface integration
+            </div>
+          </div>
+          <div className="col-span-2 lg:col-span-1">
+            <div className="font-semibold text-gray-900 mb-1">Audience</div>
+            <div className="text-gray-600">
+              Data platform teams operating production pipelines
+            </div>
           </div>
         </div>
-        <div>
-          <div className="font-semibold text-gray-900">Audience</div>
-          <div className="text-gray-600">
-            Data platform teams operating production pipelines
-          </div>
-        </div>
-      </div>
+      </header>
 
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Overview</h2>
@@ -52,6 +56,10 @@ export default function DagsterAlerting() {
 
       <section className="space-y-6">
         <h2 className="text-2xl font-semibold">The Problem</h2>
+        <p className="text-gray-700 leading-relaxed">
+          The issue wasn't whether alerts fired. It was whether they represented
+          something users actually cared about.
+        </p>
         <p className="text-gray-700 leading-relaxed">
           As adoption grew, alerting behavior became fragmented:
         </p>
@@ -82,18 +90,19 @@ export default function DagsterAlerting() {
             <span>Alert fatigue reduced trust in the system</span>
           </li>
         </ul>
-        <p className="text-gray-700 leading-relaxed">
-          The issue wasn't whether alerts fired. <br />
-          It was whether they represented something users actually cared about.
-        </p>
       </section>
 
       <section className="space-y-6">
-        <Lightbox
-          src="/alerts-1.png"
-          alt="Problem illustration"
-          className="w-full rounded-lg"
-        />
+        <figure className="space-y-3">
+          <Lightbox
+            src="/alerts-1.png"
+            alt="Problem illustration"
+            className="w-full rounded-lg"
+          />
+          <figcaption className="text-xs text-gray-500 italic">
+            Alert policy model showing the relationship between targets, events, and notification channels — with YAML parity for code-based configuration
+          </figcaption>
+        </figure>
       </section>
 
       <section className="space-y-6">
@@ -166,11 +175,16 @@ export default function DagsterAlerting() {
             </p>
           </div>
 
-          <Lightbox
-            src="/alerts-2.png"
-            alt="Alert policy creation UI"
-            className="w-full rounded-lg"
-          />
+          <figure className="space-y-3">
+            <Lightbox
+              src="/alerts-2.png"
+              alt="Alert policy creation UI"
+              className="w-full rounded-lg"
+            />
+            <figcaption className="text-xs text-gray-500 italic">
+              Policy creation flow — scoping alerts to specific assets using selection syntax and saved views
+            </figcaption>
+          </figure>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">
@@ -208,11 +222,16 @@ export default function DagsterAlerting() {
             </p>
           </div>
 
-          <Lightbox
-            src="/alerts-3.png"
-            alt="Alert surfaced alongside asset or run details"
-            className="w-full rounded-lg"
-          />
+          <figure className="space-y-3">
+            <Lightbox
+              src="/alerts-3.png"
+              alt="Alert surfaced alongside asset or run details"
+              className="w-full rounded-lg"
+            />
+            <figcaption className="text-xs text-gray-500 italic">
+              Alert policies surfaced in context within the deployment view — showing configuration, targets, and triggered alerts without leaving the workflow
+            </figcaption>
+          </figure>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">
@@ -240,15 +259,22 @@ export default function DagsterAlerting() {
             </p>
             <p className="text-gray-700 leading-relaxed mt-3">
               This reduced noise while increasing confidence in what alerts
-              represent.
+              represent. This shifted the underlying model from event-based
+              alerting to state-based alerting — a fundamental change in how the
+              system communicated with users.
             </p>
           </div>
 
-          <Lightbox
-            src="/alerts-4.png"
-            alt="Asset health status model or asset UI showing health state"
-            className="w-full rounded-lg"
-          />
+          <figure className="space-y-3">
+            <Lightbox
+              src="/alerts-4.png"
+              alt="Asset health status model or asset UI showing health state"
+              className="w-full rounded-lg"
+            />
+            <figcaption className="text-xs text-gray-500 italic">
+              Health Status change surfaced as the recommended alert trigger — guiding users toward state-based alerting over individual events
+            </figcaption>
+          </figure>
 
           <div>
             <h3 className="text-lg font-semibold mb-4">
@@ -289,11 +315,16 @@ export default function DagsterAlerting() {
             </p>
           </div>
 
-          <Lightbox
-            src="/alerts-5.png"
-            alt="Slack + Email alert screenshots"
-            className="w-full rounded-lg"
-          />
+          <figure className="space-y-3">
+            <Lightbox
+              src="/alerts-5.png"
+              alt="Slack + Email alert screenshots"
+              className="w-full rounded-lg"
+            />
+            <figcaption className="text-xs text-gray-500 italic">
+              Consistent alert delivery across email, product, and Slack — same health state, same context, same language across every surface
+            </figcaption>
+          </figure>
         </div>
       </section>
 
