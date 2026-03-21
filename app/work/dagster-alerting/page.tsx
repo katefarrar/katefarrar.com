@@ -4,7 +4,6 @@ export default function DagsterAlerting() {
   return (
     <div className="space-y-20">
       <header className="grid grid-cols-12 gap-x-8 gap-y-12 pb-12 border-b border-gray-200">
-
         <div className="col-span-12 lg:col-span-8 space-y-8">
           <h1 className="font-notch text-5xl lg:text-6xl tracking-tight leading-tight">
             Integrated Alerting in Dagster+
@@ -18,7 +17,7 @@ export default function DagsterAlerting() {
         <div className="col-span-12 lg:col-span-4 lg:border-l lg:border-gray-200 lg:pl-8 grid grid-cols-2 lg:grid-cols-1 gap-6 text-sm">
           <div>
             <div className="font-semibold text-gray-900 mb-1">Role</div>
-            <div className="text-gray-600">Product Designer</div>
+            <div className="text-gray-600">Lead Product Designer</div>
           </div>
           <div>
             <div className="font-semibold text-gray-900 mb-1">Product</div>
@@ -100,7 +99,9 @@ export default function DagsterAlerting() {
             className="w-full rounded-lg"
           />
           <figcaption className="text-xs text-gray-500 italic">
-            Alert policy model showing the relationship between targets, events, and notification channels — with YAML parity for code-based configuration
+            Alert policy model showing the relationship between targets, events,
+            and notification channels — with YAML parity for code-based
+            configuration
           </figcaption>
         </figure>
       </section>
@@ -182,7 +183,8 @@ export default function DagsterAlerting() {
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
-              Policy creation flow — scoping alerts to specific assets using selection syntax and saved views
+              Policy creation flow — scoping alerts to specific assets using
+              selection syntax and saved views
             </figcaption>
           </figure>
 
@@ -229,7 +231,9 @@ export default function DagsterAlerting() {
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
-              Alert policies surfaced in context within the deployment view — showing configuration, targets, and triggered alerts without leaving the workflow
+              Alert policies surfaced in context within the deployment view —
+              showing configuration, targets, and triggered alerts without
+              leaving the workflow
             </figcaption>
           </figure>
 
@@ -272,7 +276,8 @@ export default function DagsterAlerting() {
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
-              Health Status change surfaced as the recommended alert trigger — guiding users toward state-based alerting over individual events
+              Health Status change surfaced as the recommended alert trigger —
+              guiding users toward state-based alerting over individual events
             </figcaption>
           </figure>
 
@@ -322,7 +327,8 @@ export default function DagsterAlerting() {
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
-              Consistent alert delivery across email, product, and Slack — same health state, same context, same language across every surface
+              Consistent alert delivery across email, product, and Slack — same
+              health state, same context, same language across every surface
             </figcaption>
           </figure>
         </div>

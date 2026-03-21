@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Lightbox } from "@/components/Lightbox";
 
 export default function DagsterCompass() {
@@ -131,79 +130,6 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Key design decisions</h2>
-
-        <div className="space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold">
-              1. Natural language as the interface—with guardrails
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Natural language lowers the barrier to entry, but increases
-              ambiguity. Compass was intentionally designed to:
-            </p>
-            <ul className="space-y-2 text-gray-700 mt-4">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Ask clarifying questions when needed</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Surface uncertainty instead of guessing</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Favor correctness over speed in edge cases</span>
-              </li>
-            </ul>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              This reduced overconfidence and misuse.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">
-              2. Shared context over private answers
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Answers appear in shared Slack threads rather than private
-              dashboards. This makes assumptions visible, encourages alignment,
-              and turns insights into team artifacts instead of one-off results.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold">
-              3. Clear boundaries between exploration and truth
-            </h3>
-            <p className="text-gray-700 leading-relaxed">
-              Compass supports exploration—not canonical reporting. We were
-              deliberate about:
-            </p>
-            <ul className="space-y-2 text-gray-700 mt-4">
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>
-                  Not positioning Compass as a replacement for core BI
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>
-                  Framing it as a tool for investigation and sense-making
-                </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-gray-400 mt-1">•</span>
-                <span>Keeping analysts and data teams in the loop</span>
-              </li>
-            </ul>
-            <p className="text-gray-700 leading-relaxed mt-4">
-              This boundary was critical for long-term adoption.
-            </p>
-          </div>
-        </div>
-
         <div className="relative w-full rounded-lg overflow-hidden" style={{ paddingBottom: '56.25%' }}>
           <iframe
             className="absolute top-0 left-0 w-full h-full"
@@ -213,38 +139,6 @@ export default function DagsterCompass() {
             allowFullScreen
           />
         </div>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Designing for trust</h2>
-        <p className="text-gray-700 leading-relaxed">
-          The most important design question wasn't "Can Compass answer this?"
-          <br />
-          It was "Should it?"
-        </p>
-        <p className="text-gray-700 leading-relaxed mt-4">
-          Design choices prioritized:
-        </p>
-        <ul className="space-y-2 text-gray-700">
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Clear explanations over clever responses</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Predictable behavior over novelty</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>
-              Signals of confidence <em>and</em> uncertainty
-            </span>
-          </li>
-        </ul>
-        <p className="text-gray-700 leading-relaxed mt-4">
-          Trust was built by making the system's behavior legible, not by hiding
-          complexity.
-        </p>
       </section>
 
       <section className="space-y-6">
@@ -260,48 +154,18 @@ export default function DagsterCompass() {
       </section>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">Impact</h2>
-        <p className="text-gray-700 leading-relaxed">
-          Compass changed how teams interacted with data by:
-        </p>
-        <ul className="space-y-2 text-gray-700">
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Reducing analyst interruption</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Shortening time from question to insight</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>Making exploration collaborative rather than siloed</span>
-          </li>
-          <li className="flex gap-3">
-            <span className="text-gray-400 mt-1">•</span>
-            <span>
-              Encouraging shared understanding instead of private dashboards
-            </span>
-          </li>
-        </ul>
-        <p className="text-gray-700 leading-relaxed mt-4">
-          More importantly, it demonstrated that conversational analytics can
-          work <strong>without sacrificing governance or trust</strong>.
-        </p>
-      </section>
-
-      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Reflection</h2>
         <p className="text-gray-700 leading-relaxed">
-          Compass reinforced a core belief in my work:
-          <br />
-          Good product design isn't about removing complexity—it's about
-          deciding <strong>where complexity belongs</strong>.
+          Compass changed how I think about how teams can build products.
         </p>
-        <p className="text-gray-700 leading-relaxed mt-4">
-          By treating conversation, context, and governance as equal design
-          concerns, we built a system that helps teams explore data confidently
-          without undermining the foundations they rely on.
+        <p className="text-gray-700 leading-relaxed">
+          Not universally — context matters. But on a tiger team moving at this speed, the medium stopped mattering. I've always designed in code — that's not new. What changed was the ceiling. I was pushing production-level code I couldn't have written by hand. Our back-end engineers were building front-end prototypes alongside their architecture work. The distance between an idea and a working thing collapsed for everyone on the team, not just me. We moved faster together because the walls between roles got more permeable.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          What I learned is that the most valuable thing I brought wasn't a specific skillset. It was the clarity to figure out what the team needed and the range to go do it — whether that was systems thinking, brand strategy, or shipping a docs site in 24 hours.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          AI didn't replace design thinking. It let us act on it faster.
         </p>
       </section>
     </div>

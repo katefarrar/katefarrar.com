@@ -284,11 +284,9 @@ export default function FireHydrantSignals() {
 
       <section className="space-y-6">
         <figure className="space-y-3">
-          <Image
+          <Lightbox
             src="/signals-4.png"
             alt="GA escalation policy list view - scannable summary of escalation policies"
-            width={1200}
-            height={675}
             className="w-full rounded-lg"
           />
           <figcaption className="text-xs text-gray-500 italic">
