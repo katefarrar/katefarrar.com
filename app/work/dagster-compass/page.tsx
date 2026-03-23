@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Lightbox } from "@/components/Lightbox";
 
 export default function DagsterCompass() {
@@ -32,7 +33,7 @@ export default function DagsterCompass() {
         </div>
       </header>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Act 1 — How Compass started</h2>
         <p className="text-gray-700 leading-relaxed">
           Compass began as a CEO experiment. Frustrated by how long it took to
@@ -41,71 +42,77 @@ export default function DagsterCompass() {
           a data analyst, then the CTO and Head of Product. The reaction was
           immediate: this should exist.
         </p>
-        <section className="space-y-6">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-1.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Compass Slack interface showing a user asking a business question and receiving an AI-generated answer with data visualization"
             className="w-full rounded-lg"
           />
-        </section>
-        <p className="text-gray-700 leading-relaxed">
-          They needed a designer. I was the most senior designer at the company
-          and known for working across whatever the product needed. They put me
-          on it.
+        </figure>
+
+        <p className="text-gray-700 leading-relaxed mt-4">
+          I had experience working across design and front-end and prototyping
+          so they asked me to join the experiment. and see if we could.
         </p>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mt-3">
           When I joined, Compass was functional but hard to use. The core
           problem was the data management experience — the place where users
           connected and configured their data sources. The steps were unclear
-          and the order was wrong. I redesigned it from scratch — working
-          directly with Claude to move fast — clarifying the steps and making
-          the structure legible. Onboarding was still happening in Slack at this
-          point, but this was the moment it started to feel like an actual
-          product, not just a Slack integration.
+          and the order was wrong. Alongside the team, I redesigned it from
+          scratch — working directly with Claude to move fast — clarifying the
+          steps and making the structure legible. Onboarding was still happening
+          in Slack at this point, but this was the moment it started to feel
+          like an actual product, not just a Slack integration.
         </p>
-        <section className="space-y-6">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-2.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Compass data management interface showing configuration steps for connecting and managing data sources"
             className="w-full rounded-lg"
           />
-        </section>
-        <p className="text-gray-700 leading-relaxed">
-          This was also the first time I was shipping code I couldn't have
-          written by hand. By July 2025 I'd used Claude and ChatGPT extensively
-          for design work, but Compass was where I crossed into using AI to push
-          production-level code alongside our CEO and CTO. We were building an
-          AI product while learning in real time what AI-assisted development
-          actually meant. That context shaped everything about how we worked.
+        </figure>
+
+        <p className="text-gray-700 leading-relaxed mt-4">
+          This was also the first time I was using AI to write code I couldn't
+          have written manually. By July 2025 I'd used Claude and ChatGPT
+          extensively for design work, but Compass was where I crossed into
+          using AI to push production-level code alongside our CEO and CTO. We
+          were building an AI product while learning in real time what
+          AI-assisted development actually meant. That context shaped everything
+          about how we worked.
         </p>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">
           Act 2 — Learning what Slack could and couldn't do
         </h2>
         <p className="text-gray-700 leading-relaxed">
-          Our CEO wanted Compass to be Slack-native — Slack only. The instinct
+          Our CEO wanted Compass to be Slack-native and Slack only. The instinct
           made sense: that's where work happens, that's where the magic felt
           most natural. So we tried to make it work.
         </p>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mt-3">
           We used Slack Connect instead of building a full marketplace app,
           which let us move fast without going through Slack's approval process
           before we'd validated the idea. But Slack Connect introduced its own
           complexity. Every organization has different permissions for adding
           external apps and channels. What worked in one environment broke in
           another. We were creating ten to fifteen test Slack orgs a day trying
-          to understand the failure modes.
+          to recreate the different configurations we were encountering.
         </p>
-        <section className="space-y-6">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-3.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Compass two-channel Slack setup showing separate channels for conversations and admin management"
             className="w-full rounded-lg"
           />
-        </section>
-        <p className="text-gray-700 leading-relaxed">
+        </figure>
+
+        <p className="text-gray-700 leading-relaxed mt-4">
           The governance model made it harder. The original design had two
           channels — one for chatting with Compass, one for admins to manage
           context and approve data requests via GitHub PRs. The idea was sound:
@@ -114,60 +121,78 @@ export default function DagsterCompass() {
           another before they ever saw Compass work. The a-ha moment was buried
           too deep. And managing two channels felt like overhead nobody wanted.
         </p>
-        <p className="text-gray-700 leading-relaxed">
-          The onboarding flow made it worse. Users were bouncing between a
-          sign-up page, email, Slack, a data connection page, and back to Slack
-          — where a new channel had been created while they weren't looking. It
-          was fragmented and hard to reason about.
+        <p className="text-gray-700 leading-relaxed mt-3">
+          The onboarding flow was also fragmented. Users were bouncing between a
+          sign-up page, email, Slack, a data connection page, and back to Slack.
+          The experience was confusing and disjointed.
         </p>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mt-3">
           After months of testing we made two calls:
         </p>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mt-3">
           Onboarding had to move out of Slack. The web was the right place for
           setup, data connection, and configuration. Slack was the right place
           for conversation.
         </p>
-        <p className="text-gray-700 leading-relaxed">
+        <p className="text-gray-700 leading-relaxed mt-3">
           Admin and governance had to move out of Slack too. One linear flow —
           sign up, confirm email, connect data, then enter Slack — replaced the
           fragmented multi-surface experience. Context management and governance
           moved into a web UI with a proper audit trail and clear ownership.
         </p>
-        <section className="space-y-6">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-4.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Streamlined Compass onboarding flow showing linear progression from sign-up through data connection to Slack integration"
             className="w-full rounded-lg"
           />
-        </section>
-        <p className="text-gray-700 leading-relaxed">
+        </figure>
+
+        <p className="text-gray-700 leading-relaxed mt-4">
           The product got simpler. The constraints had forced better decisions.
+          This allowed us to better focus on the different surface areas of
+          Compass - Slack for conversation and the web for management. It also
+          opened the door for a more robust product that wasn't confined to
+          Slack.
         </p>
-        <p className="text-gray-700 leading-relaxed">
-          From there the product moved quickly. We shipped a full web-based
-          admin UI — giving data teams a single place to manage connections,
-          channels, users, governance, and billing, with a playground for
-          testing prompt accuracy and a full browser-based experience that made
-          Compass accessible entirely outside of Slack. We launched to alpha
-          users, iterated through beta, and hit GA in under six months. Compass
-          debuted at #3 on Product Hunt.
+        <p className="text-gray-700 leading-relaxed mt-3">
+          From there things moved quickly. We shipped a full web-based admin UI
+          — giving data teams a single place to manage connections, channels,
+          users, governance, and billing. We launched to alpha users, iterated
+          through beta, and hit GA in under six months. Compass debuted at #3 on
+          Product Hunt.
         </p>
-        <section className="space-y-6">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-5.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Compass web-based admin interface showing management dashboard for connections, channels, users, and governance settings"
             className="w-full rounded-lg"
           />
-        </section>
+        </figure>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">
           Act 3 — Seeing what the numbers were saying
         </h2>
         <p className="text-gray-700 leading-relaxed">
-          When we rolled out the Compass integration for Dagster+ users,
+          {" "}
+          After GA, we begin expanded the capabilities of Compass , with a
+          playground for testing prompt accuracy and a full browser-based
+          experience that made Compass accessible entirely outside of Slack.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          Since the beginning, we had a hunch that Compass alongside the power
+          of Dagster+ would add an immense amount of value for existing Dagster
+          users. Our team had been working on a prototype to integrate Dagter+
+          into Compass. But we weren't sure how it would be recieved. We had
+          been treating Compass like a separate product with a very different
+          audience. We thought it would be a hard sell to get existing users to
+          adopt something new, even if it was better. We thought we'd have to
+          convince them with marketing, sales, and education. We started beta
+          testing the Dagter+ integration with a small group of users. Then
           something unexpected happened. Adoption was immediate. 18 out of 24
           teams activated Compass within 36 hours of being told about it. They
           didn't evaluate it. They didn't need convincing. They just turned it
@@ -185,15 +210,15 @@ export default function DagsterCompass() {
           customers.
         </p>
         <section className=" space-y-6">
-          <figure className="space-y-3">
+          <figure className="space-y-2">
             <div
-              className="my-12 relative w-full rounded-lg overflow-hidden"
+              className="relative w-full rounded-lg overflow-hidden"
               style={{ paddingBottom: "56.25%" }}
             >
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/A8E9LAu1sI8"
-                title="YouTube video player"
+                title="Compass demo showing Dagster+ data integration"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
@@ -212,49 +237,53 @@ export default function DagsterCompass() {
           built.
         </p>
         <p className="text-gray-700 leading-relaxed">
-          I had been sitting at the intersection of product, brand, and
-          go-to-market long enough to see the whole picture. I brought a
-          proposal to leadership: stop fragmenting the two products and lean
-          into what was already working. Dagster is the platform. Compass
-          expands the reach. Whatever the entry point — Dagster+, Compass, or
-          open source — you're in the Dagster ecosystem.
+          Since the beginning of Compass, I had been working at the intersection
+          of product, brand, and go-to-market. I brought a proposal to
+          leadership: let's stop fragmenting the two products and lean into what
+          was already working. Dagster is the platform. Compass expands the
+          reach. Whatever the entry point — Dagster+, Compass, or open source —
+          you're in the Dagster ecosystem.
         </p>
-        <section className="space-y-6">
+        <section className="space-y-4">
           <Lightbox
             src="/compass/compass-6.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Unified Dagster ecosystem diagram showing Compass as part of the integrated platform experience"
             className="w-full rounded-lg"
           />
         </section>
         <p className="text-gray-700 leading-relaxed">
-          The proposal reframed Compass not as a standalone analytics tool but
-          as the conversational intelligence layer of the Dagster platform.
-          Compass would live inside Dagster+ as a native interface — not bolted
-          on, not opt-in, just there — while also remaining available as a
-          standalone product for teams that needed it outside the platform.
+          On the Dagster+ side, we had been struggling to see how Compass fit
+          into Dagter+. Should Compass power all AI features? Should it be in
+          the Dagster+ product at all? The proposal reframed Compass not as a
+          standalone analytics tool but as the conversational intelligence layer
+          of the Dagster platform. Dagter+ is already intelligent - we didn't
+          need a new product to add those capabilties. Compass would live inside
+          Dagster+ as the conversational layer — not bolted on, not opt-in, just
+          there — while also remaining available as a standalone product for
+          teams that needed it outside the platform.
         </p>
-        <section className="space-y-6">
+        <section className="space-y-4">
           <Lightbox
             src="/compass/compass-7.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Compass integrated inside Dagster+ platform showing conversational intelligence layer"
             className="w-full rounded-lg"
           />
         </section>
         <p className="text-gray-700 leading-relaxed">
-          Leadership approved the direction. The brand system, the product
-          architecture, and the go-to-market strategy all now reflect a single
-          coherent story.
+          Leadership approved the direction. We've begun work on an updated
+          brand system, the product architecture, and the go-to-market strategy
+          all now reflect a single coherent story.
         </p>
-        <section className="space-y-6">
+        <section className="space-y-4">
           <Lightbox
             src="/compass/compass-8.png"
-            alt="Compass hero - Slack screenshot showing a real question, result, and follow-up"
+            alt="Updated Compass brand system and product architecture reflecting unified platform positioning"
             className="w-full rounded-lg"
           />
         </section>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Reflection</h2>
         <p className="text-gray-700 leading-relaxed">
           Compass changed how I think about how teams can build products.
@@ -279,6 +308,16 @@ export default function DagsterCompass() {
           AI didn't replace design thinking. It let us act on it faster.
         </p>
       </section>
+
+      <div className="pt-12 border-t border-gray-200">
+        <Link
+          href="/work"
+          className="inline-flex items-center gap-3 text-gray-900 hover:text-gray-600 transition-colors"
+        >
+          <span aria-hidden="true" className="text-xl">←</span>
+          <span className="text-base font-medium">Back to work</span>
+        </Link>
+      </div>
     </div>
   );
 }

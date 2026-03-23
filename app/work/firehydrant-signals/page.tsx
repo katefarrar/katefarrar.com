@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { Lightbox } from "@/components/Lightbox";
 
@@ -50,7 +51,7 @@ export default function FireHydrantSignals() {
         <figure className="space-y-3">
           <Image
             src="/signals-1.png"
-            alt="Hero product screenshot showing alert, escalation, and acknowledgment"
+            alt="Signals alert timeline composite showing chronological event flow from signal trigger through escalation and mobile push notification delivery"
             width={1200}
             height={675}
             className="w-full rounded-lg"
@@ -133,7 +134,7 @@ export default function FireHydrantSignals() {
         <figure className="space-y-3">
           <Lightbox
             src="/signals-2.png"
-            alt="Incident lifecycle diagram showing Signal → Alert → Incident → Resolution → Retro"
+            alt="Incident lifecycle diagram showing progression from Signal to Alert to Incident to Resolution and Retro with Signals handling detection and alerting"
             className="w-full rounded-lg"
           />
           <figcaption className="text-xs text-gray-500 italic">
@@ -229,7 +230,7 @@ export default function FireHydrantSignals() {
         <figure className="space-y-3">
           <Lightbox
             src="/signals-3.png"
-            alt="Alpha escalation policy form"
+            alt="Alpha escalation policy form showing time-based steps and hand-offs that are difficult to reason about at a glance"
             className="w-full rounded-lg"
           />
           <figcaption className="text-xs text-gray-500 italic">
@@ -286,7 +287,7 @@ export default function FireHydrantSignals() {
         <figure className="space-y-3">
           <Lightbox
             src="/signals-4.png"
-            alt="GA escalation policy list view - scannable summary of escalation policies"
+            alt="GA escalation policy showing scannable summary view with clear ownership, timing, and repeat behavior at every step"
             className="w-full rounded-lg"
           />
           <figcaption className="text-xs text-gray-500 italic">
@@ -334,7 +335,7 @@ export default function FireHydrantSignals() {
         <figure className="space-y-3">
           <Lightbox
             src="/signals-5.png"
-            alt="Alert timeline showing chronological alert events"
+            alt="Full alert timeline showing complete lifecycle from signal trigger through escalation, notification, and incident connection"
             className="w-full rounded-lg"
           />
           <figcaption className="text-xs text-gray-500 italic">
@@ -387,6 +388,16 @@ export default function FireHydrantSignals() {
           making complex systems feel trustworthy under pressure.
         </p>
       </section>
+
+      <div className="pt-12 border-t border-gray-200">
+        <Link
+          href="/work"
+          className="inline-flex items-center gap-3 text-gray-900 hover:text-gray-600 transition-colors"
+        >
+          <span aria-hidden="true" className="text-xl">←</span>
+          <span className="text-base font-medium">Back to work</span>
+        </Link>
+      </div>
     </div>
   );
 }

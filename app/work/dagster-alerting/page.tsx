@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Lightbox } from "@/components/Lightbox";
 
 export default function DagsterAlerting() {
@@ -38,7 +39,7 @@ export default function DagsterAlerting() {
         </div>
       </header>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Overview</h2>
         <p className="text-gray-700 leading-relaxed">
           Alerting is one of the most trust-sensitive capabilities in a data
@@ -53,7 +54,7 @@ export default function DagsterAlerting() {
         </p>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">The Problem</h2>
         <p className="text-gray-700 leading-relaxed">
           The issue wasn't whether alerts fired. It was whether they represented
@@ -91,11 +92,11 @@ export default function DagsterAlerting() {
         </ul>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <figure className="space-y-3">
           <Lightbox
             src="/alerts-1.png"
-            alt="Problem illustration"
+            alt="Alert policy model diagram showing the relationship between targets, events, and notification channels with YAML parity for code-based configuration"
             className="w-full rounded-lg"
           />
           <figcaption className="text-xs text-gray-500 italic">
@@ -106,7 +107,7 @@ export default function DagsterAlerting() {
         </figure>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Design Objective</h2>
         <p className="text-gray-700 leading-relaxed">
           Design an alerting system that:
@@ -135,10 +136,10 @@ export default function DagsterAlerting() {
         </p>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Design Solution</h2>
 
-        <div className="space-y-8">
+        <div className="space-y-4">
           <div>
             <h3 className="text-lg font-semibold mb-4">
               Alert Policies as First-Class Concepts
@@ -179,7 +180,7 @@ export default function DagsterAlerting() {
           <figure className="space-y-3">
             <Lightbox
               src="/alerts-2.png"
-              alt="Alert policy creation UI"
+              alt="Alert policy creation interface showing asset selection using selection syntax and saved views for scoping alerts"
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
@@ -227,7 +228,7 @@ export default function DagsterAlerting() {
           <figure className="space-y-3">
             <Lightbox
               src="/alerts-3.png"
-              alt="Alert surfaced alongside asset or run details"
+              alt="Alert policies displayed within deployment view showing configuration, targets, and triggered alerts embedded in operational workflow"
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
@@ -272,7 +273,7 @@ export default function DagsterAlerting() {
           <figure className="space-y-3">
             <Lightbox
               src="/alerts-4.png"
-              alt="Asset health status model or asset UI showing health state"
+              alt="Asset health status interface showing health state changes as recommended alert trigger for state-based alerting"
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
@@ -323,7 +324,7 @@ export default function DagsterAlerting() {
           <figure className="space-y-3">
             <Lightbox
               src="/alerts-5.png"
-              alt="Slack + Email alert screenshots"
+              alt="Alert notifications across Slack, email, and product UI showing consistent health state, context, and language"
               className="w-full rounded-lg"
             />
             <figcaption className="text-xs text-gray-500 italic">
@@ -334,7 +335,7 @@ export default function DagsterAlerting() {
         </div>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Design Tradeoffs</h2>
         <div className="space-y-4">
           <div>
@@ -366,7 +367,7 @@ export default function DagsterAlerting() {
         </div>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Outcome</h2>
         <p className="text-gray-700 leading-relaxed">
           By consolidating signals into health status and aligning policy
@@ -397,7 +398,7 @@ export default function DagsterAlerting() {
         </p>
       </section>
 
-      <section className="space-y-6">
+      <section className="space-y-4">
         <h2 className="text-2xl font-semibold">Key Takeaways</h2>
         <ul className="space-y-2 text-gray-700">
           <li className="flex gap-3">
@@ -420,6 +421,16 @@ export default function DagsterAlerting() {
           </li>
         </ul>
       </section>
+
+      <div className="pt-12 border-t border-gray-200">
+        <Link
+          href="/work"
+          className="inline-flex items-center gap-3 text-gray-900 hover:text-gray-600 transition-colors"
+        >
+          <span aria-hidden="true" className="text-xl">←</span>
+          <span className="text-base font-medium">Back to work</span>
+        </Link>
+      </div>
     </div>
   );
 }

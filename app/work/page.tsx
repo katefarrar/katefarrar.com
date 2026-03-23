@@ -9,6 +9,8 @@ const caseStudies = [
     year: "2025 — present",
     description: "From vibe coded prototype to platform integration",
     image: "/compass-card.png",
+    imageAlt: "Compass interface showing Slack integration with Dagster data platform",
+    objectPosition: "object-top",
   },
   {
     slug: "dagster-alerting",
@@ -18,6 +20,8 @@ const caseStudies = [
     description:
       "Designing alerts that are actionable, contextual, and trustworthy",
     image: "/alerting-card.png",
+    imageAlt: "Dagster+ alerting interface showing alert configuration and monitoring dashboard",
+    objectPosition: "object-center",
   },
   {
     slug: "firehydrant-signals",
@@ -27,6 +31,8 @@ const caseStudies = [
     description:
       "Alerting and on-call, rethought as part of incident management",
     image: "/signals-card.png",
+    imageAlt: "FireHydrant Signals interface showing alert routing and incident management workflow",
+    objectPosition: "object-top",
   },
 ];
 
@@ -37,6 +43,7 @@ const miscProjects = [
       "Brand identity and e-commerce site for a vintage-inspired coffee service brand",
     url: "https://standbytechs.com",
     image: "/standby-logo.png",
+    imageAlt: "Standby Coffee Techs logo featuring vintage-style coffee service branding",
   },
   {
     name: "Longmont Care Circle",
@@ -44,51 +51,36 @@ const miscProjects = [
       "Branding and site for a community-oriented event and co-working space",
     url: "https://longmontcarecircle.com",
     image: "/lcc-logo.png",
+    imageAlt: "Longmont Care Circle logo and branding",
   },
 ];
 
 export default function Work() {
   return (
-    <div className="space-y-32">
-      <header className="grid grid-cols-12 gap-8 mb-8">
+    <div className="space-y-20">
+      <header className="grid grid-cols-12 gap-8 pb-12 border-b border-gray-200">
         <div className="col-span-12 lg:col-span-8">
           <h1 className="font-notch text-5xl lg:text-6xl tracking-tight mb-6">
             Case Studies
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+          <p className="text-2xl text-gray-600 leading-relaxed">
             Systems-level product design for complex technical platforms
           </p>
         </div>
       </header>
 
-      <div className="space-y-12">
-        {caseStudies.map((project, index) => (
+      <div className="space-y-20">
+        {caseStudies.map((project) => (
           <Link
             key={project.slug}
             href={`/work/${project.slug}`}
             className="group block cursor-pointer"
+            aria-label={`View ${project.title} case study`}
           >
-            <article className="border border-gray-300 rounded transition-all duration-300 bg-white overflow-hidden">
-              <div className="grid lg:grid-cols-2 gap-0">
-                <div
-                  className={`aspect-[4/3] lg:aspect-auto bg-gray-50 overflow-hidden relative ${index % 2 === 1 ? "lg:order-2" : ""}`}
-                >
-                  {project.image ? (
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className={`object-cover ${index % 2 === 1 ? "object-left" : "object-right"}`}
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 transition-all duration-500" />
-                  )}
-                </div>
-
-                <div
-                  className={`p-12 lg:p-16 flex flex-col justify-center space-y-6 ${index % 2 === 1 ? "lg:order-1" : ""}`}
-                >
-                  <div className="text-sm text-gray-500 tracking-wide">
+            <article className="pb-20 border-b border-gray-200 last:border-0 last:pb-0">
+              <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
+                <div className="lg:col-span-5 flex flex-col justify-top space-y-6">
+                  <div className="text-sm text-gray-500">
                     {project.company} · {project.year}
                   </div>
 
@@ -100,14 +92,29 @@ export default function Work() {
                     {project.description}
                   </p>
 
-                  <div className="flex items-center gap-3 pt-4 text-gray-900 transition-colors duration-300">
+                  <div className="flex items-center gap-3 pt-2 text-gray-900">
                     <span className="text-base font-medium">
                       View case study
                     </span>
-                    <span className="text-xl transform group-hover:translate-x-2 transition-transform duration-300">
+                    <span aria-hidden="true" className="text-xl transform group-hover:translate-x-2 transition-transform duration-300">
                       →
                     </span>
                   </div>
+                </div>
+
+                <div className="lg:col-span-7">
+                  {project.image ? (
+                    <div className="aspect-[5/4] relative overflow-hidden bg-gray-100 border border-gray-200">
+                      <Image
+                        src={project.image}
+                        alt={project.imageAlt || project.title}
+                        fill
+                        className={`object-cover ${project.objectPosition || "object-top"}`}
+                      />
+                    </div>
+                  ) : (
+                    <div className="aspect-[5/4] bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 border border-gray-200" />
+                  )}
                 </div>
               </div>
             </article>
@@ -131,13 +138,14 @@ export default function Work() {
               target="_blank"
               rel="noopener noreferrer"
               className="group block cursor-pointer"
+              aria-label={`Visit ${project.name} website`}
             >
               <article className="border border-gray-300 rounded transition-all duration-300 bg-white overflow-hidden h-full">
                 <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
                   {project.image ? (
                     <Image
                       src={project.image}
-                      alt={project.name}
+                      alt={project.imageAlt || project.name}
                       fill
                       className="object-contain p-16"
                     />
@@ -157,7 +165,7 @@ export default function Work() {
 
                   <div className="flex items-center gap-2 pt-2 text-gray-900 transition-colors duration-300">
                     <span className="text-sm font-medium">View site</span>
-                    <span className="text-base transform group-hover:translate-x-2 transition-transform duration-300">
+                    <span aria-hidden="true" className="text-base transform group-hover:translate-x-2 transition-transform duration-300">
                       →
                     </span>
                   </div>

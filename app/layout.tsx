@@ -29,7 +29,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-white text-gray-900 text-base flex flex-col min-h-screen">
         <Navigation />
-        <main className="max-w-4xl mx-auto px-6 py-16 flex-1 w-full">{children}</main>
+        <main className="max-w-4xl mx-auto px-6 pt-24 pb-16 flex-1 w-full">{children}</main>
         <Footer />
       </body>
     </html>

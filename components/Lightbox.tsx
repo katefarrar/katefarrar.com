@@ -38,7 +38,7 @@ export function Lightbox({ src, alt, width, height, className = "" }: LightboxPr
       <img
         src={src}
         alt={alt}
-        className={`${className} cursor-zoom-in transition-opacity hover:opacity-90`}
+        className={`${className} cursor-zoom-in transition-opacity hover:opacity-90 border border-gray-200`}
         onClick={() => setIsOpen(true)}
       />
 
@@ -51,7 +51,7 @@ export function Lightbox({ src, alt, width, height, className = "" }: LightboxPr
             <img
               src={src}
               alt={alt}
-              className="max-w-[85vw] sm:max-w-[67.5vw] max-h-[85vh] sm:max-h-[67.5vh] object-contain"
+              className="max-w-[95vw] max-h-[95vh] object-contain"
             />
           </div>
         </div>,

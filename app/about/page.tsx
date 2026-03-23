@@ -66,7 +66,7 @@ export default function About() {
             <div className="border border-gray-200 rounded-lg overflow-hidden">
               <Image
                 src="/kf-about.jpg"
-                alt="Kate Farrar"
+                alt="Portrait of Kate Farrar"
                 width={800}
                 height={600}
                 className="w-full"
@@ -84,7 +84,7 @@ export default function About() {
               className="inline-flex items-center gap-3 px-6 py-3 border-2 border-black hover:bg-black hover:text-white transition-all duration-300 text-base font-medium"
             >
               Send me an email
-              <span>→</span>
+              <span aria-hidden="true">→</span>
             </a>
           </div>
         </div>

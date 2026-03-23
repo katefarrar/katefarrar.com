@@ -168,3 +168,149 @@ Clean up unnecessary elements and refine hover states and interactions across Ab
 - All changes focused on refinement and polish
 - Accessibility improved with better contrast ratios
 - Interaction design simplified for better user experience
+
+
+---
+
+## 2026-03-22 - Work Page Refinements and Layout Updates
+
+### Goal
+Refine the work page layout, add card images, update navigation styling, and fix footer positioning across all pages.
+
+### Changes Made
+
+**Work Page Card Layout ([app/work/page.tsx](app/work/page.tsx)):**
+- Converted Additional Work section from 3-column to 2-column grid layout
+- Removed Compass card from Additional Work (already featured as main case study)
+- Added card images:
+  - Compass: /compass-card.png
+  - Dagster Alerting: /alerting-card.png
+  - Signals: /signals-card.png
+  - Standby Coffee Techs: /standby-logo.png (with p-16 padding)
+  - Longmont Care Circle: /lcc-logo.png (with p-16 padding)
+- Updated all card borders from heavy black (border-2 border-gray-900) to subtle (border border-gray-300)
+- Added 4px border radius (rounded) to all cards
+- Changed case study images from object-contain to object-cover with edge alignment (object-left/object-right)
+
+**Compass Case Study ([app/work/dagster-compass/page.tsx](app/work/dagster-compass/page.tsx)):**
+- Added caption underneath YouTube video: "Demo of Dagster+ data in Compass"
+- Wrapped video in figure element with figcaption using consistent styling (text-xs text-gray-500 italic)
+
+**Homepage Updates ([app/page.tsx](app/page.tsx)):**
+- Changed CTA button hover from teal to white with black outline
+- Removed min-h-[80vh] to work with new flex layout
+- Button now transitions: black bg → white bg on hover
+
+**Navigation Updates ([components/Navigation.tsx](components/Navigation.tsx)):**
+- Changed border from border-gray-900 to border-gray-200 (lighter, more subtle)
+
+**Footer and Layout System ([app/layout.tsx](app/layout.tsx), [components/Footer.tsx](components/Footer.tsx)):**
+- Implemented sticky footer that sits at bottom of viewport on all pages
+- Added flex layout to body: flex flex-col min-h-screen
+- Main content uses flex-1 to grow and fill available space
+- Footer uses w-full and mt-auto
+- Footer border changed from border-gray-900 to border-gray-200
+- Removed min-h-screen from work page content to prevent flex conflicts
+
+### Design Decisions
+- Lighter borders (gray-300) create more refined, modern look compared to heavy black borders
+- 2-column grid for Additional Work provides better balance than 3-column (too compact) or full-width rows (too similar to case studies)
+- Object-cover on case study images creates more dynamic, edge-to-edge presentation
+- Consistent image padding (p-16) on logos gives breathing room in containers
+- Sticky footer ensures professional layout on all viewport sizes
+
+### Files Modified
+1. app/work/page.tsx
+2. app/work/dagster-compass/page.tsx
+3. app/page.tsx
+4. app/layout.tsx
+5. components/Navigation.tsx
+6. components/Footer.tsx
+
+### Notes
+- All border weights reduced from 2px to 1px throughout work page
+- Card images now display properly with correct aspect ratios
+- Footer positioning works consistently across homepage, work page, and case study pages
+- No new packages installed
+- No new components created
+
+---
+
+## 2026-03-23 - Homepage and Work Page Redesign
+
+### Goal
+Redesign work page with cleaner editorial layout, add case studies to homepage, and refine visual hierarchy across the site.
+
+### Changes Made
+
+**Homepage ([app/page.tsx](app/page.tsx)):**
+- Added three case study cards below hero section using same layout as work page
+- Removed "View case studies" CTA button (commented out)
+- Added case studies data with object position configuration
+- Maintained hero section with asymmetric 8/4 grid
+- Overall spacing: `space-y-32` between hero and case studies
+
+**Work Page Layout Overhaul ([app/work/page.tsx](app/work/page.tsx)):**
+- Redesigned from boxed cards to editorial layout with horizontal dividers
+- Removed heavy borders and containers for cleaner presentation
+- Case study cards now use:
+  - `border-b border-gray-200` dividers between items
+  - 7/5 column grid (image left, content right)
+  - `aspect-[5/4]` images with `border border-gray-200`
+  - Consistent left-to-right layout (no alternating)
+  - Images: subtle `bg-gray-100` background with border
+  - Fixed heights removed - images use aspect ratio
+- Updated header to match About page style:
+  - Added `pb-12 border-b border-gray-200`
+  - Changed subtitle from `text-xl` to `text-2xl`
+- Spacing: `space-y-20` between sections and cards
+- Added object position per card:
+  - Compass: `object-top`
+  - Dagster Alerting: `object-center`
+  - Signals: `object-top`
+
+**Global Layout ([app/layout.tsx](app/layout.tsx)):**
+- Increased top padding from `pt-16` to `pt-24` (6rem)
+- Maintained bottom padding at `pb-16`
+
+**Lightbox Component ([components/Lightbox.tsx](components/Lightbox.tsx)):**
+- Increased lightbox size from `max-w-[67.5vw] max-h-[67.5vh]` to `max-w-[95vw] max-h-[95vh]`
+- Added `border border-gray-200` to thumbnail images
+- Removed responsive sizing variations for consistency
+
+**Case Study Pages:**
+- Compass ([app/work/dagster-compass/page.tsx](app/work/dagster-compass/page.tsx)):
+  - Removed `my-12` margin from YouTube iframe wrapper
+  - Changed figure spacing from `space-y-3` to `space-y-2`
+  - Updated all section spacing from `space-y-6` to `space-y-8`
+- Dagster Alerting ([app/work/dagster-alerting/page.tsx](app/work/dagster-alerting/page.tsx)):
+  - Updated all section spacing from `space-y-6` to `space-y-8`
+- FireHydrant Signals ([app/work/firehydrant-signals/page.tsx](app/work/firehydrant-signals/page.tsx)):
+  - Updated all section spacing from `space-y-6` to `space-y-8`
+
+### Design Decisions
+- **Editorial over UI**: Moved from card-based layout to editorial style with dividers
+- **Consistent alignment**: All case studies use same left-to-right layout
+- **Subtle separation**: Border on images provides definition without visual weight
+- **Refined spacing**: Increased vertical rhythm (6→8) for better breathing room
+- **Larger lightbox**: Images now display at 95% viewport for better detail viewing
+- **Homepage integration**: Case studies front and center, CTA removed
+
+### Files Modified
+1. app/page.tsx
+2. app/layout.tsx
+3. app/work/page.tsx
+4. app/work/dagster-compass/page.tsx
+5. app/work/dagster-alerting/page.tsx
+6. app/work/firehydrant-signals/page.tsx
+7. components/Lightbox.tsx
+
+### Notes
+- No new packages installed
+- No new components created
+- All changes focused on visual refinement and hierarchy
+- Maintains accessibility with proper contrast ratios
+- Editorial approach aligns with portfolio's refined aesthetic
+
+---
+
