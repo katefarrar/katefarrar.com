@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="min-h-[80vh] flex items-center -mx-6">
+    <div className="flex items-center -mx-6">
       <div className="w-full max-w-6xl mx-auto px-6">
         <div className="grid grid-cols-12 gap-x-8 gap-y-12">
           <div className="col-span-12 lg:col-span-8">
@@ -20,7 +20,7 @@ export default function Home() {
               <div className="pt-4">
                 <a
                   href="/work"
-                  className="inline-flex items-center gap-3 px-8 py-4 border-2 border-black bg-black text-white hover:bg-teal hover:border-teal hover:text-black transition-all duration-300 text-lg font-medium tracking-tight"
+                  className="inline-flex items-center gap-3 px-8 py-4 border-2 border-black bg-black text-white hover:bg-white hover:text-black transition-all duration-300 text-lg font-medium tracking-tight"
                 >
                   View case studies
                   <span className="text-xl">→</span>

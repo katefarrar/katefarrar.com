@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const caseStudies = [
   {
@@ -7,6 +8,7 @@ const caseStudies = [
     company: "Dagster",
     year: "2025 — present",
     description: "From vibe coded prototype to platform integration",
+    image: "/compass-card.png",
   },
   {
     slug: "dagster-alerting",
@@ -15,6 +17,7 @@ const caseStudies = [
     year: "2024 — 2025",
     description:
       "Designing alerts that are actionable, contextual, and trustworthy",
+    image: "/alerting-card.png",
   },
   {
     slug: "firehydrant-signals",
@@ -23,33 +26,30 @@ const caseStudies = [
     year: "2023 — 2024",
     description:
       "Alerting and on-call, rethought as part of incident management",
+    image: "/signals-card.png",
   },
 ];
 
 const miscProjects = [
   {
-    name: "Compass",
-    description:
-      "Branding, web, and marketing for a new Dagster product offering",
-    url: "https://compass.dagster.io",
-  },
-  {
     name: "Standby Coffee Techs",
     description:
       "Brand identity and e-commerce site for a vintage-inspired coffee service brand",
     url: "https://standbytechs.com",
+    image: "/standby-logo.png",
   },
   {
     name: "Longmont Care Circle",
     description:
       "Branding and site for a community-oriented event and co-working space",
     url: "https://longmontcarecircle.com",
+    image: "/lcc-logo.png",
   },
 ];
 
 export default function Work() {
   return (
-    <div className="min-h-screen space-y-32">
+    <div className="space-y-32">
       <header className="grid grid-cols-12 gap-8 mb-8">
         <div className="col-span-12 lg:col-span-8">
           <h1 className="font-notch text-5xl lg:text-6xl tracking-tight mb-6">
@@ -68,13 +68,21 @@ export default function Work() {
             href={`/work/${project.slug}`}
             className="group block cursor-pointer"
           >
-            <article className="border-2 border-gray-900 transition-all duration-300 bg-white overflow-hidden">
+            <article className="border border-gray-300 rounded transition-all duration-300 bg-white overflow-hidden">
               <div className="grid lg:grid-cols-2 gap-0">
                 <div
                   className={`aspect-[4/3] lg:aspect-auto bg-gray-50 overflow-hidden relative ${index % 2 === 1 ? "lg:order-2" : ""}`}
                 >
-                  <div className="w-full h-full bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 transition-all duration-500" />
-                  c{" "}
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className={`object-cover ${index % 2 === 1 ? "object-left" : "object-right"}`}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 transition-all duration-500" />
+                  )}
                 </div>
 
                 <div
@@ -115,7 +123,7 @@ export default function Work() {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {miscProjects.map((project) => (
             <Link
               key={project.name}
@@ -124,9 +132,18 @@ export default function Work() {
               rel="noopener noreferrer"
               className="group block cursor-pointer"
             >
-              <article className="border-2 border-gray-900 transition-all duration-300 bg-white overflow-hidden h-full">
-                <div className="aspect-[4/3] bg-gray-50 overflow-hidden">
-                  <div className="w-full h-full bg-gradient-to-br from-gray-50 to-gray-200 transition-all duration-500" />
+              <article className="border border-gray-300 rounded transition-all duration-300 bg-white overflow-hidden h-full">
+                <div className="aspect-[4/3] bg-gray-50 overflow-hidden relative">
+                  {project.image ? (
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      className="object-contain p-16"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-gray-50 to-gray-200 transition-all duration-500" />
+                  )}
                 </div>
 
                 <div className="p-6 space-y-4">

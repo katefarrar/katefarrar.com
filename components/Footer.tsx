@@ -2,15 +2,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-900 mt-24">
+    <footer className="w-full border-t border-gray-200 mt-auto">
       <div className="max-w-4xl mx-auto px-6 py-8">
         <div className="flex items-center justify-between text-sm">
-          {/* Left - Copyright */}
           <div className="text-gray-600">
             © 2026 Kate Farrar. All rights reserved
           </div>
 
-          {/* Right - Social links */}
           <div className="flex gap-6">
             <a
               href="https://linkedin.com/in/katefarrar"
