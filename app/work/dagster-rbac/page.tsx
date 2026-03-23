@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Custom RBAC for Dagster+" };
+
 export default function DagsterRBAC() {
   return (
     <div className="space-y-12">

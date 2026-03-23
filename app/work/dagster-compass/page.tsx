@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Lightbox } from "@/components/Lightbox";
+
+export const metadata: Metadata = { title: "Compass" };
 
 export default function DagsterCompass() {
   return (

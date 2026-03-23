@@ -2,9 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Kate Farrar",
+  title: {
+    default: "Kate Farrar, Product Designer",
+    template: "%s — Kate Farrar, Product Designer",
+  },
   description: "Personal site",
 };
 
@@ -31,6 +35,7 @@ export default function RootLayout({
         <Navigation />
         <main className="max-w-4xl mx-auto px-6 pt-24 pb-16 flex-1 w-full">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

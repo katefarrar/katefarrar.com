@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Package Driven Observability" };
+
 export default function ElasticPackageDrivenObservability() {
   return (
     <div className="space-y-12">

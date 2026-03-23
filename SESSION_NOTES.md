@@ -314,3 +314,26 @@ Redesign work page with cleaner editorial layout, add case studies to homepage, 
 
 ---
 
+## 2026-03-23 - Vercel Deployment Fix
+
+### Goal
+Unblock a failing Vercel build that had been stuck for ~1 hour.
+
+### Problem
+Build error: `Cannot find module './parse'` in `browserslist/index.js`. The Vercel log showed "changed 2 packages" during install, meaning Vercel's `npm install` was drifting from the lockfile and resolving browserslist to a version without `parse.js`.
+
+Previous attempts (postcss override to 8.4.31, forcing webpack mode) had not resolved the root cause.
+
+### Fix
+Created `vercel.json` with `"installCommand": "npm ci"` to force Vercel to install exactly what's in `package-lock.json` rather than re-resolving packages.
+
+### Files Modified
+1. vercel.json (created)
+
+### Notes
+- Site was previously on Netlify (no Next.js); this is a new Next.js deployment on Vercel
+- Vercel was pointed at branch `kf/2026-next` (not main) — kept as-is
+- The "changed 2 packages" line in Vercel build logs is the diagnostic signal for this class of issue
+
+---
+

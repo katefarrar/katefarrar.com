@@ -1,6 +1,9 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Lightbox } from "@/components/Lightbox";
+
+export const metadata: Metadata = { title: "Signals for FireHydrant" };
 
 export default function FireHydrantSignals() {
   return (

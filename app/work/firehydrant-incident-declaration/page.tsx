@@ -1,3 +1,7 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = { title: "Incident Declaration" };
+
 export default function FireHydrantIncidentDeclaration() {
   return (
     <div className="space-y-12">

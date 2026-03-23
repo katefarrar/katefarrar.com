@@ -1,5 +1,8 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Lightbox } from "@/components/Lightbox";
+
+export const metadata: Metadata = { title: "Integrated Alerting in Dagster+" };
 
 export default function DagsterAlerting() {
   return (
