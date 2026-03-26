@@ -36,7 +36,7 @@ export default function DagsterCompass() {
         </div>
       </header>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Act 1 — How Compass started</h2>
         <p className="text-gray-700 leading-relaxed">
           Compass began as a CEO experiment. Frustrated by how long it took to
@@ -44,6 +44,17 @@ export default function DagsterCompass() {
           prototype over a weekend and started using it himself. He showed it to
           a data analyst, then the CTO and Head of Product. The reaction was
           immediate: this should exist.
+        </p>
+        <p className="text-gray-700 leading-relaxed">
+          The team knew that I enjoy working on 0 to 1 type projects, trying new
+          tools, and experimenting in code. So they asked me to join the team.
+          For the first few months, we were a team of five — the CEO, the CTO,
+          our Head of Product, a Platform Engineer, and myself. We were meeting
+          daily, all writing and reviewing code together, and using Compass
+          ourselves as we built it. It was an incredible oppportunity to shape a
+          product from the very beginning, and to work closely with our leaders
+          in a way that blurred the lines between product, design, engineering,
+          and even brand.
         </p>
 
         <figure className="space-y-3">
@@ -53,20 +64,15 @@ export default function DagsterCompass() {
             className="w-full rounded-lg"
           />
         </figure>
-
-        <p className="text-gray-700 leading-relaxed mt-4">
-          I had experience working across design and front-end and prototyping
-          so they asked me to join the experiment. and see if we could.
-        </p>
-        <p className="text-gray-700 leading-relaxed mt-3">
-          When I joined, Compass was functional but hard to use. The core
-          problem was the data management experience — the place where users
-          connected and configured their data sources. The steps were unclear
-          and the order was wrong. Alongside the team, I redesigned it from
-          scratch — working directly with Claude to move fast — clarifying the
-          steps and making the structure legible. Onboarding was still happening
-          in Slack at this point, but this was the moment it started to feel
-          like an actual product, not just a Slack integration.
+        <p className="text-gray-700 leading-relaxed">
+          When I joined, Compass was functional but a little hard to use. The
+          chat experience worked great. But, the main problem was the data
+          management — the place where users connected and configured their data
+          sources. Alongside the team, I redesigned it from scratch — working
+          directly in the code to move fast — clarifying the steps and making
+          the structure legible. Onboarding was still happening in Slack at this
+          point, but this was the moment it started to feel like an actual
+          product, not just a Slack integration.
         </p>
 
         <figure className="space-y-3">
@@ -77,7 +83,7 @@ export default function DagsterCompass() {
           />
         </figure>
 
-        <p className="text-gray-700 leading-relaxed mt-4">
+        <p className="text-gray-700 leading-relaxed">
           This was also the first time I was using AI to write code I couldn't
           have written manually. By July 2025 I'd used Claude and ChatGPT
           extensively for design work, but Compass was where I crossed into
@@ -88,7 +94,7 @@ export default function DagsterCompass() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">
           Act 2 — Learning what Slack could and couldn't do
         </h2>
@@ -97,7 +103,7 @@ export default function DagsterCompass() {
           made sense: that's where work happens, that's where the magic felt
           most natural. So we tried to make it work.
         </p>
-        <p className="text-gray-700 leading-relaxed mt-3">
+        <p className="text-gray-700 leading-relaxed">
           We used Slack Connect instead of building a full marketplace app,
           which let us move fast without going through Slack's approval process
           before we'd validated the idea. But Slack Connect introduced its own
@@ -115,7 +121,7 @@ export default function DagsterCompass() {
           />
         </figure>
 
-        <p className="text-gray-700 leading-relaxed mt-4">
+        <p className="text-gray-700 leading-relaxed">
           The governance model made it harder. The original design had two
           channels — one for chatting with Compass, one for admins to manage
           context and approve data requests via GitHub PRs. The idea was sound:
@@ -124,20 +130,20 @@ export default function DagsterCompass() {
           another before they ever saw Compass work. The a-ha moment was buried
           too deep. And managing two channels felt like overhead nobody wanted.
         </p>
-        <p className="text-gray-700 leading-relaxed mt-3">
+        <p className="text-gray-700 leading-relaxed">
           The onboarding flow was also fragmented. Users were bouncing between a
           sign-up page, email, Slack, a data connection page, and back to Slack.
           The experience was confusing and disjointed.
         </p>
-        <p className="text-gray-700 leading-relaxed mt-3">
+        <p className="text-gray-700 leading-relaxed">
           After months of testing we made two calls:
         </p>
-        <p className="text-gray-700 leading-relaxed mt-3">
+        <p className="text-gray-700 leading-relaxed">
           Onboarding had to move out of Slack. The web was the right place for
           setup, data connection, and configuration. Slack was the right place
           for conversation.
         </p>
-        <p className="text-gray-700 leading-relaxed mt-3">
+        <p className="text-gray-700 leading-relaxed">
           Admin and governance had to move out of Slack too. One linear flow —
           sign up, confirm email, connect data, then enter Slack — replaced the
           fragmented multi-surface experience. Context management and governance
@@ -152,14 +158,14 @@ export default function DagsterCompass() {
           />
         </figure>
 
-        <p className="text-gray-700 leading-relaxed mt-4">
+        <p className="text-gray-700 leading-relaxed">
           The product got simpler. The constraints had forced better decisions.
           This allowed us to better focus on the different surface areas of
           Compass - Slack for conversation and the web for management. It also
           opened the door for a more robust product that wasn't confined to
           Slack.
         </p>
-        <p className="text-gray-700 leading-relaxed mt-3">
+        <p className="text-gray-700 leading-relaxed">
           From there things moved quickly. We shipped a full web-based admin UI
           — giving data teams a single place to manage connections, channels,
           users, governance, and billing. We launched to alpha users, iterated
@@ -176,12 +182,11 @@ export default function DagsterCompass() {
         </figure>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">
           Act 3 — Seeing what the numbers were saying
         </h2>
         <p className="text-gray-700 leading-relaxed">
-          {" "}
           After GA, we begin expanded the capabilities of Compass , with a
           playground for testing prompt accuracy and a full browser-based
           experience that made Compass accessible entirely outside of Slack.
@@ -212,25 +217,25 @@ export default function DagsterCompass() {
           actually adopting and staying were almost entirely existing Dagster+
           customers.
         </p>
-        <section className=" space-y-6">
-          <figure className="space-y-2">
-            <div
-              className="relative w-full rounded-lg overflow-hidden"
-              style={{ paddingBottom: "56.25%" }}
-            >
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/A8E9LAu1sI8"
-                title="Compass demo showing Dagster+ data integration"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-            <figcaption className="text-xs text-gray-500 italic">
-              Demo of Dagster+ data in Compass
-            </figcaption>
-          </figure>
-        </section>
+
+        <figure className="space-y-2">
+          <div
+            className="relative w-full rounded-lg overflow-hidden"
+            style={{ paddingBottom: "56.25%" }}
+          >
+            <iframe
+              className="absolute top-0 left-0 w-full h-full"
+              src="https://www.youtube.com/embed/A8E9LAu1sI8"
+              title="Compass demo showing Dagster+ data integration"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+          <figcaption className="text-xs text-gray-500 italic">
+            Demo of Dagster+ data in Compass
+          </figcaption>
+        </figure>
+
         <p className="text-gray-700 leading-relaxed">
           The reason wasn't the product. It was trust. Dagster+ users already
           trusted the platform. They didn't need to evaluate whether Compass was
@@ -247,13 +252,15 @@ export default function DagsterCompass() {
           reach. Whatever the entry point — Dagster+, Compass, or open source —
           you're in the Dagster ecosystem.
         </p>
-        <section className="space-y-4">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-6.png"
             alt="Unified Dagster ecosystem diagram showing Compass as part of the integrated platform experience"
             className="w-full rounded-lg"
           />
-        </section>
+        </figure>
+
         <p className="text-gray-700 leading-relaxed">
           On the Dagster+ side, we had been struggling to see how Compass fit
           into Dagter+. Should Compass power all AI features? Should it be in
@@ -265,28 +272,31 @@ export default function DagsterCompass() {
           there — while also remaining available as a standalone product for
           teams that needed it outside the platform.
         </p>
-        <section className="space-y-4">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-7.png"
             alt="Compass integrated inside Dagster+ platform showing conversational intelligence layer"
             className="w-full rounded-lg"
           />
-        </section>
+        </figure>
+
         <p className="text-gray-700 leading-relaxed">
           Leadership approved the direction. We've begun work on an updated
           brand system, the product architecture, and the go-to-market strategy
           all now reflect a single coherent story.
         </p>
-        <section className="space-y-4">
+
+        <figure className="space-y-3">
           <Lightbox
             src="/compass/compass-8.png"
             alt="Updated Compass brand system and product architecture reflecting unified platform positioning"
             className="w-full rounded-lg"
           />
-        </section>
+        </figure>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Reflection</h2>
         <p className="text-gray-700 leading-relaxed">
           Compass changed how I think about how teams can build products.
@@ -317,7 +327,9 @@ export default function DagsterCompass() {
           href="/work"
           className="inline-flex items-center gap-3 text-gray-900 hover:text-gray-600 transition-colors"
         >
-          <span aria-hidden="true" className="text-xl">←</span>
+          <span aria-hidden="true" className="text-xl">
+            ←
+          </span>
           <span className="text-base font-medium">Back to work</span>
         </Link>
       </div>

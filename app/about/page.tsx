@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "About" };
 export default function About() {
   return (
     <div className="space-y-20">
-      <header className="grid grid-cols-12 gap-8 pb-12 border-b border-gray-200">
+      <header className="grid grid-cols-12 gap-y-8 lg:gap-8 pb-12 border-b border-gray-200">
         <div className="col-span-12 lg:col-span-8">
           <h1 className="font-notch text-5xl lg:text-6xl tracking-tight mb-6">
             About
@@ -17,7 +17,7 @@ export default function About() {
         </div>
       </header>
 
-      <div className="grid grid-cols-12 gap-x-12 gap-y-12">
+      <div className="grid grid-cols-12 gap-x-0 lg:gap-x-12 gap-y-12">
         <div className="col-span-12 lg:col-span-7 space-y-7">
           <p className="text-lg leading-relaxed">
             I'm a product designer who's always enjoyed designing in code. I

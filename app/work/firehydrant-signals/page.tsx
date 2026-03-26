@@ -51,22 +51,7 @@ export default function FireHydrantSignals() {
       </header>
 
       <section className="space-y-6">
-        <figure className="space-y-3">
-          <Image
-            src="/signals-1.png"
-            alt="Signals alert timeline composite showing chronological event flow from signal trigger through escalation and mobile push notification delivery"
-            width={1200}
-            height={675}
-            className="w-full rounded-lg"
-          />
-          <figcaption className="text-xs text-gray-500 italic">
-            Alert timeline composite showing the chronological event flow — from signal trigger through escalation and notification — alongside real-time mobile push delivery
-          </figcaption>
-        </figure>
-      </section>
-
-      <section className="space-y-6">
-        <h2 className="text-2xl font-semibold">The problem</h2>
+        <h2 className="text-2xl font-semibold">The Problem</h2>
         <p className="text-gray-700 leading-relaxed">
           Most alerting tools are built as standalone systems. They notify
           people, but they don't help teams understand what's happening,
@@ -97,6 +82,18 @@ export default function FireHydrantSignals() {
           We saw an opportunity to design alerting not as a separate product,
           but as the <strong>first step in incident response</strong>.
         </p>
+        <figure className="space-y-3">
+          <Image
+            src="/signals-1.png"
+            alt="Signals alert timeline composite showing chronological event flow from signal trigger through escalation and mobile push notification delivery"
+            width={1200}
+            height={675}
+            className="w-full rounded-lg"
+          />
+          <figcaption className="text-xs text-gray-500 italic">
+            Alert timeline composite showing the chronological event flow — from signal trigger through escalation and notification — alongside real-time mobile push delivery
+          </figcaption>
+        </figure>
       </section>
 
       <section className="space-y-6">
@@ -131,9 +128,6 @@ export default function FireHydrantSignals() {
             <span>Preserve context for post-incident review</span>
           </li>
         </ul>
-      </section>
-
-      <section className="space-y-6">
         <figure className="space-y-3">
           <Lightbox
             src="/signals-2.png"
@@ -201,8 +195,8 @@ export default function FireHydrantSignals() {
           small misunderstandings have real operational impact.
         </p>
 
-        <div className="space-y-6 mt-8">
-          <div>
+        <div className="space-y-10">
+          <div className="space-y-4">
             <h3 className="text-lg font-semibold">
               Alpha: exposing everything
             </h3>
@@ -211,7 +205,7 @@ export default function FireHydrantSignals() {
               the full complexity. Policies were fully visible and configurable,
               but users struggled to understand:
             </p>
-            <ul className="space-y-2 text-gray-700 mt-4">
+            <ul className="space-y-2 text-gray-700">
               <li className="flex gap-3">
                 <span className="text-gray-400 mt-1">•</span>
                 <span>Time gaps between notifications</span>
@@ -225,78 +219,68 @@ export default function FireHydrantSignals() {
                 <span>When responsibility changed hands</span>
               </li>
             </ul>
+            <figure className="space-y-3">
+              <Lightbox
+                src="/signals-3.png"
+                alt="Alpha escalation policy form showing time-based steps and hand-offs that are difficult to reason about at a glance"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-xs text-gray-500 italic">
+                Alpha escalation policy design — time-based steps and hand-offs visible but difficult to reason about at a glance
+              </figcaption>
+            </figure>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Beta: making time explicit</h3>
+            <p className="text-gray-700 leading-relaxed">
+              User feedback showed that{" "}
+              <strong>time was the missing dimension</strong>. We redesigned
+              escalation policies to visualize actions along a timeline,
+              clarifying order, delays, repeats, and hand-offs.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">GA: clarity over cleverness</h3>
+            <p className="text-gray-700 leading-relaxed">
+              Final designs prioritized:
+            </p>
+            <ul className="space-y-2 text-gray-700">
+              <li className="flex gap-3">
+                <span className="text-gray-400 mt-1">•</span>
+                <span>Clear language</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-gray-400 mt-1">•</span>
+                <span>Explicit intervals</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-gray-400 mt-1">•</span>
+                <span>Scan-friendly policy summaries</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-gray-400 mt-1">•</span>
+                <span>
+                  Helper text that explained <em>why</em>, not just <em>what</em>
+                </span>
+              </li>
+            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              The result was a system that felt powerful without being opaque.
+            </p>
+            <figure className="space-y-3">
+              <Lightbox
+                src="/signals-4.png"
+                alt="GA escalation policy showing scannable summary view with clear ownership, timing, and repeat behavior at every step"
+                className="w-full rounded-lg"
+              />
+              <figcaption className="text-xs text-gray-500 italic">
+                GA escalation policy — scannable summary view with clear ownership, timing, and repeat behavior at every step
+              </figcaption>
+            </figure>
           </div>
         </div>
-      </section>
-
-      <section className="space-y-6">
-        <figure className="space-y-3">
-          <Lightbox
-            src="/signals-3.png"
-            alt="Alpha escalation policy form showing time-based steps and hand-offs that are difficult to reason about at a glance"
-            className="w-full rounded-lg"
-          />
-          <figcaption className="text-xs text-gray-500 italic">
-            Alpha escalation policy design — time-based steps and hand-offs visible but difficult to reason about at a glance
-          </figcaption>
-        </figure>
-      </section>
-
-      <section className="space-y-6">
-        <div>
-          <h3 className="text-lg font-semibold">Beta: making time explicit</h3>
-          <p className="text-gray-700 leading-relaxed">
-            User feedback showed that{" "}
-            <strong>time was the missing dimension</strong>. We redesigned
-            escalation policies to visualize actions along a timeline,
-            clarifying order, delays, repeats, and hand-offs.
-          </p>
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <div>
-          <h3 className="text-lg font-semibold">GA: clarity over cleverness</h3>
-          <p className="text-gray-700 leading-relaxed">
-            Final designs prioritized:
-          </p>
-          <ul className="space-y-2 text-gray-700 mt-4">
-            <li className="flex gap-3">
-              <span className="text-gray-400 mt-1">•</span>
-              <span>Clear language</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-gray-400 mt-1">•</span>
-              <span>Explicit intervals</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-gray-400 mt-1">•</span>
-              <span>Scan-friendly policy summaries</span>
-            </li>
-            <li className="flex gap-3">
-              <span className="text-gray-400 mt-1">•</span>
-              <span>
-                Helper text that explained <em>why</em>, not just <em>what</em>
-              </span>
-            </li>
-          </ul>
-          <p className="text-gray-700 leading-relaxed mt-4">
-            The result was a system that felt powerful without being opaque.
-          </p>
-        </div>
-      </section>
-
-      <section className="space-y-6">
-        <figure className="space-y-3">
-          <Lightbox
-            src="/signals-4.png"
-            alt="GA escalation policy showing scannable summary view with clear ownership, timing, and repeat behavior at every step"
-            className="w-full rounded-lg"
-          />
-          <figcaption className="text-xs text-gray-500 italic">
-            GA escalation policy — scannable summary view with clear ownership, timing, and repeat behavior at every step
-          </figcaption>
-        </figure>
       </section>
 
       <section className="space-y-6">
@@ -310,7 +294,7 @@ export default function FireHydrantSignals() {
         <p className="text-gray-700 leading-relaxed">
           We introduced an alert timeline that shows:
         </p>
-        <ul className="space-y-2 text-gray-700 mt-4">
+        <ul className="space-y-2 text-gray-700">
           <li className="flex gap-3">
             <span className="text-gray-400 mt-1">•</span>
             <span>When the signal triggered</span>
@@ -328,13 +312,10 @@ export default function FireHydrantSignals() {
             <span>When alerts connected to incidents</span>
           </li>
         </ul>
-        <p className="text-gray-700 leading-relaxed mt-4">
+        <p className="text-gray-700 leading-relaxed">
           This reduced guesswork and improved confidence during high-stress
           moments.
         </p>
-      </section>
-
-      <section className="space-y-6">
         <figure className="space-y-3">
           <Lightbox
             src="/signals-5.png"

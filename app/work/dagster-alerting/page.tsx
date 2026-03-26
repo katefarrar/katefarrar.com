@@ -42,7 +42,7 @@ export default function DagsterAlerting() {
         </div>
       </header>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Overview</h2>
         <p className="text-gray-700 leading-relaxed">
           Alerting is one of the most trust-sensitive capabilities in a data
@@ -57,7 +57,7 @@ export default function DagsterAlerting() {
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">The Problem</h2>
         <p className="text-gray-700 leading-relaxed">
           The issue wasn't whether alerts fired. It was whether they represented
@@ -93,9 +93,6 @@ export default function DagsterAlerting() {
             <span>Alert fatigue reduced trust in the system</span>
           </li>
         </ul>
-      </section>
-
-      <section className="space-y-4">
         <figure className="space-y-3">
           <Lightbox
             src="/alerts-1.png"
@@ -110,7 +107,7 @@ export default function DagsterAlerting() {
         </figure>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Design Objective</h2>
         <p className="text-gray-700 leading-relaxed">
           Design an alerting system that:
@@ -133,24 +130,24 @@ export default function DagsterAlerting() {
             <span>Maintains consistency across product, Slack, and email</span>
           </li>
         </ul>
-        <p className="text-gray-700 leading-relaxed mt-4">
+        <p className="text-gray-700 leading-relaxed">
           Alerting needed to function as system behavior — not a standalone
           page.
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Design Solution</h2>
 
-        <div className="space-y-4">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">
               Alert Policies as First-Class Concepts
             </h3>
             <p className="text-gray-700 leading-relaxed">
               Alert policies were designed to clearly communicate:
             </p>
-            <ul className="space-y-2 text-gray-700 mt-3">
+            <ul className="space-y-2 text-gray-700">
               <li className="flex gap-3">
                 <span className="text-gray-400 mt-1">•</span>
                 <span>What is being monitored</span>
@@ -168,7 +165,7 @@ export default function DagsterAlerting() {
                 <span>Who owns response</span>
               </li>
             </ul>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               Configuration needed to feel predictable and transparent —
               especially in high-stakes production environments. As targeting
               needs grew more complex, we expanded alert policies from selecting
@@ -192,8 +189,8 @@ export default function DagsterAlerting() {
             </figcaption>
           </figure>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">
               Alerts Embedded in Product Context
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -201,10 +198,10 @@ export default function DagsterAlerting() {
               such as asset and run views — rather than being confined to a
               dedicated alerts page.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               This reduced context switching and allowed users to:
             </p>
-            <ul className="space-y-2 text-gray-700 mt-3">
+            <ul className="space-y-2 text-gray-700">
               <li className="flex gap-3">
                 <span className="text-gray-400 mt-1">•</span>
                 <span>See current health state</span>
@@ -222,7 +219,7 @@ export default function DagsterAlerting() {
                 <span>Act immediately</span>
               </li>
             </ul>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               Alerting became part of the operational workflow, not an
               interruption outside it.
             </p>
@@ -241,8 +238,8 @@ export default function DagsterAlerting() {
             </figcaption>
           </figure>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">
               From Events to Health Status
             </h3>
             <p className="text-gray-700 leading-relaxed">
@@ -250,22 +247,22 @@ export default function DagsterAlerting() {
               noticed a recurring issue: even well-configured alerts were firing
               too frequently.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               Teams were being notified about individual events — retries,
               partial failures, transient warnings — that didn't always reflect
               meaningful system degradation.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               The system was working as designed, but the model of "alert on
               every signal" was flawed.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               We introduced asset health status as a consolidated state model
               that aggregates signals into meaningful transitions. Alerts could
               now fire on state changes — Healthy → Degraded → Failed — rather
               than on isolated events.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               This reduced noise while increasing confidence in what alerts
               represent. This shifted the underlying model from event-based
               alerting to state-based alerting — a fundamental change in how the
@@ -285,18 +282,18 @@ export default function DagsterAlerting() {
             </figcaption>
           </figure>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">
               Cross-Surface Delivery: Slack and Email
             </h3>
             <p className="text-gray-700 leading-relaxed">
               Slack and email notifications carried forward the same
               health-based model used in the product UI.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               Each notification included:
             </p>
-            <ul className="space-y-2 text-gray-700 mt-3">
+            <ul className="space-y-2 text-gray-700">
               <li className="flex gap-3">
                 <span className="text-gray-400 mt-1">•</span>
                 <span>Current health state</span>
@@ -314,11 +311,11 @@ export default function DagsterAlerting() {
                 <span>Deep links back into Dagster+</span>
               </li>
             </ul>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               By aligning delivery channels with the same underlying system
               model, we ensured consistency across surfaces.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-3">
+            <p className="text-gray-700 leading-relaxed">
               Users no longer had to reconstruct state from fragments — the
               system spoke the same language everywhere.
             </p>
@@ -338,9 +335,9 @@ export default function DagsterAlerting() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Design Tradeoffs</h2>
-        <div className="space-y-4">
+        <div className="space-y-6">
           <div>
             <p className="font-semibold text-gray-900">Noise vs. Coverage</p>
             <p className="text-gray-700 leading-relaxed">
@@ -370,14 +367,14 @@ export default function DagsterAlerting() {
         </div>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Outcome</h2>
         <p className="text-gray-700 leading-relaxed">
           By consolidating signals into health status and aligning policy
           configuration with consistent cross-surface delivery, alerting in
           Dagster+ became:
         </p>
-        <ul className="space-y-2 text-gray-700 mt-3">
+        <ul className="space-y-2 text-gray-700">
           <li className="flex gap-3">
             <span className="text-gray-400 mt-1">•</span>
             <span>Easier to configure</span>
@@ -395,13 +392,13 @@ export default function DagsterAlerting() {
             <span>More trustworthy over time</span>
           </li>
         </ul>
-        <p className="text-gray-700 leading-relaxed mt-4">
+        <p className="text-gray-700 leading-relaxed">
           Rather than adding more alerts, we focused on making alerts represent
           something meaningful.
         </p>
       </section>
 
-      <section className="space-y-4">
+      <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Key Takeaways</h2>
         <ul className="space-y-2 text-gray-700">
           <li className="flex gap-3">

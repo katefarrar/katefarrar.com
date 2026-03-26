@@ -337,3 +337,41 @@ Created `vercel.json` with `"installCommand": "npm ci"` to force Vercel to insta
 
 ---
 
+## 2026-03-26 - Responsiveness, Spacing, and Cleanup
+
+### Goal
+Fix responsiveness on the About page, standardize spacing across all three case study pages using Signals as the reference, and clean up committed node_modules.
+
+### Changes Made
+
+**Commit cleanup:**
+- Removed `node_modules/postcss` from git tracking (was force-committed as a build workaround; no longer needed since `vercel.json` enforces `npm ci`)
+- Committed `@vercel/analytics` addition, all modified app files, and SESSION_NOTES.md
+
+**About Page ([app/about/page.tsx](app/about/page.tsx)):**
+- Fixed mobile overflow: `grid-cols-12` with large `gap-x` values was causing columns to collapse and overflow on small screens
+- Header: `gap-8` → `gap-y-8 lg:gap-8`
+- Content grid: `gap-x-12` → `gap-x-0 lg:gap-x-12`
+
+**Case study spacing overhaul — all three pages:**
+- Used Signals as the reference
+- Standardized all `<section>` elements to `space-y-6`
+- Removed all `mt-3`/`mt-4` manual margin overrides from `<p>` and `<ul>` elements (these were fighting against parent `space-y` and creating uneven rhythm)
+- Added `space-y-4` to subsection `<div>` wrappers that contain `h3 + p + ul + p` content (without this, removing the mt overrides left zero gap between those elements)
+- Removed `mb-4` from `<h3>` elements where `space-y-4` on the parent div now handles the spacing
+
+**Compass ([app/work/dagster-compass/page.tsx](app/work/dagster-compass/page.tsx)):**
+- Unwrapped nested `<section>` elements around images in Act 3 — replaced with `<figure>` elements directly in the parent section
+
+### Files Modified
+1. app/about/page.tsx
+2. app/work/dagster-compass/page.tsx
+3. app/work/dagster-alerting/page.tsx
+4. app/work/firehydrant-signals/page.tsx
+
+### Notes
+- dagster-rbac and other work pages have the same mt-3/mt-4 pattern but were left alone per user preference
+- node_modules/postcss should stay untracked going forward — vercel.json with `npm ci` is the correct fix
+
+---
+
