@@ -61,26 +61,24 @@ const miscProjects = [
 export default function Work() {
   return (
     <div className="space-y-20">
-      <header className="grid grid-cols-12 gap-8 pb-12 border-b border-gray-200">
-        <div className="col-span-12 lg:col-span-8">
-          <h1 className="font-notch text-5xl lg:text-6xl tracking-tight mb-6">
-            Case Studies
-          </h1>
-          <p className="text-2xl text-gray-600 leading-relaxed">
-            Systems-level product design for complex technical platforms
-          </p>
-        </div>
+      <header className="pb-12 border-b border-gray-200 space-y-3">
+        <h1 className="font-notch text-5xl lg:text-6xl tracking-tight">
+          Case Studies
+        </h1>
+        <p className="text-xl text-gray-600 leading-relaxed">
+          Systems-level product design for complex technical platforms
+        </p>
       </header>
 
-      <div className="space-y-20">
-        {caseStudies.map((project) => (
+      <div className="space-y-32">
+        {caseStudies.map((project, index) => (
           <Link
             key={project.slug}
             href={`/work/${project.slug}`}
             className="group block cursor-pointer"
             aria-label={`View ${project.title} case study`}
           >
-            <article className="pb-20 border-b border-gray-200 last:border-0 last:pb-0">
+            <article className={`pt-8 ${index > 0 ? "border-t border-gray-200" : ""}`}>
               <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
                 <div className="lg:col-span-5 flex flex-col justify-top space-y-6">
                   <div className="text-sm text-gray-500">
@@ -91,7 +89,7 @@ export default function Work() {
                     {project.title}
                   </h2>
 
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="text-lg text-gray-800 leading-relaxed">
                     {project.description}
                   </p>
 
@@ -107,7 +105,7 @@ export default function Work() {
 
                 <div className="lg:col-span-7">
                   {project.image ? (
-                    <div className="aspect-[5/4] relative overflow-hidden bg-gray-100 border border-gray-200">
+                    <div className="aspect-[5/4] relative overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
                       <Image
                         src={project.image}
                         alt={project.imageAlt || project.title}

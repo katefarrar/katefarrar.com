@@ -44,14 +44,15 @@ export default function Home() {
     <div className="space-y-12">
       <div className="flex items-center -mx-6">
         <div className="w-full max-w-6xl mx-auto px-6">
-          <h1 className="font-notch text-6xl lg:text-7xl xl:text-8xl leading-[0.95] tracking-tight mb-8">
-            Designing for <span className="inline-block">clarity,</span>{" "}
+          <h1 className="font-notch text-5xl lg:text-6xl xl:text-7xl leading-[0.95] tracking-tight mb-8">
+            Designing for <span className="inline-block">clarity,</span>
+            <br />
             <span className="inline-block">trust,</span> and{" "}
             <span className="inline-block">scale</span>
           </h1>
 
-          <div className="max-w-xl space-y-6">
-            <p className="text-xl lg:text-2xl leading-relaxed text-gray-600">
+          <div className="space-y-6">
+            <p className="text-lg leading-relaxed text-gray-600">
               Staff Product Designer building complex systems for data platforms
               and technical tools
             </p>
@@ -71,7 +72,7 @@ export default function Home() {
 
       <div className="-mx-6">
         <div className="w-full max-w-6xl mx-auto px-6">
-          <div className="border-t border-gray-200 pt-12 space-y-20">
+          <div className="pt-12 space-y-32">
             {caseStudies.map((project) => (
               <Link
                 key={project.slug}
@@ -79,7 +80,7 @@ export default function Home() {
                 className="group block cursor-pointer"
                 aria-label={`View ${project.title} case study`}
               >
-                <article className="pb-20 border-b border-gray-200 last:border-0 last:pb-0">
+                <article>
                   <div className="grid lg:grid-cols-12 gap-8 lg:gap-12">
                     <div className="lg:col-span-5 flex flex-col justify-top space-y-6">
                       <div className="text-sm text-gray-500">
@@ -90,7 +91,7 @@ export default function Home() {
                         {project.title}
                       </h2>
 
-                      <p className="text-lg text-gray-600 leading-relaxed">
+                      <p className="text-lg text-gray-800 leading-relaxed">
                         {project.description}
                       </p>
 
@@ -109,7 +110,7 @@ export default function Home() {
 
                     <div className="lg:col-span-7">
                       {project.image ? (
-                        <div className="aspect-[5/4] relative overflow-hidden bg-gray-100 border border-gray-200">
+                        <div className="aspect-[5/4] relative overflow-hidden bg-gray-100 border border-gray-200 rounded-lg">
                           <Image
                             src={project.image}
                             alt={project.imageAlt || project.title}

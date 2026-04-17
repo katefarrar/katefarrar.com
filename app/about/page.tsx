@@ -6,15 +6,13 @@ export const metadata: Metadata = { title: "About" };
 export default function About() {
   return (
     <div className="space-y-20">
-      <header className="grid grid-cols-12 gap-y-8 lg:gap-8 pb-12 border-b border-gray-200">
-        <div className="col-span-12 lg:col-span-8">
-          <h1 className="font-notch text-5xl lg:text-6xl tracking-tight mb-6">
-            About
-          </h1>
-          <p className="text-2xl text-gray-600 leading-relaxed">
-            Designing reliable systems for complex technical products
-          </p>
-        </div>
+      <header className="pb-12 border-b border-gray-200 space-y-3">
+        <h1 className="font-notch text-5xl lg:text-6xl tracking-tight">
+          About
+        </h1>
+        <p className="text-xl text-gray-600 leading-relaxed">
+          Designing reliable systems for complex technical products
+        </p>
       </header>
 
       <div className="grid grid-cols-12 gap-x-0 lg:gap-x-12 gap-y-12">
