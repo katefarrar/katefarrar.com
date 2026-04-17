@@ -23,6 +23,12 @@ export default function Navigation() {
                 Work
               </Link>
               <Link
+                href="/writing"
+                className="text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Writing
+              </Link>
+              <Link
                 href="/about"
                 className="text-gray-600 hover:text-gray-900 transition-colors"
               >
