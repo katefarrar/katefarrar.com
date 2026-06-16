@@ -375,3 +375,60 @@ Fix responsiveness on the About page, standardize spacing across all three case 
 
 ---
 
+## 2026-04-17 — Writing Section and Site-wide Design Refinements
+
+### Goal
+Add a Writing section for short MDX-based posts and refine design consistency across the site.
+
+### Writing Section
+- Installed `@next/mdx`, configured `next.config.ts` with MDX plugin and `pageExtensions`
+- Created `mdx-components.tsx` (root level, required by App Router) with styled HTML elements
+- Created `components/Post.tsx` — layout wrapper for posts: title, date, content, "Back to writing" link with animated arrow
+- Created `components/ShareButton.tsx` — client component (unused in current flow, kept for future use)
+- Created `app/writing/page.tsx` — listing page with `posts` array (slug, title, date), arrow hover animations
+- Added Writing nav link to `components/Navigation.tsx`
+- Four posts published:
+  - `2026-04-17-re-claude-design` — Re: Claude Design
+  - `2026-03-18-ai-doesnt-replace-design-thinking` — AI doesn't replace design thinking, it lets us act on it faster
+  - `2026-03-08-ai-is-fun` — AI tools are fun
+  - `2026-03-04-more-access-doesnt-dilute-creativity` — More access to creative tools doesn't dilute creativity
+
+### Design Refinements
+
+**Typography/color consistency:**
+- Standardized subheadings to `text-xl text-gray-600 leading-relaxed` across Work, About, Writing
+- Removed grid constraint from subheadings on Work and About so they run full width
+- Reduced homepage h1 from `text-6xl/7xl/8xl` to `text-5xl/6xl/7xl`
+- Forced h1 line break after "clarity," with `<br />`
+- Reduced hero subheading to `text-lg`, removed `max-w-xl` constraint
+- Three-level color hierarchy on case study cards: `text-gray-500` metadata, `text-gray-900` title, `text-gray-800` description (all pass WCAG AA)
+- Added `rounded-lg` to card images on work page and homepage to match case study and about page images
+
+**Work page layout:**
+- Increased case study spacing from `space-y-20` to `space-y-32`
+- Switched from `border-b` to `border-t` on each section; first section has no border-t (index check) to avoid double-border with header
+- Removed index numbers (01/02/03) — redundant with border treatment
+
+**Homepage:**
+- Matched case study spacing to `space-y-32`
+- No borders between homepage case studies — spacing sufficient, homepage is showcase not listing
+
+**Footer:**
+- Added `flex-col sm:flex-row` so copyright and links stack on small screens
+
+### Files Modified
+1. next.config.ts, package.json, package-lock.json
+2. mdx-components.tsx (new)
+3. app/writing/page.tsx (new) + four post MDX files (new)
+4. components/Post.tsx (new), components/ShareButton.tsx (new)
+5. components/Navigation.tsx
+6. app/about/page.tsx, app/work/page.tsx, app/page.tsx
+7. components/Footer.tsx
+
+### Notes
+- PR opened against `kf/2026-next`: https://github.com/katefarrar/katefarrar.com/pull/new/kf/041726-writing
+- Post template: `<Post title="..." date="...">` wrapping MDX content in `page.mdx`
+- Adding a new post: create `app/writing/YYYY-MM-DD-slug/page.mdx`, add entry to `posts` array in `app/writing/page.tsx`
+
+---
+
